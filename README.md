@@ -1,24 +1,7 @@
-# README
+# Moscow Coding Bootcamp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi, glad to see you!
+Wanna learn web-development?
+**Enroll to Moscow Coding Bootcamp to learn JavaScript and Ruby on Rails!**
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Visit Coding Bootcamp Page](http://www.codingbootcamp.ru/ "Moscow Coding Bootcamp")
