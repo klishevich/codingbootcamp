@@ -5,6 +5,7 @@ server 'jupiter.j123.ru', port: 22, roles: [:web, :app, :db], primary: true
 
 set :application, "codingbootcamp"
 set :repo_url, "git@github.com:klishevich/codingbootcamp.git"
+set :user, 'mike'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -37,7 +38,6 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :user,            'mike'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
@@ -116,5 +116,4 @@ namespace :deploy do
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
-  after  :finishing,    :restart
 end
