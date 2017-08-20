@@ -88,4 +88,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.ru_website_url = 'http://ru.gt.j123.ru/'
+  config.en_website_url = 'http://gt.j123.ru/'
 end
