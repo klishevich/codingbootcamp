@@ -27,15 +27,15 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%=t :nav_search %></button>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_lang %></a>
-          <div class="dropdown-menu" aria-labelledby="dropdown02">
-            <%= link_to 'EN', Rails.application.config.en_website_url, class: 'dropdown-item' %>
-            <%= link_to 'RU', Rails.application.config.ru_website_url, class: 'dropdown-item' %>
-          </div>
-        </li>
-      </ul>
     </form>
+    <ul class="navbar-nav justify-content-end">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_lang %></a>
+        <div class="dropdown-menu" aria-labelledby="dropdown02">
+          <%= link_to 'EN', Rails.application.config.en_website_url, class: 'dropdown-item' %>
+          <%= link_to 'RU', Rails.application.config.ru_website_url, class: 'dropdown-item' %>
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>
