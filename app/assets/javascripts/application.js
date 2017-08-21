@@ -15,4 +15,5 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require turbolinks
+//= require_self
 //= require_tree .
