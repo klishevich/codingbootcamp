@@ -30,7 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  nav_brand: 'GT TechLead'
+  nav_brand: 'Boston Coding Bootcamp'
   nav_courses: 'Courses'
   nav_mentors: 'Mentors'
   nav_faq: 'FAQ'
@@ -40,6 +40,6 @@ en:
   nav_become_instructor: 'Become an Instructor'
   nav_search: 'Search'
   nav_lang: 'Language'
-  home_page_header: 'Home Page GT Technical Leadership'
+  home_page_header: 'Home Page Boston Coding Bootcamp in Moscow'
   home_page_text1: 'Some usefull info soon will be here...'
   home_page_text2: 'Have questions? Write me'

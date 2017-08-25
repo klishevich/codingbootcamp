@@ -66,7 +66,7 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.default_url_options = { host: 'gt.j123.ru' }
+  config.action_mailer.default_url_options = { host: 'codingbootcamp.ru' }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -91,6 +91,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.ru_website_url = 'http://ru.gt.j123.ru/'
-  config.en_website_url = 'http://gt.j123.ru/'
+  config.ru_website_url = 'http://codingbootcamp.ru/'
+  config.en_website_url = 'http://en.codingbootcamp.ru/'
 end
