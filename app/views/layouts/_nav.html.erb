@@ -1,7 +1,8 @@
 <% navItemDropdownClassActive = current_action?(['hiring_students', 'corporate_workshop', 'become_instructor']) ? "active" : "" %>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="/"><%=t :nav_brand %></a>
+  <a class="navbar-brand d-none d-lg-block" href="/"><%=t :nav_brand %></a>
+  <a class="navbar-brand d-block d-lg-none" href="/"><%=t :nav_brand_short %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

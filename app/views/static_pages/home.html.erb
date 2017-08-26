@@ -2,14 +2,13 @@
 <% provide(:description, "Boston Coding Bootcamp в Москве обучение веб-разработке за 6 месяцев, Ruby on Rails, Node.js, React") %>
 <% provide(:keywords, "boston, coding, bootcamp, бостон, программирование, буткэмп, лагерь, веб-разработка, обучение, ruby on rails, react, node.js") %>
 <div class="starter-template">
-  <div class="jumbotron">
+  <div class="jumbotron d-none d-lg-block">
     <h1 class="display-3">Boston Coding Bootcamp в Москве</h1>
-    <p class="lead">Объявляет набор на курс <span class="badge badge-danger">Full-Stack Web Developer с нуля</span>. Начало курса <span class="badge badge-warning">23 октября 2017г</span>. Получи высокооплачиваимую и интересную профессию веб-разработчика за <span class="badge badge-success">6 месяцев</span>.</p>
-    <hr class="my-4">
-    <p>Набираем экспериментальную группу из 10 человек. Программа курса составлена с учетом опыта буткэмпов из Бостона США. Вы изучите серверный и клиентский языки программирования (Ruby on Rails, Node.js, React). По окончанию курса у выпускника будет достаточно знаний для работы на должности веб-разработчик.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="/courses" role="button">Узнать больше</a>
-    </p>
+    <%= render 'home_promo' %>
+  </div>
+  <div class="d-block d-lg-none">
+    <h1 class="display-5">Boston Coding Bootcamp в Москве</h1>
+    <%= render 'home_promo' %>
   </div>
   <div class="course-block">
     <h2>Основная информация о курсе</h2>
