@@ -1,41 +1,29 @@
+<% navItemDropdownClassActive = current_action?(['hiring_students', 'corporate_workshop', 'become_instructor']) ? "active" : "" %>
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="/"><%=t :nav_brand %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li id="courses" class="nav-item">
-        <a class="nav-link" href="/courses"><%=t :nav_courses %></a>
-      </li>
-      <li id="mentors" class="nav-item">
-        <a class="nav-link" href="/mentors"><%=t :nav_mentors %></a>
-      </li>
-      <li id="faq" class="nav-item">
-        <a class="nav-link" href="/faq"><%=t :nav_faq %></a>
-      </li>
-      <li class="nav-item dropdown">
+      <%= page_nav_item t(:nav_courses), courses_path %>
+      <%= page_nav_item t(:nav_mentors), mentors_path %>
+      <%= page_nav_item t(:nav_faq), faq_path %>
+      <li class="nav-item dropdown <%=navItemDropdownClassActive%>">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_business %></a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="/hiring_students"><%=t :nav_hiring_students %></a>
-          <a class="dropdown-item" href="/corporate_workshop"><%=t :nav_corporate_workshop %></a>
-          <a class="dropdown-item" href="/become_instructor"><%=t :nav_become_instructor %></a>
+          <%= page_dropdown_item t(:nav_hiring_students), hiring_students_path %>
+          <%= page_dropdown_item t(:nav_corporate_workshop), corporate_workshop_path %>
+          <%= page_dropdown_item t(:nav_become_instructor), become_instructor_path %>
         </div>
       </li>
+      <%= page_nav_item t(:nav_contacts), contacts_path %>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%=t :nav_search %></button>
-    </form>
+    <div class="dropdown-divider"></div>
     <ul class="navbar-nav justify-content-end">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_lang %></a>
-        <div class="dropdown-menu" aria-labelledby="dropdown02">
-          <%= link_to 'EN', Rails.application.config.en_website_url, class: 'dropdown-item' %>
-          <%= link_to 'RU', Rails.application.config.ru_website_url, class: 'dropdown-item' %>
-        </div>
-      </li>
+      <%= change_locale_nav_item :ru, Rails.application.config.ru_website_url %>
+      <%= change_locale_nav_item :en, Rails.application.config.en_website_url %>
     </ul>
   </div>
 </nav>

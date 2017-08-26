@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
     parsed_locale = request.subdomains.first
     I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
   end
+
+  def current_action?(names)
+    names.include?(params[:action]) unless params[:action].blank? || false
+  end
+  helper_method :current_action?
+  
 end

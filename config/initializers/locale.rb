@@ -1,5 +1,5 @@
 # Whitelist locales available for the application
 I18n.available_locales = [:en, :ru]
  
-# Set default locale to something other than :en
+# DEFAULT LOCALE SHOULD BE :ru
 I18n.default_locale = :ru

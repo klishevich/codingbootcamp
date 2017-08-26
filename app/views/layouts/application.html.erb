@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= I18n.locale %>">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="GT Technical Leadership">
     <meta name="author" content="Michael Klishevich">
-    <title>GT Technical Leadership</title>
-    <%= csrf_meta_tags %>
+    <title><%= content_for?(:title) ? yield(:title) : t(:default_title) %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t(:default_title) %>">
+    <meta name="keywords" content="<%= content_for?(:keywords) ? yield(:keywords) : t(:default_title) %>">
 
+    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <%= render 'layouts/nav' %>
   <body>
     <div class="container">
-      <%= render 'layouts/flash_messages' %>
+      <%#= render 'layouts/flash_messages' %>
       <%= yield %>
     </div>
   </body>
