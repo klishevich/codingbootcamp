@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home; end
-  def courses; end
+  def program; end
   def mentors; end
   def faq; end
   def contacts; end

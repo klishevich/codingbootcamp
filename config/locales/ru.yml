@@ -1,8 +1,9 @@
 ru:
   default_title: 'Boston Coding Bootcamp в Москве'
   nav_brand: 'Boston Coding Bootcamp'
-  nav_brand_short: 'Boston Bootcamp'
-  nav_courses: 'Программа'
+  nav_brand_short: 'BCB'
+  nav_home: 'Bootcamp'
+  nav_program: 'Программа'
   nav_mentors: 'Менторы'
   nav_faq: 'FAQ'
   nav_contacts: 'Контакты'
