@@ -1,14 +1,14 @@
-<% provide(:title, "Boston Coding Bootcamp в Москве") %>
-<% provide(:description, "Boston Coding Bootcamp в Москве обучение веб-разработке за 6 месяцев, Ruby on Rails, Node.js, React") %>
-<% provide(:keywords, "boston, coding, bootcamp, бостон, программирование, буткэмп, лагерь, веб-разработка, обучение, ruby on rails, react, node.js") %>
+<% provide(:title, t(:default_title)) %>
+<% provide(:description, "Обучение веб-разработке за 6 месяцев, Ruby on Rails, Node.js, React в #{t(:default_title)}") %>
+<% provide(:keywords, "boston, coding, bootcamp, бостон, программирование, буткэмп, лагерь, веб-разработка, обучение, ruby on rails, react, node.js, #{t(:default_title)}") %>
 <div class="starter-template">
   <div class="jumbotron d-none d-lg-block">
-    <h1 class="display-3">Boston Coding Bootcamp в Москве</h1>
-    <%= render 'home_promo' %>
+    <h1 class="display-3"><%= t(:default_title) %></h1>
+    <%= render 'home_promo_ru' %>
   </div>
   <div class="d-block d-lg-none">
-    <h1 class="display-5">Boston Coding Bootcamp в Москве</h1>
-    <%= render 'home_promo' %>
+    <h1 class="display-5"><%= t(:default_title) %></h1>
+    <%= render 'home_promo_ru' %>
   </div>
   <div class="course-block">
     <h2>Основная информация о курсе</h2>
@@ -104,7 +104,7 @@
   <div class="course-block">
     <h2>Зачисление в буткэмп</h2>
     <div class="center-text">
-      <div>Напишите мне на email <a href="mailto:info@busation.com?subject=Enrol to Boston Coding Bootcamp">info@busation.com</a></div>
+      <div>Напишите мне на email <a href="mailto:info@busation.com?subject=Enrol to Coding Bootcamp">info@busation.com</a></div>
       <div>или в Telegram @klishevich</div>
       <div>или в Twitter <a href="https://twitter.com/busation">@busation</a></div>
       <div>и мы запланируем интервью</div>
