@@ -6,7 +6,7 @@
     <title><%= content_for?(:title) ? yield(:title) : t(:default_title) %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t(:default_title) %>">
     <meta name="keywords" content="<%= content_for?(:keywords) ? yield(:keywords) : t(:default_title) %>">
-
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
