@@ -1,4 +1,4 @@
-<% provide(:title, t(:default_title)) %>
+<% provide(:title, "#{t(:default_title)} - обучение веб-разработке") %>
 <% provide(:description, "Обучение веб-разработке за 6 месяцев, Ruby on Rails, Node.js, React в #{t(:default_title)}") %>
 <% provide(:keywords, "boston, coding, bootcamp, бостон, программирование, буткэмп, лагерь, веб-разработка, обучение, ruby on rails, react, node.js, #{t(:default_title)}") %>
 <div class="starter-template">
@@ -9,6 +9,7 @@
       </div>
     </div>
     <h1 class="display-5"><%= t(:default_title) %></h1>
+    <h2 class="display-5">Обучение веб-разработке</h1>
     <%= render 'home_promo_ru' %>
   </div>
   <div class="course-block">
