@@ -5,4 +5,12 @@ module StaticPagesHelper
       content_tag(:div, text, class: 'col-lg-9')
     end
   end
+
+  def codingbootcamp_site
+    link_to 'www.codingbootcamp.ru', 'http://www.codingbootcamp.ru/'
+  end
+
+  def busation_email
+    link_to 'info@busation.com', 'mailto:info@busation.com'
+  end
 end

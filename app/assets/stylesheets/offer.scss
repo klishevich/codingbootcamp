@@ -11,6 +11,11 @@
   font-weight: bold;
 }
 
+.offer-page__version {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
 .offer-page-block {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -25,4 +30,11 @@
 
 .offer-page-block__item {
   margin-top: 0.6rem;
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.offer-page-block__item_bold {
+  font-weight: bold;
 }
