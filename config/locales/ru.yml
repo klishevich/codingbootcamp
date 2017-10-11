@@ -14,6 +14,8 @@ ru:
   nav_search: 'Поиск'
   nav_lang: 'Language'
   nav_offer: 'Оферта'
+  nav_posts: 'Публикации'
   program_intro_to_web: 'Введение в веб-разработку'
   program_web_developer: 'Веб-разработка. Уровень 1'
   program_modern_javascript: 'Современный JavaScript'
+  post_1: 'Как стать веб-разрботчиком'

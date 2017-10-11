@@ -8,7 +8,8 @@ class StaticPagesController < ApplicationController
   def faq; end
   def contacts; end
   def offer; end
-
+  def posts; end
+  def post1; end
   def hiring_students; end
   def corporate_workshop; end
   def become_instructor; end
