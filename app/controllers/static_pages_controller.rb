@@ -7,10 +7,10 @@ class StaticPagesController < ApplicationController
   def mentors; end
   def faq; end
   def contacts; end
+  def offer; end
 
   def hiring_students; end
   def corporate_workshop; end
   def become_instructor; end
-
 
 end

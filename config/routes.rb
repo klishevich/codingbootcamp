@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/mentors', to: 'static_pages#mentors'
   get '/faq', to: 'static_pages#faq'
   get '/contacts', to: 'static_pages#contacts'
+  get '/offer', to: 'static_pages#offer'
 
   get '/hiring_students', to: 'static_pages#hiring_students'
   get '/corporate_workshop', to: 'static_pages#corporate_workshop'
