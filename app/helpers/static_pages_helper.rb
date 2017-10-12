@@ -13,4 +13,15 @@ module StaticPagesHelper
   def busation_email
     link_to 'info@busation.com', 'mailto:info@busation.com'
   end
+
+  def program_info_li(lesson, video, homework, reading)
+    content_tag(:li) do
+      list = content_tag(:ul) do
+        content_tag(:li,'(В). ' + video) +
+            content_tag(:li,'(ДЗ). ' + homework) +
+            content_tag(:li, '(Ч). ' +reading)
+      end
+      content_tag(:b, lesson) + list
+    end
+  end
 end

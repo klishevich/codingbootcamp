@@ -1,3 +1,7 @@
+<% provide :title, 'Программа курса Введение в веб-разработку' %>
+<% provide :description, "#{t(:default_title)} представляет программу курса Введение в веб-разработку, опыт программирования не требуется" %>
+<% provide(:keywords, "программирование, введение, веб-разработка, для начинающих, html, css, javascript, #{t(:default_title)}") %>
+
 <div class="program-block">
   <h1>Программа курса <%= t(:program_intro_to_web) %></h1>
   <div class="alert alert-success program-block__goals" role="alert">
@@ -8,65 +12,68 @@
       <li>Подготовить к курсу по веб-разработке</li>
     </ol>
   </div>
-  <h5><span class="badge badge-primary">Module 1</span> Welcome to Programming <span class="badge badge-success">1 week</span></h5>
+  <div>Учебный курс представляет собой <b>14 видео-уроков</b>. После каждого видео-урока дается <b>практическое задание</b>, которое проверяется наставником и <b>материалы для чтения</b>. Если у наставника есть замечания, то ученик должен их исправить, чтобы получить доступ к следующему уроку. Ученику дается <b>8 недель для прохождения</b> всего курса. По окончанию этого срока доступ к материалам и проверка заданий наставником прекращаются. Необхоимо планировать примерно <b>4 часа на прохождение одного урока</b>, это включает время на просмотр видео, на выполнение домашнего задание и на чтение.</div>
+  <h5>Введение в веб-разработку <span class="badge badge-primary">8 недель</span> <span class="badge badge-success">14 уроков</span></h5>
   <ol>
-    <li>Introduction to Programming <span class="badge badge-success">2 hours</span>
+    <li><b>Ставим Ubuntu</b>
       <ul>
-        <li>Programming specialist fields' review: <b>web developer (frontend, backend, full-stack)</b>, mobile (iOS, Android), SQL (MS SQL, PL SQL, Postgres), Data Science (Machine Learning, Data Mining, Cluster Analysis), VR development, Games development</li>
-        <li>Programming Languages and Frameworks' review: Java, C#, Python, <b>Ruby on Rails</b>, Swift, Objective C, <b>JavaScript, React</b>, Angular, Vue, jQuery</li>
-        <li><span class="badge badge-warning">Homework</span>: Install ruby, play around with IRB</li>
+        <li>Видео (В). Установка Ubuntu 16.04</li>
+        <li>Домашнее задание (ДЗ). Установить Ubuntu 16.04</li>
+        <li>Читать (Ч). Читать информацию о Linux</li>
       </ul>
     </li>
-    <li>How to find your first job in the field of programming <span class="badge badge-success">0.5 hour</span></li>
-    <li>Version Control <span class="badge badge-success">1 hour</span>
-      <ul>
-        <li><b>Git (GitHub)</b>, SVN, TFS</li>
-        <li><span class="badge badge-warning">Homework</span>: Setting GitHub account, adding SSH keys and creating your first repository</li>
-      </ul>
-    </li>
-    <li>Text Editors and IDEs <span class="badge badge-success">0.5 hour</span>
-      <ul>
-        <li><b>Sublime Text</b>, Visual Studio Code, Atom, WebStorm, RubyMine</li>
-        <li><span class="badge badge-warning">Homework</span>: Set up Sublime Text editor, add JavaScript and Ruby autocomplete plugins</li>
-      </ul>
-    </li>
-    <li>Linux or Mac basics <span class="badge badge-success">1 hour</span>
-      <ul>
-        <li>Terminal basic commands</li>
-        <li>VI basic commands</li>
-        <li><span class="badge badge-warning">Home task</span>: Create basic HTML index page using Terminal and VI</li>
-      </ul>
-    </li>
-    <li>Tools <span class="badge badge-success">0.5 hour</span>
-      <ul>
-        <li>Slack, Jira, Git</li>
-        <li><span class="badge badge-warning">Homework</span>: Register your Slack account and join the Bootcamp team</li>
-      </ul>
-    </li>
-  </ol>
-
-  <h5><span class="badge badge-primary">Module 2</span> CSS / HTML / JavaScript <span class="badge badge-success">2 weeks</span></h5>
-  <ol>
-    <li>Basics of CSS / HTML <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li><span class="badge badge-warning">Homework</span>: Create your personal page with your bio, photo, email and phone number. Use as many CSS and HTML tags as you can (<a href="https://fvsch.com/code/base-stylesheet/full.css" target="_blank">fvsch.com/code/base-stylesheet/full.css</a>)</li>
-      </ul>
-    </li>
-    <li>Basics of JavaScript and jQuery <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li><span class="badge badge-warning">Homework</span>: Add some JavaScript to you page: alerts, a form to calculate your precise age, manipulations with DOM</li>
-      </ul>
-    </li>
-    <li>Responsive sites <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li><b>Twitter Bootstrap</b> / Material UI / Foundation</li>
-        <li><span class="badge badge-warning">Homework</span>: Create you bio page using a bootstrap template. The page should be responsive. Use the grid system, tables, navigation, at least two pages, a carousel</li>
-      </ul>
-    </li>
-    <li>Setting up Linux server <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li><span class="badge badge-warning">Homework</span>: Register Linode account, acquire domain name, set up nginx and add the site to hosting</li>
-      </ul>
-    </li>
+    <%= program_info_li 'Bash - Ubuntu terminal',
+                        'Базовые bash команды, установка пакетов, движение между папками',
+                        'Установить VIM, выполнить задание на использование пройденных команд',
+                        'Читать про Linux Terminal' %>
+    <%= program_info_li 'Текстовый редактор SublimeText и учимся гуглить',
+                        'Об установке SublimeText и советы по гуглению',
+                        'Установка SublimeText, подключение полезных модулей. Задание по поиску информации',
+                        'Читаем про текстовые редакторы и IDE. Что это и чем они отличаются' %>
+    <%= program_info_li 'Git и GitHub',
+                        'Установка Git, создание аккаунта на GitHub, генерация ключей ssh, базовые команды Git',
+                        'Установить Git, настроить свой аккаунт на GitHub. Создать репозиторий, в который разместить один текстовый файл с информацией о себе (ФИО, место работы, должность, контактные данные). Добавить меня в колобораторы. Примечание: так как бесплатный аккаунт на гитхабе открытый, то просьба не размещать секретную информацию',
+                        'Читать про Git и GitHub' %>
+    <%= program_info_li 'HTML',
+                        'Базовый HTML, различия между HTML и HTML5, обзор проблем совместимости между различными браузерами (high level), элементы HTML документа, синтаксис (элементы, атрибуты и пр.)',
+                        'Сверстать визитную карточку (использовать тэги b, i, br, div, img, href). Создать новый репозиторий (my_card) в который разместить проект',
+                        'Читать про основные HTML тэги' %>
+    <%= program_info_li 'CSS',
+                        'Базовый CSS и подключение стилей, различия между css/css3, синтаксис и inheritance, селекторы, playground codepen.io',
+                        'Добавляем в проект my_card немного красоты: color, align, background, margin, padding, fonts',
+                        'Читаем про возможности CSS, какие прикольные штуки можно с помощью него делать.' %>
+    <%= program_info_li 'Twitter Bootstrap',
+                        'Об адаптивной, mobile-first библиотеке Twitter Bootstrap',
+                        'Создать новый репозиторий my_pretty_card. Сверстать одностраничный сайт резюме на bootstrap',
+                        'Читать документацию Twitter Bootstrap' %>
+    <%= program_info_li 'JavaScript простейшая программа',
+                        'Установка npm и node. Базовые команды. Понятие переменных, констант, ввод-вывод данных, console.log',
+                        'Написать программу, которая будет спрашивать имя и возраст и выводить строку “Здравствуйте, Иван, вам 20 лет”. Сделать новый репозиторий my_first_js, меня добавить в коллобораторы.',
+                        'Читаем для чего используется JavaScript, что такое EcmaScript, какие различные версии бывают и что работает в браузере и что работает на сервере.' %>
+    <%= program_info_li 'JavaScript в браузере',
+                        'О том как подключать JavaScript на html-страницы, манипуляция с DOM, события, логирования в браузере, Chrome DevTools',
+                        'Добавить в проект my_card js-файл, в котором будут скрипы (выводить alert при нажатии на кнопку “Сообщение” на визитной карточке, удалять элемент при нажатии на кнопку “Удалить” и добавлять элемент при нажатии на кнопку “Добавить”)',
+                        'Читаем про то какие прикольные штуки может делать js в браузере' %>
+    <%= program_info_li 'JavaScript Циклы, условные операторы и использование библиотек',
+                        'Базовые элементы программы на JavaScript. Использование jQuery',
+                        'Добавить в проект my_card еще один js-файл. Пользователь вводит число от 1 до 10 на форму и пользователь вводит слово. И указанное слово, указанное количество раз печатается в alert. Если пользователь вводит число больше 10, то печатается сообщение об ошибке. Сделать, чтобы вместо alert, добавлялись элементы на форму и использованием jQuery',
+                        'Про другие базовые операторы в JS и про возможности jQuery' %>
+    <%= program_info_li 'Web-сервер NGINX',
+                        'Установка и базовая настройка сервера nginx',
+                        'Запустить свой проект my_card на локальном сервере на порту 88',
+                        'Что такое веб-сервера и что такое NGINX' %>
+    <%= program_info_li 'Реляционная база данных Postgresql',
+                        'Установка и настройка Postgresql. Базовые команды. PgAdmin',
+                        'Установить Postgresql и PgAdmin. Создать таблицу с колонками (name (string), sex(boolean), age(number)) вставить в неё несколько записей и сделать пару селектов',
+                        'Читать про реляционные базы данных и что такое Postgres' %>
+    <%= program_info_li 'Связка с базой данных',
+                        'Настройка простейшей связки с базой данных. Рассказать про очистку данных и SQL-injection',
+                        'Создать новый проект my_db_project. Создать страницу на которой будут возвращаться все записи из БД',
+                        'О взаимодействии с базами данных (ORM)' %>
+    <%= program_info_li 'Размещение сайта на серевер Linode',
+                        'Покупка домена. Добавление dns-записей. Настойка Linode.
+ Установка nginx. Закачка сайта.',
+                        'Купить Linode account. И закачать туда свой проект my_pretty_card',
+                        'Читать по HTTP и DNS' %>
   </ol>
 </div>
