@@ -17,9 +17,9 @@ module StaticPagesHelper
   def program_info_li(lesson, video, homework, reading)
     content_tag(:li) do
       list = content_tag(:ul) do
-        content_tag(:li,'(В). ' + video) +
-            content_tag(:li,'(ДЗ). ' + homework) +
-            content_tag(:li, '(Ч). ' +reading)
+        content_tag(:li, image_tag('icons8-YouTube-64.png', height: '30px') + content_tag(:span, ' ' + video)) +
+          content_tag(:li, image_tag('icons8-Home-64.png', height: '30px') + content_tag(:span, ' ' + homework)) +
+          content_tag(:li, image_tag('icons8-OpenBook-64.png', height: '30px') + content_tag(:span, ' ' + reading))
       end
       content_tag(:b, lesson) + list
     end
