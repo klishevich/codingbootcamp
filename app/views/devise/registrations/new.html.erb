@@ -1,0 +1,26 @@
+<h2>Регистрация</h2>
+
+<div class="row">
+  <div class="col-lg-6">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} символов минимум" if @minimum_password_length) %>
+          <%= f.input :password_confirmation, required: true %>
+          <%= f.input :full_name, required: true %>
+          <%= f.input :preferred_name %>
+          <%= f.input :phone, required: true %>
+          <%= f.input :city, required: true %>
+          <%= f.input :comment, required: true %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Зарегистрировать", class: 'btn btn-primary btn-lg' %>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "devise/shared/links" %>

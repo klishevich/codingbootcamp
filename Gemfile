@@ -32,6 +32,7 @@ gem 'figaro'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'devise'
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

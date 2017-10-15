@@ -56,4 +56,6 @@ Rails.application.configure do
 
   config.ru_website_url = 'http://localhost:3000/'
   config.en_website_url = 'http://localhost:3000/'
+
+  # config.i18n.available_locales = [:ru, :en]
 end

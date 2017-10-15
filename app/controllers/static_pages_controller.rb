@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+
   def home; end
   def courses; end
   def program_intro_to_web; end
