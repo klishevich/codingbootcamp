@@ -18,6 +18,7 @@ ru:
         city: 'Город проживания'
         phone: 'Телефон'
         comment: 'Чего вы хотите'
+        remember_me: 'Запомнить меня'
   date:
     abbr_day_names:
     - Вс
@@ -296,3 +297,6 @@ ru:
   program_web_developer: 'Веб-разработка. Уровень 1'
   program_modern_javascript: 'Современный JavaScript'
   post_1: 'Как стать веб-разрботчиком'
+  nav_accout: 'Ваш профиль'
+  nav_log_in: 'Вход'
+  nav_sign_up: 'Регистрация'
