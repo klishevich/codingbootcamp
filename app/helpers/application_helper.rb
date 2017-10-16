@@ -18,13 +18,11 @@ module ApplicationHelper
 
   def apply_now_button(large=false)
     cls = large ? 'btn btn-success btn-lg' : 'btn btn-success'
-    apply_text = 'Подать заявку'
-    view_text = 'Моя заявка'
     Rails.logger.info("user_signed_in? #{user_signed_in?}")
     if !user_signed_in?
-      return link_to(apply_text, new_user_registration_path, role: 'button', class: cls)
+      return link_to('Подать заявку', new_user_registration_path, role: 'button', class: cls)
     else
-      return link_to(view_text, edit_user_registration_path(current_user), role: 'button', class: cls)
+      return link_to(t(:my_data), users_profile_path, role: 'button', class: cls)
     end
   end
 end

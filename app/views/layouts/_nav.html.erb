@@ -22,16 +22,17 @@
         </div>
       </li>
       <%= page_nav_item t(:nav_contacts), contacts_path %>
+      <!--<div class="dropdown-divider"></div>-->
       <li>
         <%= apply_now_button %>
       </li>
     </ul>
-    <!--<div class="dropdown-divider"></div>-->
     <ul class="navbar-nav justify-content-end">
       <li class="nav-item dropdown <%=navItemDropdownClassActive2%>">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_accout %></a>
         <div class="dropdown-menu" aria-labelledby="dropdown02">
           <% if user_signed_in? %>
+              <%= link_to t(:my_data), users_profile_path, class: 'dropdown-item' %>
               <%= link_to 'Выход', destroy_user_session_path, method: 'delete', class: 'dropdown-item' %>
           <% else %>
               <%= page_dropdown_item t(:nav_log_in), new_user_session_path %>
