@@ -11,9 +11,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+    user = User.last
+    MyMailer.new_registration(user).deliver_later
+  end
 
   # GET /resource/edit
   # def edit
