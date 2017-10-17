@@ -6,7 +6,7 @@ module ApplicationHelper
 
   def page_nav_item(text, path)
     temp = current_page?(path)
-    Rails.logger.info("temp #{temp}")
+    # Rails.logger.info("temp #{temp}")
     elClass = current_page?(path) ? "nav-item active" : "nav-item"
     content_tag(:li, link_to(text, path, class: "nav-link"), class: elClass)
   end
@@ -18,7 +18,7 @@ module ApplicationHelper
 
   def apply_now_button(large=false)
     cls = large ? 'btn btn-success btn-lg' : 'btn btn-success'
-    Rails.logger.info("user_signed_in? #{user_signed_in?}")
+    # Rails.logger.info("user_signed_in? #{user_signed_in?}")
     if !user_signed_in?
       return link_to('Подать заявку', new_user_registration_path, role: 'button', class: cls)
     else
