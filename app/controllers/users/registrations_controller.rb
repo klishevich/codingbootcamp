@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super
     user = User.last
-    MyMailer.new_registration(user).deliver_later
+    MyMailer.new_registration(user).deliver_now
   end
 
   # GET /resource/edit
