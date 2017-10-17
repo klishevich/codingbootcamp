@@ -10,8 +10,10 @@ module StaticPagesHelper
     link_to 'www.codingbootcamp.ru', 'http://www.codingbootcamp.ru/'
   end
 
-  def busation_email
-    link_to 'info@busation.com', 'mailto:info@busation.com'
+  def codingbootcamp_email(subject='')
+    mailto = 'mailto:info@codingbootcamp.ru'
+    mailto += "?subject=#{subject}" if (subject != '')
+    link_to 'info@codingbootcamp.ru', mailto
   end
 
   def program_info_li(lesson, video, homework, reading)
