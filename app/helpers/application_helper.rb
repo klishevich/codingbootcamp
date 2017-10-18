@@ -18,6 +18,10 @@ module ApplicationHelper
 
   def apply_now_button(large=false)
     cls = large ? 'btn btn-success btn-lg' : 'btn btn-success'
-    link_to('Подать заявку', new_user_registration_path, role: 'button', class: cls)
+    if !user_signed_in?
+      return link_to('Подать заявку', new_user_registration_path, role: 'button', class: cls)
+    else
+      return link_to(t(:my_data), users_profile_path, role: 'button', class: cls)
+    end
   end
 end
