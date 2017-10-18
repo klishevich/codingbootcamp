@@ -17,6 +17,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_action?
 
+  def auth_admin
+    if !current_user&.is_admin?
+      flash[:notice] = t(:you_are_not_admin)
+      redirect_to '/'
+    end
+  end
+
   protected
 
   def configure_permitted_parameters

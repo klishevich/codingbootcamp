@@ -1,5 +1,4 @@
 <% navItemDropdownClassActive = current_action?(['hiring_students', 'corporate_workshop', 'become_instructor']) ? "active" : "" %>
-<% navItemDropdownClassActive2 = current_action?(['devise/sessions.new', 'devise/registrations.new']) ? "active" : "" %>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="/"><%= image_tag 'logo3a.png', height: '40' %></a>
@@ -22,13 +21,24 @@
         </div>
       </li>
       <%= page_nav_item t(:nav_contacts), contacts_path %>
-      <!--<div class="dropdown-divider"></div>-->
-      <li>
-        <%= apply_now_button %>
+      <% if !user_signed_in? %>
+        <li>
+          <%= apply_now_button %>
+        </li>
+      <% end %>
+    </ul>
+    <% if current_user&.is_admin? %>
+    <ul class="navbar-nav justify-content-end">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Админ</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown02">
+          <%= link_to 'Пользователи', users_path, class: 'dropdown-item' %>
+        </div>
       </li>
     </ul>
+    <% end %>
     <ul class="navbar-nav justify-content-end">
-      <li class="nav-item dropdown <%=navItemDropdownClassActive2%>">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_accout %></a>
         <div class="dropdown-menu" aria-labelledby="dropdown02">
           <% if user_signed_in? %>

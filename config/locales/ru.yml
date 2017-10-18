@@ -301,3 +301,4 @@ ru:
   nav_log_in: 'Вход'
   nav_sign_up: 'Регистрация'
   my_data: 'Мои данные'
+  you_are_not_admin: 'У вас нет прав администратора'

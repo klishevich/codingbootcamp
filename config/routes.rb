@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
-  devise_scope :user do
-    get 'users/profile', to: 'users/registrations#show'
-  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'static_pages#home'
   get '/courses', to: 'static_pages#courses'
@@ -19,4 +17,7 @@ Rails.application.routes.draw do
   get '/hiring_students', to: 'static_pages#hiring_students'
   get '/corporate_workshop', to: 'static_pages#corporate_workshop'
   get '/become_instructor', to: 'static_pages#become_instructor'
+
+  resources :users, only: [:index]
+  get '/users/profile', to: 'users#profile'
 end
