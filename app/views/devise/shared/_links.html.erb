@@ -12,11 +12,11 @@
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "Не получили инструкцию о подтверждении?", new_confirmation_path(resource_name) %><br />
+  <%= link_to "Не получили письмо для подтверждения email?", new_confirmation_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
-  <%= link_to "Не получили инструкцию по разблокировке?", new_unlock_path(resource_name) %><br />
+  <%= link_to "Не получили письмо по разблокировке?", new_unlock_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.omniauthable? %>
