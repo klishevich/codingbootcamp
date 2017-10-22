@@ -1,5 +1,7 @@
 <% navItemDropdownClassActive = current_action?(['hiring_students', 'corporate_workshop', 'become_instructor']) ? "active" : "" %>
 
+<% navItemDropdownClassActive2 = current_action?(['program_intro_to_web', 'program_web_developer', 'program_modern_javascript']) ? "active" : "" %>
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="/"><%= image_tag 'logo3a.png', height: '40' %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,7 +10,14 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <%= page_nav_item t(:nav_home), '/' %>
-      <%= page_nav_item t(:nav_courses), courses_path %>
+      <li class="nav-item dropdown <%= navItemDropdownClassActive2 %>">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Курсы</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <%= page_dropdown_item t(:program_intro_to_web), program_intro_to_web_path %>
+          <%= page_dropdown_item t(:program_web_developer), program_web_developer_path %>
+          <%= page_dropdown_item t(:program_modern_javascript), program_modern_javascript_path %>
+        </div>
+      </li>
       <%= page_nav_item t(:nav_mentors), mentors_path %>
       <%= page_nav_item t(:nav_posts), posts_path %>
       <%= page_nav_item t(:nav_offer), offer_path %>

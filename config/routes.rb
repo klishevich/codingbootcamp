@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'static_pages#home'
-  get '/courses', to: 'static_pages#courses'
   get '/program_intro_to_web', to: 'static_pages#program_intro_to_web'
   get '/program_web_developer', to: 'static_pages#program_web_developer'
   get '/program_modern_javascript', to: 'static_pages#program_modern_javascript'
