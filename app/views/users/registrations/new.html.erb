@@ -8,14 +8,14 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :email, required: true, autofocus: true %>
-          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} символов минимум" if @minimum_password_length) %>
-          <%= f.input :password_confirmation, required: true %>
-          <%= f.input :full_name, required: true %>
-          <%= f.input :preferred_name %>
-          <%= f.input :phone, required: true %>
-          <%= f.input :city, required: true %>
-          <%= f.input :comment, required: true %>
+          <%= f.input :email, required: false, autofocus: true %>
+          <%= f.input :password, required: false, hint: ("#{@minimum_password_length} символов минимум" if @minimum_password_length) %>
+          <%= f.input :password_confirmation, required: false %>
+          <%= f.input :full_name, required: false %>
+          <%= f.input :preferred_name, required: false %>
+          <%= f.input :phone, required: false %>
+          <%= f.input :city, required: false %>
+          <%= f.input :comment, required: false %>
         </div>
 
         <div class="form-actions">
