@@ -1,6 +1,6 @@
 <h2>Регистрация</h2>
 <div class="alert alert-secondary" role="alert">
-  <div>После регистрации Вам будет оправлено письмо для подтверждения email.  Если у Вас возникли вопросы обращайтесь <%= codingbootcamp_email %></div>
+  <div>После регистрации Вам будет оправлено письмо для подтверждения email. Оплата курса производится по реквизитам указанным в п. 11 на странице <%= link_to 'Оферта', offer_path + '#rekv' %>. Если у Вас возникли вопросы обращайтесь <%= codingbootcamp_email %></div>
 </div>
 <div class="row">
   <div class="col-lg-6">
@@ -12,7 +12,7 @@
           <%= f.input :password, required: false, hint: ("#{@minimum_password_length} символов минимум" if @minimum_password_length) %>
           <%= f.input :password_confirmation, required: false %>
           <%= f.input :full_name, required: false %>
-          <%= f.input :preferred_name, required: false %>
+          <%= f.input :preferred_name, required: false, placeholder: 'не обязательное поле' %>
           <%= f.input :phone, required: false %>
           <%= f.input :city, required: false %>
           <%= f.input :comment, required: false %>
