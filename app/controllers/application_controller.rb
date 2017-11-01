@@ -24,6 +24,20 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def auth_mentor
+    if !current_user&.is_mentor?
+      flash[:notice] = t(:you_are_not_mentor)
+      redirect_to '/'
+    end
+  end
+
+  def auth_student
+    if !current_user&.is_student?
+      flash[:notice] = t(:you_are_not_student)
+      redirect_to '/'
+    end
+  end
+
   protected
 
   def configure_permitted_parameters

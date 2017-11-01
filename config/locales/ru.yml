@@ -302,3 +302,7 @@ ru:
   nav_sign_up: 'Регистрация'
   my_data: 'Мои данные'
   you_are_not_admin: 'У вас нет прав администратора'
+  you_are_not_mentor: 'У вас нет прав ментора'
+  created_successfuly: 'Успешно создано'
+  saved_successfuly: 'Успешно сохранено'
+  deleted_successfuly: 'Успешно удалено'

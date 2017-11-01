@@ -19,4 +19,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index]
   get '/users/profile', to: 'users#profile'
+
+  resources :courses do
+    resources :lessons
+  end
 end

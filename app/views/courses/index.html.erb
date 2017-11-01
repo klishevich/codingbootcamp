@@ -1,0 +1,29 @@
+<% page_title = 'Админка ментора / Список курсов' %>
+<% provide :title, page_title %>
+<% provide :breadcrumb, page_title %>
+<h2>Список курсов</h2>
+<div class="form-group">
+    <%= link_to "Создать курс", new_course_path, class: "btn btn-primary" %>
+  </div>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th><%= Course.human_attribute_name(:id) %></th>
+      <th><%= Course.human_attribute_name(:name) %></th>
+      <th><%= Course.human_attribute_name(:created_at) %></th>
+      <th><%= Course.human_attribute_name(:description) %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @courses.each do |u| %>
+        <tr>
+          <td><%= u.id %></td>
+          <td><%= link_to u.name, course_path(u) %></td>
+          <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
+          <td><%= u.description %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

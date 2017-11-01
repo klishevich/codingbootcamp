@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course: one
+  name: MyString
+  video_desc: MyText
+  task_desc: MyText
+  reading_desc: MyText
+  comment_desc: MyText
+
+two:
+  course: two
+  name: MyString
+  video_desc: MyText
+  task_desc: MyText
+  reading_desc: MyText
+  comment_desc: MyText
