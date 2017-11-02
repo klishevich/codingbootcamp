@@ -3,17 +3,17 @@
 <% provide :breadcrumb, page_title  %>
 <h2>Просмотр курса</h2>
 <div class="form-group">
-  <%= link_to "Список курсов", courses_path, class: "btn btn-primary" %>
+  <%= link_to "Список курсов", courses_path, class: "btn btn-secondary" %>
   <%= link_to "Редактировать курс", edit_course_path(@course), class: "btn btn-primary" %>
 </div>
-<div><b>Название курса</b></div>
+<div><b><%= Course.human_attribute_name(:name) %></b></div>
 <div><%= @course.name %></div>
-<div><b>Описание курса</b></div>
+<div><b><%= Course.human_attribute_name(:description) %></b></div>
 <div><%= @course.description %></div>
 <br/>
 <h3>Список уроков</h3>
 <div class="form-group">
-    <%= link_to "Создать урок (TODO)", '#', class: "btn btn-primary" %>
+    <%= link_to "Создать урок", new_course_lesson_path(@course), class: "btn btn-primary" %>
   </div>
 <div>
   <table class="table table-striped">
@@ -21,6 +21,7 @@
     <tr>
       <th><%= Lesson.human_attribute_name(:id) %></th>
       <th><%= Lesson.human_attribute_name(:name) %></th>
+      <th><%= Lesson.human_attribute_name(:comment_desc) %></th>
       <th><%= Lesson.human_attribute_name(:created_at) %></th>
     </tr>
     </thead>
@@ -29,6 +30,7 @@
         <tr>
           <td><%= u.id %></td>
           <td><%= link_to u.name, course_lesson_path(@course, u) %></td>
+          <td><%= u.comment_desc %></td>
           <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
         </tr>
     <% end %>

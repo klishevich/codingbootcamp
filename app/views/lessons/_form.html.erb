@@ -1,0 +1,21 @@
+<div>
+  <div class="form-group">
+    <%= link_to "Просмотр курса", course_path(@course), class: "btn btn-secondary" %>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <%= simple_form_for([@course, @lesson]) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :name %>
+          <%= f.input :video_desc, input_html: { rows: 7 },  hint: 'можно вводить HTML' %>
+          <%= f.input :task_desc, input_html: { rows: 7 },  hint: 'можно вводить HTML' %>
+          <%= f.input :reading_desc, input_html: { rows: 7 },  hint: 'можно вводить HTML' %>
+          <%= f.input :comment_desc %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Сохранить", class: 'btn btn-primary btn-lg' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

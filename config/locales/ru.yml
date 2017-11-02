@@ -1,24 +1,5 @@
 ---
 ru:
-  activerecord:
-    errors:
-      messages:
-        record_invalid: 'Возникли ошибки: %{errors}'
-        restrict_dependent_destroy:
-          has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
-          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
-    models:
-      user: 'Пользователь'
-    attributes:
-      user:
-        password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
-        full_name: 'ФИО'
-        preferred_name: 'Как к вам обращаться'
-        city: 'Город проживания'
-        phone: 'Телефон'
-        comment: 'Чего вы хотите'
-        remember_me: 'Запомнить меня'
   date:
     abbr_day_names:
     - Вс
@@ -277,6 +258,32 @@ ru:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: вечера
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Возникли ошибки: %{errors}'
+        restrict_dependent_destroy:
+          has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
+          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+    models:
+      user: 'Пользователь'
+      lesson: 'Урок'
+    attributes:
+      user:
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        full_name: 'ФИО'
+        preferred_name: 'Как к вам обращаться'
+        city: 'Город проживания'
+        phone: 'Телефон'
+        comment: 'Чего вы хотите'
+        remember_me: 'Запомнить меня'
+      lesson:
+        name: 'Название'
+        video_desc: 'Видео'
+        task_desc: 'Задание'
+        reading_desc: 'Список для чтения'
+        comment_desc: 'Комментарий для менторов'
   default_title: 'Boston-Moscow Coding Bootcamp'
   nav_brand: 'Coding Bootcamp'
   nav_brand_short: 'Coding Bootcamp'
