@@ -267,7 +267,9 @@ ru:
           has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
     models:
       user: 'Пользователь'
+      course: 'Курс'
       lesson: 'Урок'
+      my_course: 'Курс студента'
     attributes:
       user:
         password: 'Пароль'
@@ -284,6 +286,15 @@ ru:
         task_desc: 'Задание'
         reading_desc: 'Список для чтения'
         comment_desc: 'Комментарий для менторов'
+      my_course:
+        user_id: 'Студент'
+        course_id: 'Курс'
+        status: "Статус"
+        ref: "Источник привлечения"
+        date_start: "Дата начала курса"
+        date_end: "Дата окончания курса"
+        grade: "Оценка"
+        comment: "Комментарий"
   default_title: 'Boston-Moscow Coding Bootcamp'
   nav_brand: 'Coding Bootcamp'
   nav_brand_short: 'Coding Bootcamp'
