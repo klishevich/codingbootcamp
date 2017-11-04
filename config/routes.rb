@@ -26,4 +26,8 @@ Rails.application.routes.draw do
 
   resources :my_courses
 
+  resources :st_my_courses, only: [:index, :show]
+  # get 'st_my_courses/index'
+  # get '/st_my_courses/:id', to: 'st_my_courses#show', as: 'st_my_courses'
+
 end

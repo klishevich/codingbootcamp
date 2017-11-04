@@ -1,0 +1,24 @@
+<% page_title = 'ЛК Студента / Список моих курсов' %>
+<% provide :title, page_title %>
+<% provide :breadcrumb, page_title %>
+<h2>Список моих курсов</h2>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th><%= MyCourse.human_attribute_name(:course_id) %></th>
+      <th><%= MyCourse.human_attribute_name(:status) %></th>
+      <th><%= MyCourse.human_attribute_name(:date_start) %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @courses.each do |u| %>
+        <tr>
+          <td><%= link_to u.course.name, st_my_course_path(u) %></td>
+          <td><%= u.status %></td>
+          <td><%= u.date_start.strftime('%d.%m.%Y') %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

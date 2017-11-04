@@ -57,6 +57,16 @@
       </li>
     </ul>
     <% end %>
+    <% if current_user&.is_student? %>
+    <ul class="navbar-nav justify-content-end">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Студент</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown04">
+          <%= link_to 'Мои курсы', st_my_courses_path, class: 'dropdown-item' %>
+        </div>
+      </li>
+    </ul>
+    <% end %>
     <ul class="navbar-nav justify-content-end">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_accout %></a>

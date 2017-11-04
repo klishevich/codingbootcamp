@@ -8,11 +8,12 @@
         <div class="form-inputs">
           <%= f.association :user, label_method: :full_name, collection: User.where(is_student: true).order(:full_name), label: MyCourse.human_attribute_name(:user_id) %>
           <%= f.association :course, label: MyCourse.human_attribute_name(:course_id) %>
-          <%= f.input :status, collection: MyCourse.statuses %>
+          <%= f.input :status, collection: MyCourse.statuses.collect{|item, val| [item.humanize, item]} %>
           <%= f.input :ref %>
           <%= f.input :date_start %>
           <%= f.input :date_end %>
           <%= f.input :grade %>
+          <%= f.input :comment_for_student %>
           <%= f.input :comment %>
         </div>
         <div class="form-actions">

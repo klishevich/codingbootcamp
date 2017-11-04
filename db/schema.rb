@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20171103060359) do
     t.date "date_start"
     t.date "date_end"
     t.integer "grade"
+    t.text "comment_for_student"
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

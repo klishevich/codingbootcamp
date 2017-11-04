@@ -55,6 +55,7 @@ class MyCoursesController < ApplicationController
                                       :date_start,
                                       :date_end,
                                       :grade,
+                                      :comment_for_student,
                                       :comment)
   end
 end

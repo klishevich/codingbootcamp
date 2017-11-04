@@ -8,6 +8,7 @@ class CreateMyCourses < ActiveRecord::Migration[5.1]
       t.date :date_start
       t.date :date_end
       t.integer :grade
+      t.text :comment_for_student
       t.text :comment
 
       t.timestamps

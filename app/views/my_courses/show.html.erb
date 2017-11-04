@@ -20,6 +20,8 @@
 <div><%= @course.date_end.strftime('%d.%m.%Y') %></div>
 <div><b><%= MyCourse.human_attribute_name(:grade) %></b></div>
 <div><%= @course.grade %></div>
+<div><b><%= MyCourse.human_attribute_name(:comment_for_student) %></b></div>
+<div><%= raw(@course.comment_for_student) %></div>
 <div><b><%= MyCourse.human_attribute_name(:comment) %></b></div>
 <div><%= @course.comment %></div>
 <br/>

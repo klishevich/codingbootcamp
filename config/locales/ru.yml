@@ -294,7 +294,8 @@ ru:
         date_start: "Дата начала курса"
         date_end: "Дата окончания курса"
         grade: "Оценка"
-        comment: "Комментарий"
+        comment_for_student: "Комментарий для студента"
+        comment: "Комментарий для ментора"
   default_title: 'Boston-Moscow Coding Bootcamp'
   nav_brand: 'Coding Bootcamp'
   nav_brand_short: 'Coding Bootcamp'
