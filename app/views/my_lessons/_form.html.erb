@@ -6,7 +6,7 @@
     <div class="col-lg-6">
       <%= simple_form_for([@my_course, @my_lesson]) do |f| %>
         <div class="form-inputs">
-          <%= f.association :lesson, collection: Lesson.where(course_id: @my_course.course.id), label: MyLesson.human_attribute_name(:lesson_id) %>
+          <%= f.association :lesson, collection: Lesson.where(course_id: @my_course.course.id).order(:id), label: MyLesson.human_attribute_name(:lesson_id) %>
           <%= f.input :status, collection: MyLesson.statuses.collect{|item, val| [item.humanize, item]} %>
           <%= f.input :date_start %>
           <%= f.input :date_end %>

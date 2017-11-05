@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/hiring_students', to: 'static_pages#hiring_students'
   get '/corporate_workshop', to: 'static_pages#corporate_workshop'
   get '/become_instructor', to: 'static_pages#become_instructor'
+  get '/partner', to: 'static_pages#partner'
 
   resources :users, only: [:index]
   get '/users/profile', to: 'users#profile'

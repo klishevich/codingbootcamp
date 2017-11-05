@@ -13,5 +13,6 @@ class StaticPagesController < ApplicationController
   def hiring_students; end
   def corporate_workshop; end
   def become_instructor; end
+  def partner; end
 
 end

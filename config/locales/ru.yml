@@ -298,7 +298,7 @@ ru:
         comment: "Комментарий для ментора"
       my_lesson:
         lesson_id: 'Название урока'
-        status: 'Статус'
+        status: 'Статус урока'
         date_start: 'Дата начала'
         date_end: 'Дата окончания'
         grade: 'Оценка'
@@ -316,6 +316,7 @@ ru:
   nav_hiring_students: 'Нанять наших студентов'
   nav_corporate_workshop: 'Корпоративное обучение'
   nav_become_instructor: 'Стать ментором'
+  nav_partner: 'Партнерство'
   nav_search: 'Поиск'
   nav_lang: 'Language'
   nav_offer: 'Оферта'
