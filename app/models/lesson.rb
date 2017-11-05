@@ -1,4 +1,4 @@
 class Lesson < ApplicationRecord
   belongs_to :course
-  validates :name, presence: true
+  validates :name, :video_desc, presence: true
 end

@@ -3,7 +3,7 @@ class MyLessonsController < ApplicationController
   before_action :set_my_course, only: [:create, :new, :edit, :update, :show]
 
   def new
-    @my_lesson = MyLesson.new
+    @my_lesson = MyLesson.new(status: 0)
   end
 
   def create

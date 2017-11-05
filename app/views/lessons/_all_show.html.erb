@@ -1,13 +1,11 @@
 <div class="info-block3 lesson-show">
   <h3>Информация по уроку</h3>
-  <div><b><%= Lesson.human_attribute_name(:name) %></b></div>
-  <div><%= @lesson.name %></div>
-  <div><b><%= Lesson.human_attribute_name(:video_desc) %></b></div>
-  <div><%= raw(@lesson.video_desc) %></div>
-  <div><b><%= Lesson.human_attribute_name(:task_desc) %></b></div>
-  <div><%= raw(@lesson.task_desc) %></div>
-  <div><b><%= Lesson.human_attribute_name(:reading_desc) %></b></div>
-  <div><%= raw(@lesson.reading_desc) %></div>
-  <div><b><%= Lesson.human_attribute_name(:comment_desc) %></b></div>
-  <div><%= @lesson.comment_desc %></div>
+  <%= show_div_not_blank(Lesson.human_attribute_name(:name), @lesson.name) %>
+  <div class="show-div">
+    <div><b><%= Lesson.human_attribute_name(:video_desc) %></b></div>
+    <div><%= link_to @lesson.video_desc, @lesson.video_desc, target: "_blank" %></div>
+  </div>
+  <%= show_div_not_blank(Lesson.human_attribute_name(:task_desc), raw(@lesson.task_desc)) %>
+  <%= show_div_not_blank(Lesson.human_attribute_name(:reading_desc), raw(@lesson.reading_desc)) %>
+  <%= show_div_not_blank(Lesson.human_attribute_name(:comment_desc), @lesson.comment_desc) %>
 </div>

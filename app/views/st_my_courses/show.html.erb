@@ -5,16 +5,11 @@
 <div class="form-group">
   <%= link_to "Список курсов", st_my_courses_path, class: "btn btn-secondary" %>
 </div>
-<div><b><%= MyCourse.human_attribute_name(:course_id) %></b></div>
-<div><%= @course.course.name %></div>
-<div><b><%= MyCourse.human_attribute_name(:status) %></b></div>
-<div><%= @course.status %></div>
-<div><b><%= MyCourse.human_attribute_name(:date_start) %></b></div>
-<div><%= @course.date_start.strftime('%d.%m.%Y') %></div>
-<div><b><%= MyCourse.human_attribute_name(:date_end) %></b></div>
-<div><%= @course.date_end.strftime('%d.%m.%Y') %></div>
-<div><b><%= MyCourse.human_attribute_name(:comment_for_student) %></b></div>
-<div><%= raw(@course.comment_for_student) %></div>
+<%= show_div_not_blank MyCourse.human_attribute_name(:course_id), @course.course.name %>
+<%= show_div_not_blank MyCourse.human_attribute_name(:status), @course.status %>
+<%= show_div_not_blank MyCourse.human_attribute_name(:date_start), @course.date_start.strftime('%d.%m.%Y') %>
+<%= show_div_not_blank MyCourse.human_attribute_name(:date_end), @course.date_end.strftime('%d.%m.%Y') %>
+<%= show_div_not_blank MyCourse.human_attribute_name(:comment_for_student), raw(@course.comment_for_student) %>
 <br/>
 <div>
   <table class="table table-striped">

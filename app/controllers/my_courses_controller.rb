@@ -6,7 +6,7 @@ class MyCoursesController < ApplicationController
   end
 
   def new
-    @course = MyCourse.new
+    @course = MyCourse.new(status: 0)
   end
 
   def create
