@@ -1,0 +1,13 @@
+<div class="info-block3 lesson-show">
+  <h3>Информация по уроку</h3>
+  <div><b><%= Lesson.human_attribute_name(:name) %></b></div>
+  <div><%= @lesson.name %></div>
+  <div><b><%= Lesson.human_attribute_name(:video_desc) %></b></div>
+  <div><%= raw(@lesson.video_desc) %></div>
+  <div><b><%= Lesson.human_attribute_name(:task_desc) %></b></div>
+  <div><%= raw(@lesson.task_desc) %></div>
+  <div><b><%= Lesson.human_attribute_name(:reading_desc) %></b></div>
+  <div><%= raw(@lesson.reading_desc) %></div>
+  <div><b><%= Lesson.human_attribute_name(:comment_desc) %></b></div>
+  <div><%= @lesson.comment_desc %></div>
+</div>

@@ -16,22 +16,25 @@
 <div><b><%= MyCourse.human_attribute_name(:comment_for_student) %></b></div>
 <div><%= raw(@course.comment_for_student) %></div>
 <br/>
-<h3>Список уроков</h3>
 <div>
   <table class="table table-striped">
     <thead>
     <tr>
-      <th><%= Lesson.human_attribute_name(:name) %></th>
-      <th><%= Lesson.human_attribute_name(:comment_desc) %></th>
-      <th><%= Lesson.human_attribute_name(:created_at) %></th>
+      <th><%= MyLesson.human_attribute_name(:lesson_id) %></th>
+      <th><%= MyLesson.human_attribute_name(:status) %></th>
+      <th><%= MyLesson.human_attribute_name(:date_start) %></th>
+      <th><%= MyLesson.human_attribute_name(:comment_for_student) %></th>
     </tr>
     </thead>
     <tbody>
+    <% @lessons.each do |u| %>
         <tr>
-          <td><%= link_to 'Урок 1. Ставим Ubuntu', '#' %></td>
-          <td>Установка Убунту</td>
-          <td>07.11.2017</td>
+          <td><%= link_to u.lesson.name, st_my_course_st_my_lesson_path(@course, u) %></td>
+          <td><%= u.status %></td>
+          <td><%= u.date_start.strftime('%d.%m.%Y') %></td>
+          <td><%= short_info(u.comment_for_student) %></td>
         </tr>
+    <% end %>
     </tbody>
   </table>
 </div>

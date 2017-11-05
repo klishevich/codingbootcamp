@@ -2,7 +2,7 @@ class MyCoursesController < ApplicationController
   before_action :auth_mentor
 
   def index
-    @courses = MyCourse.all
+    @courses = MyCourse.all.order(:id)
   end
 
   def new
@@ -35,7 +35,7 @@ class MyCoursesController < ApplicationController
 
   def show
     @course = MyCourse.find(params[:id])
-    # @lessons = @course.lessons
+    @lessons = @course.my_lessons.order(:id)
   end
 
   def destroy

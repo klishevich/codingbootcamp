@@ -1,0 +1,15 @@
+<div class="info-block3 my-lesson-st-show">
+  <h3>Информация для студента</h3>
+  <div><b><%= MyCourse.human_attribute_name(:user_id) %></b></div>
+  <div><%= @my_lesson.my_course.user.full_name %></div>
+  <div><b><%= MyCourse.human_attribute_name(:course_id) %></b></div>
+  <div><%= @my_lesson.my_course.course.name %></div>
+  <div><b><%= MyLesson.human_attribute_name(:lesson_id) %></b></div>
+  <div><%= @my_lesson.lesson.name %></div>
+  <div><b><%= MyLesson.human_attribute_name(:status) %></b></div>
+  <div><%= @my_lesson.status %></div>
+  <div><b><%= MyLesson.human_attribute_name(:date_start) %></b></div>
+  <div><%= @my_lesson.date_start.strftime('%d.%m.%Y') %></div>
+  <div><b><%= MyLesson.human_attribute_name(:comment_for_student) %></b></div>
+  <div><%= raw(@my_lesson.comment_for_student) %></div>
+</div>

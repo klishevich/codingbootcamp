@@ -1,0 +1,11 @@
+<% page_title = 'Админка ментора / Просмотр курса студента / Просмотр урока' %>
+<% provide :title, page_title %>
+<% provide :breadcrumb, page_title  %>
+<h2>Просмотр урока студента</h2>
+<div class="form-group">
+  <%= link_to "Просмотр курса студента", my_course_path(@my_course), class: "btn btn-secondary" %>
+  <%= link_to "Редактировать урок студента", edit_my_course_my_lesson_path(@my_course, @my_lesson), class: "btn btn-primary" %>
+</div>
+<%= render 'st_my_lessons/st_show' %>
+<%= render 'mt_show' %>
+<%= render 'lessons/all_show' %>

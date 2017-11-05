@@ -1,0 +1,9 @@
+<% page_title = 'ЛК Студента / Просмотр курса / Просмотр урока' %>
+<% provide :title, page_title %>
+<% provide :breadcrumb, page_title  %>
+<h2>Просмотр урока студента</h2>
+<div class="form-group">
+  <%= link_to "Просмотр курса студента", st_my_course_path(@my_course), class: "btn btn-secondary" %>
+</div>
+<%= render 'st_show' %>
+<%= render 'lessons/all_show' %>

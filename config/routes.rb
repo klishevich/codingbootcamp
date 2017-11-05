@@ -24,10 +24,13 @@ Rails.application.routes.draw do
     resources :lessons
   end
 
-  resources :my_courses
+  resources :my_courses do
+    resources :my_lessons
+  end
 
-  resources :st_my_courses, only: [:index, :show]
-  # get 'st_my_courses/index'
+  resources :st_my_courses, only: [:index, :show] do
+    resources :st_my_lessons, only: [:show]
+  end
   # get '/st_my_courses/:id', to: 'st_my_courses#show', as: 'st_my_courses'
 
 end

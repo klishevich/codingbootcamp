@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103060359) do
+ActiveRecord::Schema.define(version: 20171105073523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,21 @@ ActiveRecord::Schema.define(version: 20171103060359) do
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_my_courses_on_course_id"
     t.index ["user_id"], name: "index_my_courses_on_user_id"
+  end
+
+  create_table "my_lessons", force: :cascade do |t|
+    t.bigint "my_course_id"
+    t.bigint "lesson_id"
+    t.integer "status"
+    t.date "date_start"
+    t.date "date_end"
+    t.integer "grade"
+    t.text "comment_for_student"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_my_lessons_on_lesson_id"
+    t.index ["my_course_id"], name: "index_my_lessons_on_my_course_id"
   end
 
   create_table "test_models", force: :cascade do |t|
@@ -88,4 +103,6 @@ ActiveRecord::Schema.define(version: 20171103060359) do
   add_foreign_key "lessons", "courses"
   add_foreign_key "my_courses", "courses"
   add_foreign_key "my_courses", "users"
+  add_foreign_key "my_lessons", "lessons"
+  add_foreign_key "my_lessons", "my_courses"
 end

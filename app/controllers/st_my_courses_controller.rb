@@ -7,5 +7,6 @@ class StMyCoursesController < ApplicationController
 
   def show
     @course = MyCourse.where(user_id: current_user.id).find(params[:id])
+    @lessons = @course.my_lessons.order(:id)
   end
 end
