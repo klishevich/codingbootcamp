@@ -280,12 +280,17 @@ ru:
         phone: 'Телефон'
         comment: 'Чего вы хотите'
         remember_me: 'Запомнить меня'
+      course:
+        name: 'Название'
+        created_at: 'Создан'
+        description: 'Описание'
       lesson:
         name: 'Название'
         video_desc: 'Видео'
         task_desc: 'Задание'
         reading_desc: 'Список для чтения'
         comment_desc: 'Комментарий'
+        created_at: 'Создан'
       my_course:
         user_id: 'Студент'
         course_id: 'Курс'

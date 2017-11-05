@@ -19,7 +19,7 @@
     <% @courses.each do |u| %>
         <tr>
           <td><%= link_to u.id, my_course_path(u) %></td>
-          <td><%= u.user.full_name %></td>
+          <td><%= link_to u.user.full_name, my_course_path(u) %></td>
           <td><%= u.course.name %></td>
           <td><%= u.status %></td>
         </tr>
