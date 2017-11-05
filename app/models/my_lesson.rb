@@ -5,5 +5,5 @@ class MyLesson < ApplicationRecord
 
   validates_uniqueness_of :lesson_id, scope: :my_course_id
 
-  enum status: { active: 0, closed: 1, hold: 2 }
+  enum status: { active: 0, done: 1, hold: 2 }
 end
