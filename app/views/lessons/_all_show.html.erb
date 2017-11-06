@@ -7,5 +7,6 @@
   </div>
   <%= show_div_not_blank(Lesson.human_attribute_name(:task_desc), raw(@lesson.task_desc)) %>
   <%= show_div_not_blank(Lesson.human_attribute_name(:reading_desc), raw(@lesson.reading_desc)) %>
+  <%= show_div_not_blank(Lesson.human_attribute_name(:hint), raw(@lesson.hint)) %>
   <%= show_div_not_blank(Lesson.human_attribute_name(:comment_desc), @lesson.comment_desc) %>
 </div>

@@ -291,6 +291,7 @@ ru:
         reading_desc: 'Список для чтения'
         comment_desc: 'Комментарий'
         created_at: 'Создан'
+        hint: 'Подсказка'
       my_course:
         user_id: 'Студент'
         course_id: 'Курс'
