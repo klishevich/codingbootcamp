@@ -1,7 +1,7 @@
 <div class="info-block3 my-lesson-mt-show">
   <h3>Информация для ментора</h3>
   <div><b><%= MyCourse.human_attribute_name(:user_id) %></b></div>
-  <div><%= @my_lesson.my_course.user.full_name %></div>
+  <div><%= pref_and_full_name @my_lesson.my_course.user %></div>
   <div><b><%= MyCourse.human_attribute_name(:course_id) %></b></div>
   <div><%= @my_lesson.my_course.course.name %></div>
   <div><b><%= MyLesson.human_attribute_name(:status) %></b></div>

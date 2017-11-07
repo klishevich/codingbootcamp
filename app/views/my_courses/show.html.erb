@@ -7,7 +7,7 @@
   <%= link_to "Редактировать курс", edit_my_course_path(@course), class: "btn btn-primary" %>
 </div>
 <div><b><%= MyCourse.human_attribute_name(:user_id) %></b></div>
-<div><%= @course.user.full_name %></div>
+<div><%= pref_and_full_name(@course.user) %></div>
 <div><b><%= MyCourse.human_attribute_name(:course_id) %></b></div>
 <div><%= @course.course.name %></div>
 <div><b><%= MyCourse.human_attribute_name(:status) %></b></div>

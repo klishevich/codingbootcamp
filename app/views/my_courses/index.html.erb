@@ -3,7 +3,7 @@
 <% provide :breadcrumb, page_title %>
 <h2>Список курсов студентов</h2>
 <div class="form-group">
-    <%= link_to "Создать курс", new_my_course_path, class: "btn btn-primary" %>
+    <%= link_to "Открыть курс студенту", new_my_course_path, class: "btn btn-primary" %>
   </div>
 <div>
   <table class="table table-striped">
@@ -19,7 +19,7 @@
     <% @courses.each do |u| %>
         <tr>
           <td><%= link_to u.id, my_course_path(u) %></td>
-          <td><%= link_to u.user.full_name, my_course_path(u) %></td>
+          <td><%= pref_and_full_name_link(u.user, my_course_path(u)) %></td>
           <td><%= u.course.name %></td>
           <td><%= u.status %></td>
         </tr>

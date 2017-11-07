@@ -275,10 +275,10 @@ ru:
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
         full_name: 'ФИО'
-        preferred_name: 'Как к вам обращаться'
+        preferred_name: 'Как к Вам обращаться'
         city: 'Город проживания'
         phone: 'Телефон'
-        comment: 'Чего вы хотите'
+        comment: 'Чего Вы хотите'
         remember_me: 'Запомнить меня'
       course:
         name: 'Название'
