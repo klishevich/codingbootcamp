@@ -3,8 +3,8 @@
 <% provide :breadcrumb, page_title  %>
 <h2>Просмотр курса студента</h2>
 <div class="form-group">
-  <%= link_to "Список курсов", my_courses_path, class: "btn btn-secondary" %>
-  <%= link_to "Редактировать курс", edit_my_course_path(@course), class: "btn btn-primary" %>
+  <%= link_to "Список курсов студентов", my_courses_path, class: "btn btn-secondary" %>
+  <%= link_to "Редактировать курс студента", edit_my_course_path(@course), class: "btn btn-primary" %>
 </div>
 <div><b><%= MyCourse.human_attribute_name(:user_id) %></b></div>
 <div><%= pref_and_full_name(@course.user) %></div>
