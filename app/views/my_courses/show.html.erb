@@ -8,6 +8,10 @@
 </div>
 <div><b><%= MyCourse.human_attribute_name(:user_id) %></b></div>
 <div><%= pref_and_full_name(@course.user) %></div>
+<div><b><%= User.human_attribute_name(:email) %></b></div>
+<div><%= link_to @course.user.email, "mailto:#{@course.user.email}?subject=Codingbootcamp" %></div>
+<div><b><%= User.human_attribute_name(:phone) %></b></div>
+<div><%= @course.user.phone %></div>
 <div><b><%= MyCourse.human_attribute_name(:course_id) %></b></div>
 <div><%= @course.course.name %></div>
 <div><b><%= MyCourse.human_attribute_name(:status) %></b></div>
