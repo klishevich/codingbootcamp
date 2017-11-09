@@ -13,6 +13,7 @@
       <th><%= MyCourse.human_attribute_name(:user_id) %></th>
       <th><%= MyCourse.human_attribute_name(:course_id) %></th>
       <th><%= MyCourse.human_attribute_name(:status) %></th>
+      <th>Текущий урок</th>
     </tr>
     </thead>
     <tbody>
@@ -22,6 +23,7 @@
           <td><%= pref_and_full_name_link(u.user, my_course_path(u)) %></td>
           <td><%= u.course.name %></td>
           <td><%= u.status %></td>
+          <td><%= u.my_lessons.last&.lesson&.name %></td>
         </tr>
     <% end %>
     </tbody>

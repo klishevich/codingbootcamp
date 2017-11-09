@@ -7,6 +7,6 @@ class StMyCoursesController < ApplicationController
 
   def show
     @course = MyCourse.where(user_id: current_user.id).find(params[:id])
-    @lessons = @course.my_lessons.order(:id)
+    @lessons = @course.my_lessons.where.not(status: [:hold]).order(:lesson_id)
   end
 end
