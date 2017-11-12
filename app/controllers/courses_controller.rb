@@ -35,7 +35,7 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
-    @lessons = @course.lessons
+    @lessons = @course.lessons.order(:id)
   end
 
   def destroy
