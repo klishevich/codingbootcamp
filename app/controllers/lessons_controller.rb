@@ -1,5 +1,6 @@
 class LessonsController < ApplicationController
-  before_action :auth_mentor
+  before_action :auth_mentor_view, only: [:show]
+  before_action :auth_mentor, except: [:show]
   before_action :set_course, only: [:create, :new, :edit, :update, :show]
 
   def new

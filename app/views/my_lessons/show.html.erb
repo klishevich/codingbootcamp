@@ -4,7 +4,9 @@
 <h2>Просмотр урока студента</h2>
 <div class="form-group">
   <%= link_to "Просмотр курса студента", my_course_path(@my_course), class: "btn btn-secondary" %>
+  <% if current_user&.is_mentor? %>
   <%= link_to "Редактировать урок студента", edit_my_course_my_lesson_path(@my_course, @my_lesson), class: "btn btn-primary" %>
+  <% end %>
 </div>
 <%= render 'st_my_lessons/st_show' %>
 <%= render 'mt_show' %>

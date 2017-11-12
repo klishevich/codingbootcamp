@@ -1,5 +1,6 @@
 class MyCoursesController < ApplicationController
-  before_action :auth_mentor
+  before_action :auth_mentor_view, only: [:index, :show]
+  before_action :auth_mentor, except: [:index, :show]
 
   def index
     @courses = MyCourse.all.order(:id)

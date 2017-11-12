@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   validates :full_name, :preferred_name, :phone, :city, :comment, presence: true
 
+  def mentor?
+    self.is_mentor? || self.is_mentor_view?
+  end
+
 end

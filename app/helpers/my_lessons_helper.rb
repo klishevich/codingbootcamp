@@ -2,10 +2,10 @@ module MyLessonsHelper
   def short_info(text)
     if text.blank?
       return ''
-    elsif text.length <= 10
+    elsif text.length <= 20
       return text
     else
-      return "#{text[0..10]} ..."
+      return "#{text[0..20]} ..."
     end
   end
 

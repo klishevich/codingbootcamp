@@ -4,7 +4,9 @@
 <h2>Просмотр курса</h2>
 <div class="form-group">
   <%= link_to "Список курсов", courses_path, class: "btn btn-secondary" %>
+  <% if current_user&.is_mentor? %>
   <%= link_to "Редактировать курс", edit_course_path(@course), class: "btn btn-primary" %>
+  <% end %>
 </div>
 <div><b><%= Course.human_attribute_name(:name) %></b></div>
 <div><%= @course.name %></div>
@@ -12,9 +14,11 @@
 <div><%= @course.description %></div>
 <br/>
 <h3>Список уроков</h3>
+<% if current_user&.is_mentor? %>
 <div class="form-group">
-    <%= link_to "Создать урок", new_course_lesson_path(@course), class: "btn btn-primary" %>
-  </div>
+  <%= link_to "Создать урок", new_course_lesson_path(@course), class: "btn btn-primary" %>
+</div>
+<% end %>
 <div>
   <table class="table table-striped">
     <thead>

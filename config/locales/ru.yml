@@ -289,7 +289,7 @@ ru:
         video_desc: 'Видео'
         task_desc: 'Задание'
         reading_desc: 'Список для чтения'
-        comment_desc: 'Комментарий'
+        comment_desc: 'Комментарий по уроку'
         created_at: 'Создан'
         hint: 'Подсказка'
       my_course:
@@ -336,7 +336,8 @@ ru:
   nav_sign_up: 'Регистрация'
   my_data: 'Мои данные'
   you_are_not_admin: 'У вас нет прав администратора'
-  you_are_not_mentor: 'У вас нет прав ментора'
+  you_are_not_mentor: 'У вас нет прав ментора для редактирования'
+  you_are_not_mentor_view: 'У вас нет прав ментора'
   created_successfuly: 'Успешно создано'
   saved_successfuly: 'Успешно сохранено'
   deleted_successfuly: 'Успешно удалено'

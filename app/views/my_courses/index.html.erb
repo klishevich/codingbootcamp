@@ -2,9 +2,11 @@
 <% provide :title, page_title %>
 <% provide :breadcrumb, page_title %>
 <h2>Список курсов студентов</h2>
+<% if current_user&.is_mentor? %>
 <div class="form-group">
-    <%= link_to "Открыть курс студенту", new_my_course_path, class: "btn btn-primary" %>
-  </div>
+  <%= link_to "Открыть курс студенту", new_my_course_path, class: "btn btn-primary" %>
+</div>
+<% end %>
 <div>
   <table class="table table-striped">
     <thead>
