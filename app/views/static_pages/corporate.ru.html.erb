@@ -1,0 +1,20 @@
+<% provide :title, 'Партнерство для работодателей IT-компаний по обучению веб-разработчиков' %>
+<% provide :description, "#{t(:default_title)} предлагает партнерскую программу для IT-компаний по обучению веб-разработчиков (HTML, CSS, JavaScript, React, Node.js, Java, DevOps)" %>
+<% provide(:keywords, "партнерство, it, компании, веб-разработка, html, css, javascript, react, nodejs, java, devops") %>
+<div class="program-block">
+  <h1><%=t :nav_corporate %></h1>
+  <div class="row">
+    <div class="col-lg-6">
+      <%= image_tag "it.jpg", class: "img-fluid", alt: "Партнерство для IT-компаний обучение", title: "Партнерство для IT-компаний обучение" %>
+    </div>
+  </div>
+  <br/>
+  <p><b><%= t(:default_title) %></b> проводит профессиональные обучающие курсы по веб-разработке (<b>HTML, CSS, JavaScript, React, Node.js, Java, DevOps</b>). Курсы проводятся 100% дистанционно практикующими экспертами.</p>
+  <div><b>Возможны следующие виды сотрудничества</b>:</div>
+  <ol>
+    <li>Подготовка специалистов с последующим устройством на работу</li>
+    <li>Обучение / переобучение работающих специалистов</li>
+    <li>Проведение мастер-классов</li>
+  </ol>
+  <p>Напишите нам <%= codingbootcamp_email('Corporate') %></p>
+</div>

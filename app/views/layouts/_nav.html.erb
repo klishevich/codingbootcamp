@@ -1,4 +1,4 @@
-<% navItemDropdownClassActive = current_action?(['hiring_students', 'corporate_workshop', 'become_instructor', 'partner']) ? "active" : "" %>
+<% navItemDropdownClassActive = current_action?(['corporate', 'instructor', 'partner']) ? "active" : "" %>
 
 <% navItemDropdownClassActive2 = current_action?(['program_intro_to_web', 'program_web_developer', 'program_modern_javascript']) ? "active" : "" %>
 
@@ -24,10 +24,9 @@
       <li class="nav-item dropdown <%=navItemDropdownClassActive%>">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=t :nav_business %></a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <%= page_dropdown_item t(:nav_instructor), instructor_path %>
           <%= page_dropdown_item t(:nav_partner), partner_path %>
-          <%= page_dropdown_item t(:nav_become_instructor), become_instructor_path %>
-          <%= page_dropdown_item t(:nav_hiring_students), hiring_students_path %>
-          <%= page_dropdown_item t(:nav_corporate_workshop), corporate_workshop_path %>
+          <%= page_dropdown_item t(:nav_corporate), corporate_path %>
         </div>
       </li>
       <%= page_nav_item t(:nav_contacts), contacts_path %>

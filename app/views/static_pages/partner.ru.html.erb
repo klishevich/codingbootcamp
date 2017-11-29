@@ -1,5 +1,20 @@
-<div class="partner-block">
+<% provide :title, 'Партнерство для ВУЗов и коллеждей курс веб-разработка' %>
+<% provide :description, "#{t(:default_title)} предлагает партнерскую программу для ВУЗов и коллеждей по курсу веб-разработка (HTML, CSS, JavaScript, React, Node.js, Java, DevOps)" %>
+<% provide(:keywords, "партнерство, вуз, колледж, веб-разработка, html, css, javascript, react, nodejs, java, devops") %>
+<div class="program-block">
   <h1><%=t :nav_partner %></h1>
-  <p>Приглашаем к партнерству. Отдаем 30% за привлечение учащихся на курс.</p>
-  <p>Напишите нам <%= codingbootcamp_email('Become Partner') %></p>
+  <div class="row">
+    <div class="col-lg-6">
+      <%= image_tag "handshake.jpg", class: "img-fluid", alt: "Партнерство для ВУЗов веб-разработка", title: "Партнерство для ВУЗов веб-разработка" %>
+    </div>
+  </div>
+  <br/>
+  <p><b><%= t(:default_title) %></b> предлагает <b>партнерскую программу для ВУЗов и коллеждей</b> по обучению веб-разработке (<b>HTML, CSS, JavaScript, React, Node.js, Java, DevOps</b>). С трудоустройством успешных выпускников на работу в компании города Москвы.</p>
+  <div>Условия программы:</div>
+  <ol>
+    <li>Вы набираете группу студентов от <b>10 человек</b></li>
+    <li>Студенты должны быть <b>учащимися последнего курса</b> (техническая специальность)</li>
+    <li>За каждого учащегося, оплатившего курс, мы <b>возвращаем вам партнерскую скидку в размере 25%</b> от стоимости курса</li>
+  </ol>
+  <p>Напишите нам <%= codingbootcamp_email('Partner University') %></p>
 </div>

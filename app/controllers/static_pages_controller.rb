@@ -10,9 +10,8 @@ class StaticPagesController < ApplicationController
   def offer; end
   def posts; end
   def post1; end
-  def hiring_students; end
-  def corporate_workshop; end
-  def become_instructor; end
+  def corporate; end
+  def instructor; end
   def partner; end
 
 end
