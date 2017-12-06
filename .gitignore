@@ -26,3 +26,4 @@
 /config/application.yml
 .idea/
 lib/capistrano/
+.DS_Store
