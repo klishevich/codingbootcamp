@@ -53,6 +53,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdown03">
           <%= link_to 'Курсы', courses_path, class: 'dropdown-item' %>
           <%= link_to 'Курсы студентов', my_courses_path, class: 'dropdown-item' %>
+          <%= link_to 'Активные студенты', "#{my_courses_path}?s=active", class: 'dropdown-item' %>
         </div>
       </li>
     </ul>

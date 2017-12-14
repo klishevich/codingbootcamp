@@ -3,7 +3,8 @@ class MyCoursesController < ApplicationController
   before_action :auth_mentor, except: [:index, :show]
 
   def index
-    @courses = MyCourse.all.order(:id)
+    s = params[:s]
+    @courses = (s == 'active') ? MyCourse.where(status: [:active]).order(:id) : MyCourse.all.order(:id)
   end
 
   def new

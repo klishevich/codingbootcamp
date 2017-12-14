@@ -26,7 +26,7 @@
           <td><%= pref_and_full_name_link(u.user, my_course_path(u)) %></td>
           <td><%= u.course.name %></td>
           <td><%= u.status %></td>
-          <td><%= u.my_lessons.last&.lesson&.name %></td>
+          <td><%= link_to_last_lesson(u) %></td>
           <td><%= u.ref %></td>
         </tr>
     <% end %>
