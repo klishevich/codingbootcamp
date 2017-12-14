@@ -36,24 +36,25 @@
         </li>
       <% end %>
     </ul>
-    <% if current_user&.is_admin? %>
-    <ul class="navbar-nav justify-content-end">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Админ</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown02">
-          <%= link_to 'Пользователи', users_path, class: 'dropdown-item' %>
-        </div>
-      </li>
-    </ul>
-    <% end %>
     <% if current_user&.mentor? %>
     <ul class="navbar-nav justify-content-end">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ментор</a>
         <div class="dropdown-menu" aria-labelledby="dropdown03">
           <%= link_to 'Курсы', courses_path, class: 'dropdown-item' %>
+          <%= link_to 'Последний курс', last_course_helper_path, class: 'dropdown-item' %>
           <%= link_to 'Курсы студентов', my_courses_path, class: 'dropdown-item' %>
           <%= link_to 'Активные студенты', "#{my_courses_path}?s=active", class: 'dropdown-item' %>
+        </div>
+      </li>
+    </ul>
+    <% end %>
+    <% if current_user&.is_admin? %>
+    <ul class="navbar-nav justify-content-end">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Админ</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown02">
+          <%= link_to 'Пользователи', users_path, class: 'dropdown-item' %>
         </div>
       </li>
     </ul>
