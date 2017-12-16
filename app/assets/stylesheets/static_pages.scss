@@ -20,6 +20,7 @@ body {
 }
 
 .course-block {
+  margin-top: 3.6rem;
   text-align: left;
   h2 {
     text-align: center;
@@ -29,9 +30,10 @@ body {
   .intro {
     margin-bottom: 1.2rem;
   }
-  .center-text {
-    text-align: center;
-  }
+}
+
+.center-text {
+  text-align: center;
 }
 
 .program-block {
@@ -109,4 +111,8 @@ body {
 
 .show-div {
   margin-top: 0.6rem;
+}
+
+.course-date {
+  font-size: 1rem;
 }
