@@ -310,6 +310,12 @@ ru:
         grade: 'Оценка'
         comment_for_student: 'Комментарий для студента'
         comment: 'Комментарий для ментора'
+      certificate:
+        student: 'Получатель'
+        course_title: 'Успешно прошел курс'
+        course_desc: 'Описание курса'
+        mentors: 'Преподаватели'
+        issue_date: 'Дата выдачи'
   default_title: 'Boston-Moscow Coding Bootcamp'
   nav_brand: 'Coding Bootcamp'
   nav_brand_short: 'Coding Bootcamp'

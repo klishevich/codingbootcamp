@@ -1,0 +1,26 @@
+<% page_title = 'Админка ментора / Список сертификатов' %>
+<% provide :title, page_title %>
+<% provide :breadcrumb, page_title %>
+<h2>Список сертификатов</h2>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th><%= Certificate.human_attribute_name(:id) %></th>
+      <th><%= Certificate.human_attribute_name(:student) %></th>
+      <th><%= Certificate.human_attribute_name(:course_title) %></th>
+      <th><%= Certificate.human_attribute_name(:issue_date) %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @certificates.each do |c| %>
+        <tr>
+          <td><%= link_to c.id, certificate_path(c) %></td>
+          <td><%= c.student %></td>
+          <td><%= c.course_title %></td>
+          <td><%= c.issue_date.strftime('%d.%m.%Y') %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

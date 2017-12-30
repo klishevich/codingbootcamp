@@ -1,0 +1,30 @@
+<% page_title = @certificate.student + ' - держатель сертификата CodingBootcamp.ru' %>
+<% provide :title, page_title %>
+<% provide :breadcrumb, page_title  %>
+<% provide :keywords, page_title  %>
+<% current_url = request.original_url %>
+<div class="container">
+  <div class="certificate-logo">
+    <div class="certificate-logo__logo">
+      <%= image_tag 'logo3a.png', height: '80' %>
+    </div>
+    <div class="certificate-logo__text">
+      <div>CodingBootcamp.ru</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Сертификат</h1>
+      <%= show_div_not_blank(Certificate.human_attribute_name(:student), @certificate.student) %>
+      <%= show_div_not_blank(Certificate.human_attribute_name(:course_title), @certificate.course_title) %>
+      <%= show_div_not_blank(Certificate.human_attribute_name(:course_desc), @certificate.course_desc) %>
+      <%= show_div_not_blank(Certificate.human_attribute_name(:mentors), @certificate.mentors) %>
+      <%= show_div_not_blank(Certificate.human_attribute_name(:issue_date), @certificate.issue_date.strftime('%d.%m.%Y')) %>
+      <div class="certificate-social">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<%= current_url %>" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/share?url=<%= current_url %>" class="fa fa-twitter"></a>
+        <a href="https://vkontakte.ru/share.php?url=<%= current_url %>" class="fa fa-vk"></a>
+      </div>
+    </div>
+  </div>
+</div>

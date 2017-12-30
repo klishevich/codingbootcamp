@@ -33,4 +33,6 @@ Rails.application.routes.draw do
   end
   # get '/st_my_courses/:id', to: 'st_my_courses#show', as: 'st_my_courses'
 
+  resources :certificates, only: [:index, :show]
+
 end

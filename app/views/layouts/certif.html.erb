@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Michael Klishevich">
+    <title><%= content_for?(:title) ? yield(:title) : t(:default_title) %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t(:default_title) %>">
+    <meta name="keywords" content="<%= content_for?(:keywords) ? yield(:keywords) : t(:default_title) %>">
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <%= yield %>
+    <%= render 'layouts/analytics_scripts' %>
+  </body>
+</html>
