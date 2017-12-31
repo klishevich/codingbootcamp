@@ -1,20 +1,32 @@
-.certificate-logo {
-  display: flex;
-  margin-bottom: 30px;
+.certificate-body {
+  padding-top: 1rem;
 }
 
-.certificate-logo__logo {
+.certificate-logo-block {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.certificate-logo-block__logo {
   width: 80px;
 }
 
-.certificate-logo__text {
+.certificate-logo-block__logo img {
+  height: 80px;
+}
+
+.certificate-logo-block__text {
   width: 300px;
 }
 
-.certificate-logo__text div{
+.certificate-logo-block__text div {
   font-size: 24px;
   margin-left: 10px;
   margin-top: 20px;
+}
+
+.certificate-info {
+  margin-bottom: 1rem;
 }
 
 // .certificate-social {
