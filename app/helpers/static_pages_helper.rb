@@ -7,7 +7,7 @@ module StaticPagesHelper
   end
 
   def codingbootcamp_site
-    link_to 'www.codingbootcamp.ru', 'http://www.codingbootcamp.ru/'
+    link_to 'www.codingbootcamp.ru', 'https://www.codingbootcamp.ru/'
   end
 
   def codingbootcamp_email(subject='')

@@ -91,8 +91,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.ru_website_url = 'http://www.codingbootcamp.ru/'
-  config.en_website_url = 'http://en.codingbootcamp.ru/'
+  config.ru_website_url = 'https://www.codingbootcamp.ru/'
+  config.en_website_url = 'https://en.codingbootcamp.ru/'
 
   config.action_mailer.default_url_options = { host: 'www.codingbootcamp.ru' }
   config.action_mailer.perform_deliveries = true
