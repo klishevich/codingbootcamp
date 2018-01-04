@@ -30,9 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  default_title: 'Boston-Moscow Coding Bootcamp'
-  nav_brand: 'Coding Bootcamp'
-  nav_brand_short: 'Coding Bootcamp'
+  default_title: 'Coding Bootcamp Ru'
+  nav_brand: 'Coding Bootcamp Ru'
+  nav_brand_short: 'Coding Bootcamp Ru'
   nav_home: 'Bootcamp'
   nav_mentors: 'Mentors'
   nav_faq: 'FAQ'
