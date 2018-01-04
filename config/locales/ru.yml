@@ -311,7 +311,7 @@ ru:
         comment_for_student: 'Комментарий для студента'
         comment: 'Комментарий для ментора'
       certificate:
-        student: 'Получатель'
+        student: 'Ученик'
         course_title: 'Успешно прошел курс'
         course_desc: 'Описание курса'
         mentors: 'Преподаватели'
