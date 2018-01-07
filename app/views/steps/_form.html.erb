@@ -1,0 +1,20 @@
+<div>
+  <div class="form-group">
+    <%= link_to "Просмотр урока", course_lesson_path(@course, @lesson), class: "btn btn-secondary" %>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <%= simple_form_for([@course, @lesson, @step]) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :name %>
+          <%= f.input :video_link, input_html: { rows: 2 }, hint: 'ссылка на видео' %>
+          <%= f.input :desc, input_html: { rows: 7 },  hint: 'можно вводить HTML' %>
+          <%= f.input :step_type, collection: Step.step_types.collect{|item, val| [item.humanize, item]} %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Сохранить", class: 'btn btn-primary btn-lg' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

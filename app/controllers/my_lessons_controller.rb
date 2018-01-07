@@ -10,6 +10,7 @@ class MyLessonsController < ApplicationController
   def create
     @my_lesson = @my_course.my_lessons.build(my_lesson_params)
     if @my_lesson.save
+      create_my_steps
       flash[:notice] = t(:created_successfuly)
       redirect_to my_course_my_lesson_path(@my_course, @my_lesson)
     else
@@ -49,4 +50,13 @@ class MyLessonsController < ApplicationController
                                       :comment_for_student,
                                       :comment)
   end
+
+  private
+
+  def create_my_steps
+    @my_lesson.lesson.steps.each do |s|
+      MyStep.create(my_lesson: @my_lesson, step: s)
+    end
+  end
+
 end

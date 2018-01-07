@@ -292,6 +292,11 @@ ru:
         comment_desc: 'Комментарий по уроку'
         created_at: 'Создан'
         hint: 'Подсказка'
+      step:
+        name: 'Название'
+        video_link: 'Видео'
+        desc: 'Описание'
+        step_type: 'Тип шага'
       my_course:
         user_id: 'Студент'
         course_id: 'Курс'

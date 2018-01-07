@@ -21,7 +21,9 @@ Rails.application.routes.draw do
   get '/users/profile', to: 'users#profile'
 
   resources :courses do
-    resources :lessons
+    resources :lessons do
+      resources :steps
+    end
   end
 
   resources :my_courses do
@@ -29,7 +31,9 @@ Rails.application.routes.draw do
   end
 
   resources :st_my_courses, only: [:index, :show] do
-    resources :st_my_lessons, only: [:show]
+    resources :st_my_lessons, only: [:show] do
+      resources :st_my_steps, only: [:show]
+    end
   end
   # get '/st_my_courses/:id', to: 'st_my_courses#show', as: 'st_my_courses'
 

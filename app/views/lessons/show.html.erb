@@ -9,3 +9,32 @@
   <% end %>
 </div>
 <%= render 'all_show' %>
+<br/>
+<h3>Список шагов</h3>
+<% if current_user&.is_mentor? %>
+<div class="form-group">
+  <%= link_to "Создать шаг", new_course_lesson_step_path(@course, @lesson), class: "btn btn-primary" %>
+</div>
+<% end %>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th><%= Step.human_attribute_name(:id) %></th>
+      <th><%= Step.human_attribute_name(:name) %></th>
+      <th><%= Step.human_attribute_name(:video_link) %></th>
+      <th><%= Step.human_attribute_name(:step_type) %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @lesson.steps.each do |s| %>
+        <tr>
+          <td><%= s.id %></td>
+          <td><%= link_to s.name, course_lesson_step_path(@course, @lesson, s) %></td>
+          <td><%= link_to s.video_link, s.video_link, target: '_blank' %></td>
+          <td><%= s.step_type %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
