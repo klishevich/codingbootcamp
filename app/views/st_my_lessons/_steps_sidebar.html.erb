@@ -1,0 +1,25 @@
+<div class="col-lg-3 bd-sidebar">
+  <nav class="bd-links">
+    <div class="bd-toc-item">
+      <h3>План урока</h3>
+      <ul class="nav bd-sidenav">
+        <% @steps_sidebar_menu.each do |e| %>
+          <% elClass = e[:active] ? 'bd-sidenav-active' : '' %>
+          <%
+            element = case e[:img_type]
+            when 'info'
+              image_tag('icons8-information-64.png', height: '30px') + link_to(e[:name], e[:link])
+            when 'video'
+              image_tag('icons8-YouTube-64.png', height: '30px') + link_to(e[:name], e[:link])
+            when 'text'
+              image_tag('icons8-OpenBook-64.png', height: '30px') + link_to(e[:name], e[:link])
+            else
+              link_to(e[:name], e[:link])
+            end
+          %>
+          <%= content_tag(:li, element, class: elClass) %>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171230213202) do
+ActiveRecord::Schema.define(version: 20180107182449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,27 @@ ActiveRecord::Schema.define(version: 20171230213202) do
     t.index ["my_course_id"], name: "index_my_lessons_on_my_course_id"
   end
 
+  create_table "my_steps", force: :cascade do |t|
+    t.bigint "my_lesson_id"
+    t.bigint "step_id"
+    t.boolean "is_new", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["my_lesson_id"], name: "index_my_steps_on_my_lesson_id"
+    t.index ["step_id"], name: "index_my_steps_on_step_id"
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.bigint "lesson_id"
+    t.string "name"
+    t.string "video_link"
+    t.text "desc"
+    t.integer "step_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_steps_on_lesson_id"
+  end
+
   create_table "test_models", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -117,4 +138,7 @@ ActiveRecord::Schema.define(version: 20171230213202) do
   add_foreign_key "my_courses", "users"
   add_foreign_key "my_lessons", "lessons"
   add_foreign_key "my_lessons", "my_courses"
+  add_foreign_key "my_steps", "my_lessons"
+  add_foreign_key "my_steps", "steps"
+  add_foreign_key "steps", "lessons"
 end

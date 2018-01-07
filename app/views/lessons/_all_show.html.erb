@@ -1,10 +1,12 @@
 <div class="info-block3 lesson-show">
-  <h3>Информация по уроку</h3>
+  <h3>Описание урока</h3>
   <%= show_div_not_blank(Lesson.human_attribute_name(:name), @lesson.name) %>
-  <div class="show-div">
-    <div><b><%= Lesson.human_attribute_name(:video_desc) %></b></div>
-    <div><%= link_to @lesson.video_desc, @lesson.video_desc, target: "_blank" %></div>
-  </div>
+  <% if !@lesson.video_desc.blank? %>
+    <div class="show-div">
+      <div><b><%= Lesson.human_attribute_name(:video_desc) %></b></div>
+      <div><%= link_to @lesson.video_desc, @lesson.video_desc, target: "_blank" %></div>
+    </div>
+  <% end %>
   <%= show_div_not_blank(Lesson.human_attribute_name(:task_desc), raw(@lesson.task_desc)) %>
   <%= show_div_not_blank(Lesson.human_attribute_name(:reading_desc), raw(@lesson.reading_desc)) %>
   <%= show_div_not_blank(Lesson.human_attribute_name(:hint), raw(@lesson.hint)) %>
