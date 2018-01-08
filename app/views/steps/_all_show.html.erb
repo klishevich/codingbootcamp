@@ -3,7 +3,7 @@
   <% if !@step.video_link.blank? %>
     <div class="show-div">
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/kZ1Rmwd4Hjg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src='https://www.youtube.com/embed/<%=@step.video_link %>' frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
   <% end %>

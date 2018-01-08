@@ -294,7 +294,7 @@ ru:
         hint: 'Подсказка'
       step:
         name: 'Название'
-        video_link: 'Видео'
+        video_link: 'YouTube video ID'
         desc: 'Описание'
         step_type: 'Тип шага'
       my_course:

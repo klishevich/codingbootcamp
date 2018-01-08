@@ -31,7 +31,7 @@
         <tr>
           <td><%= s.id %></td>
           <td><%= link_to s.name, course_lesson_step_path(@course, @lesson, s) %></td>
-          <td><%= link_to s.video_link, s.video_link, target: '_blank' %></td>
+          <td><%= s.video_link %></td>
           <td><%= s.step_type %></td>
         </tr>
     <% end %>
