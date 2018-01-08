@@ -6,7 +6,6 @@ module ApplicationHelper
 
   def page_nav_item(text, path)
     temp = current_page?(path)
-    # Rails.logger.info("temp #{temp}")
     elClass = current_page?(path) ? "nav-item active" : "nav-item"
     content_tag(:li, link_to(text, path, class: "nav-link"), class: elClass)
   end
