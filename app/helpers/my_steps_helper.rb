@@ -8,7 +8,7 @@ module MyStepsHelper
     content_tag(:ul, class: 'nav bd-sidenav') do
       all_li = lesson_li
       my_steps.each do |s|
-        step_li_el_img = case s.step.step_type.to_i
+        step_li_el_img = case s.step.step_type_before_type_cast
         when Step.step_types[:video]
           image_tag('icons8-YouTube-64.png', height: '30px')
         when Step.step_types[:text]
