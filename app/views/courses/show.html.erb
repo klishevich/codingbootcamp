@@ -1,7 +1,6 @@
 <% page_title = 'Админка ментора / Просмотр курса' %>
 <% provide :title, page_title %>
 <% provide :breadcrumb, page_title  %>
-<h2>Просмотр курса</h2>
 <div class="form-group">
   <%= link_to "Список курсов", courses_path, class: "btn btn-secondary" %>
   <% if current_user&.is_mentor? %>
@@ -13,7 +12,6 @@
 <div><b><%= Course.human_attribute_name(:description) %></b></div>
 <div><%= @course.description %></div>
 <br/>
-<h3>Список уроков</h3>
 <% if current_user&.is_mentor? %>
 <div class="form-group">
   <%= link_to "Создать урок", new_course_lesson_path(@course), class: "btn btn-primary" %>

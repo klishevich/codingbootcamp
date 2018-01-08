@@ -285,7 +285,7 @@ ru:
         created_at: 'Создан'
         description: 'Описание'
       lesson:
-        name: 'Название'
+        name: 'Название урока'
         video_desc: 'Видео'
         task_desc: 'Задание'
         reading_desc: 'Список для чтения'
@@ -294,7 +294,7 @@ ru:
         hint: 'Подсказка'
       step:
         name: 'Название'
-        video_link: 'YouTube video ID'
+        video_link: 'Видео'
         desc: 'Описание'
         step_type: 'Тип шага'
       my_course:
@@ -302,14 +302,14 @@ ru:
         course_id: 'Курс'
         status: "Статус"
         ref: "Источник привлечения"
-        date_start: "Дата начала курса"
-        date_end: "Дата окончания курса"
+        date_start: "Дата начала"
+        date_end: "Дата окончания"
         grade: "Оценка"
-        comment_for_student: "Комментарий для студента"
+        comment_for_student: "Комментарий"
         comment: "Комментарий для ментора"
       my_lesson:
         lesson_id: 'Название урока'
-        status: 'Статус урока'
+        status: 'Статус'
         date_start: 'Дата начала'
         date_end: 'Дата окончания'
         grade: 'Оценка'

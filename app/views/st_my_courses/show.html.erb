@@ -1,37 +1,45 @@
 <% page_title = 'ЛК Студента / Просмотр курса' %>
 <% provide :title, page_title %>
 <% provide :breadcrumb, page_title  %>
-<h2>Просмотр курса</h2>
-<div class="form-group">
-  <%= link_to "Список курсов", st_my_courses_path, class: "btn btn-secondary" %>
-</div>
-<%= show_div_not_blank MyCourse.human_attribute_name(:course_id), @course.course.name %>
-<%= show_div_not_blank MyCourse.human_attribute_name(:status), @course.status %>
-<%= show_div_not_blank MyCourse.human_attribute_name(:date_start), @course.date_start.strftime('%d.%m.%Y') %>
-<%= show_div_not_blank MyCourse.human_attribute_name(:date_end), @course.date_end.strftime('%d.%m.%Y') %>
-<%= show_div_not_blank MyCourse.human_attribute_name(:comment_for_student), raw(@course.comment_for_student) %>
-<br/>
-<div>
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th><%= MyLesson.human_attribute_name(:lesson_id) %></th>
-      <th><%= MyLesson.human_attribute_name(:status) %></th>
-      <th><%= MyLesson.human_attribute_name(:date_start) %></th>
-      <th><%= Lesson.human_attribute_name(:comment_desc) %></th>
-      <th><%= MyLesson.human_attribute_name(:comment_for_student) %></th>
-    </tr>
-    </thead>
-    <tbody>
-    <% @lessons.each do |u| %>
+<div class="row">
+  <div class="col-lg-3">
+    <div class="bd-sidebar">
+      <div class="info-block3 my-lesson-st-show">
+        <h3>О курсе</h3>
+        <%= show_div_not_blank Course.human_attribute_name(:name), @course.course.name %>
+        <%= show_div_not_blank MyCourse.human_attribute_name(:status), @course.status %>
+        <%= show_div_not_blank MyCourse.human_attribute_name(:date_start), @course.date_start.strftime('%d.%m.%Y') %>
+        <%= show_div_not_blank MyCourse.human_attribute_name(:date_end), @course.date_end.strftime('%d.%m.%Y') %>
+        <%= show_div_not_blank MyCourse.human_attribute_name(:comment_for_student), raw(@course.comment_for_student) %>
+      </div>
+      <div class="form-group info-block3">
+        <%= link_to "Список курсов", st_my_courses_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-9">
+    <div class="info-block3">
+      <h1>Список уроков</h1>
+      <table class="table">
+        <thead>
         <tr>
-          <td><%= link_to u.lesson.name, st_my_course_st_my_lesson_path(@course, u) %></td>
-          <td><%= u.status %></td>
-          <td><%= u.date_start.strftime('%d.%m.%Y') %></td>
-          <td><%= short_info(u.lesson.comment_desc) %></td>
-          <td><%= short_info(u.comment_for_student) %></td>
+          <th><%= MyLesson.human_attribute_name(:lesson_id) %></th>
+          <th><%= MyLesson.human_attribute_name(:status) %></th>
+          <th><%= Lesson.human_attribute_name(:comment_desc) %></th>
+          <th><%= MyLesson.human_attribute_name(:comment_for_student) %></th>
         </tr>
-    <% end %>
-    </tbody>
-  </table>
+        </thead>
+        <tbody>
+        <% @lessons.each do |u| %>
+            <tr>
+              <td><%= link_to u.lesson.name, st_my_course_st_my_lesson_path(@course, u) %></td>
+              <td><%= u.status %></td>
+              <td><%= short_info(u.lesson.comment_desc) %></td>
+              <td><%= short_info(u.comment_for_student) %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

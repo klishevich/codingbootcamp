@@ -23,4 +23,26 @@ module ApplicationHelper
       return link_to(t(:my_data), users_profile_path, role: 'button', class: cls)
     end
   end
+
+  def markdown(text)
+    options = {
+      link_attributes: { target: "_blank" }
+    }
+
+    renderer = Redcarpet::Render::HTML.new(options)
+
+    extensions = {
+      autolink: true,
+      fenced_code_blocks: true,
+      disable_indented_code_blocks: true,
+      tables: true,
+      strikethrough: true,
+      # lax_spacing: true,
+      # underline: true,
+      highlight: true
+    }
+
+    markdown = Redcarpet::Markdown.new(renderer, extensions)
+    content_tag(:div, markdown.render(text).html_safe, class: 'markdown-body')
+  end
 end

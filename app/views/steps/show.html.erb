@@ -1,7 +1,6 @@
 <% page_title = 'Админка ментора / Просмотр курса / Просмотр урока / Просмотр шага' %>
 <% provide :title, page_title %>
 <% provide :breadcrumb, page_title  %>
-<h2>Просмотр шага</h2>
 <div class="form-group">
   <%= link_to "Просмотр урока", course_lesson_path(@course, @lesson), class: "btn btn-secondary" %>
   <% if current_user&.is_mentor? %>
