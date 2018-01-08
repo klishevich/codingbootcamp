@@ -1,5 +1,5 @@
 <div class="info-block3 lesson-show">
-  <h3><%= @step.name %></h3>
+  <h1><%= @step.name %></h1>
   <% if !@step.video_link.blank? %>
     <div class="show-div">
       <div class="embed-responsive embed-responsive-16by9">
@@ -8,8 +8,5 @@
     </div>
   <% end %>
   <br/>
-  <div>
-    <%= raw(@step.desc) %>
-  </div>
-  <%= show_div_not_blank(Step.human_attribute_name(:step_type), @step.step_type) %>
+  <%= markdown(@step.desc) %>
 </div>

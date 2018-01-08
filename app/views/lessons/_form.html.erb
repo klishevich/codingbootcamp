@@ -7,11 +7,11 @@
       <%= simple_form_for([@course, @lesson]) do |f| %>
         <div class="form-inputs">
           <%= f.input :name %>
-          <%= f.input :video_desc, input_html: { rows: 2 }, hint: 'ссылка на видео' %>
-          <%= f.input :task_desc, input_html: { rows: 7 },  hint: 'можно вводить HTML' %>
-          <%= f.input :reading_desc, input_html: { rows: 7 },  hint: 'можно вводить HTML' %>
-          <%= f.input :hint, input_html: { rows: 7 },  hint: 'можно вводить HTML' %>
+          <%= f.input :task_desc, input_html: { rows: 21 },  hint: 'можно вводить Markdown' %>
           <%= f.input :comment_desc %>
+          <%= f.input :video_desc, input_html: { rows: 1 }, hint: 'ссылка на видео, в новых не используем' %>
+          <%= f.input :reading_desc, input_html: { rows: 1 },  hint: 'можно вводить HTML, в новых не используем' %>
+          <%= f.input :hint, input_html: { rows: 1 },  hint: 'можно вводить HTML, в новых не используем' %>
         </div>
         <div class="form-actions">
           <%= f.button :submit, "Сохранить", class: 'btn btn-primary btn-lg' %>

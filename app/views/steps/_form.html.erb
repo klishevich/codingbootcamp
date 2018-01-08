@@ -7,9 +7,9 @@
       <%= simple_form_for([@course, @lesson, @step]) do |f| %>
         <div class="form-inputs">
           <%= f.input :name %>
-          <%= f.input :video_link, input_html: { rows: 2 }, hint: 'ссылка на видео' %>
-          <%= f.input :desc, input_html: { rows: 7 },  hint: 'можно вводить HTML' %>
           <%= f.input :step_type, collection: Step.step_types.collect{|item, val| [item.humanize, item]} %>
+          <%= f.input :video_link, input_html: { rows: 2 }, hint: 'код YouTube видео' %>
+          <%= f.input :desc, input_html: { rows: 21 },  hint: 'можно вводить Markdown' %>
         </div>
         <div class="form-actions">
           <%= f.button :submit, "Сохранить", class: 'btn btn-primary btn-lg' %>

@@ -1,16 +1,15 @@
 <% page_title = 'Админка ментора / Просмотр курса / Просмотр урока' %>
 <% provide :title, page_title %>
 <% provide :breadcrumb, page_title  %>
-<h2>Просмотр урока</h2>
 <div class="form-group">
   <%= link_to "Просмотр курса", course_path(@course), class: "btn btn-secondary" %>
   <% if current_user&.is_mentor? %>
   <%= link_to "Редактировать урок", edit_course_lesson_path(@course, @lesson), class: "btn btn-primary" %>
   <% end %>
 </div>
+<%= show_div_not_blank(Lesson.human_attribute_name(:comment_desc), @lesson.comment_desc) %>
 <%= render 'all_show' %>
 <br/>
-<h3>Список шагов</h3>
 <% if current_user&.is_mentor? %>
 <div class="form-group">
   <%= link_to "Создать шаг", new_course_lesson_step_path(@course, @lesson), class: "btn btn-primary" %>

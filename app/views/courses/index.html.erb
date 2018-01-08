@@ -1,7 +1,6 @@
 <% page_title = 'Админка ментора / Список курсов' %>
 <% provide :title, page_title %>
 <% provide :breadcrumb, page_title %>
-<h2>Список курсов</h2>
 <% if current_user&.is_mentor? %>
 <div class="form-group">
   <%= link_to "Создать курс", new_course_path, class: "btn btn-primary" %>
