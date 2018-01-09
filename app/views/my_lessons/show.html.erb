@@ -8,48 +8,53 @@
   <%= link_to "Редактировать урок", edit_my_course_my_lesson_path(@my_course, @my_lesson), class: "btn btn-primary" %>
   <% end %>
 </div>
-<%= render 'mt_show' %>
-<%= render 'lessons/all_show' %>
-<br/>
 <div class="row">
-  <div class="col-lg-6">
-    <h3>Шаги урока</h3>
-    <div>
-      <table class="table table-striped">
-        <thead>
-        <tr>
-          <th><%= Step.human_attribute_name(:name) %></th>
-          <th><%= Step.human_attribute_name(:step_type) %></th>
-        </tr>
-        </thead>
-        <tbody>
-        <% @steps.each do |s| %>
-            <tr>
-              <td><%= s.name %></td>
-              <td><%= s.step_type %></td>
-            </tr>
-        <% end %>
-        </tbody>
-      </table>
-    </div>
+  <div class="col-lg-3">
+    <%= render 'mt_show' %>
   </div>
-  <div class="col-lg-6">
-    <h3>Шаги урока студента</h3>
-    <div>
-      <table class="table table-striped">
-        <thead>
-        <tr>
-          <th><%= Step.human_attribute_name(:name) %></th>
-        </tr>
-        </thead>
-        <tbody>
-        <% @my_steps.each do |s| %>
+  <div class="col-lg-9">
+    <div class="row">
+      <div class="col-lg-7">
+        <h3>Шаги урока</h3>
+        <div>
+          <table class="table table-striped">
+            <thead>
             <tr>
-              <td><%= s.step.name %></td>
+              <th><%= Step.human_attribute_name(:name) %></th>
+              <th><%= Step.human_attribute_name(:step_type) %></th>
             </tr>
-        <% end %>
-        </tbody>
-      </table>
+            </thead>
+            <tbody>
+            <% @steps.each do |s| %>
+                <tr>
+                  <td><%= s.name %></td>
+                  <td><%= s.step_type %></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h3>Шаги урока студента</h3>
+        <div>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th><%= Step.human_attribute_name(:name) %></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @my_steps.each do |s| %>
+                <tr>
+                  <td><%= s.step.name %></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
+    <%= render 'lessons/all_show' %>
   </div>
 </div>

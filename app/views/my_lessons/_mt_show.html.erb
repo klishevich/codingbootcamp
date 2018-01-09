@@ -1,19 +1,12 @@
 <div class="info-block3 my-lesson-mt-show">
-  <h3>Информация для ментора</h3>
-  <div><b><%= MyCourse.human_attribute_name(:user_id) %></b></div>
-  <div><%= pref_and_full_name @my_lesson.my_course.user %></div>
-  <div><b><%= MyCourse.human_attribute_name(:course_id) %></b></div>
-  <div><%= @my_lesson.my_course.course.name %></div>
-  <div><b><%= MyLesson.human_attribute_name(:status) %></b></div>
-  <div><%= @my_lesson.status %></div>
-  <div><b><%= MyLesson.human_attribute_name(:date_start) %></b></div>
-  <div><%= @my_lesson.date_start.strftime('%d.%m.%Y') %></div>
-  <div><b><%= MyLesson.human_attribute_name(:date_end) %></b></div>
-  <div><%= @my_lesson.date_end.strftime('%d.%m.%Y') %></div>
-  <div><b><%= MyLesson.human_attribute_name(:grade) %></b></div>
-  <div><%= @my_lesson.grade %></div>
-  <div><b><%= MyLesson.human_attribute_name(:comment) %></b></div>
-  <div><%= @my_lesson.comment %></div>
-  <div><b><%= MyLesson.human_attribute_name(:comment_for_student) %></b></div>
-  <div><%= @my_lesson.comment_for_student %></div>
+  <%= show_div_not_blank(Course.human_attribute_name(:name), @my_course.course.name) %>
+  <%= show_div_not_blank(Lesson.human_attribute_name(:name), @my_lesson.lesson.name) %>
+  <%= show_div_not_blank(MyCourse.human_attribute_name(:user_id), @my_course.user.preferred_name) %>
+  <%= show_div_not_blank(User.human_attribute_name(:full_name), @my_course.user.full_name) %>
+  <%= show_div_not_blank(MyLesson.human_attribute_name(:status), @my_lesson.status) %>
+  <%= show_div_not_blank(MyLesson.human_attribute_name(:date_start), @my_lesson.date_start.strftime('%d.%m.%Y')) %>
+  <%= show_div_not_blank(MyLesson.human_attribute_name(:date_end), @my_lesson.date_end.strftime('%d.%m.%Y')) %>
+  <%= show_div_not_blank(MyLesson.human_attribute_name(:grade), @my_lesson.grade) %>
+  <%= show_div_not_blank(MyLesson.human_attribute_name(:comment), @my_lesson.comment) %>
+  <%= show_div_not_blank(MyLesson.human_attribute_name(:comment_for_student), @my_lesson.comment_for_student) %>
 </div>
