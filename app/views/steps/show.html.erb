@@ -7,4 +7,13 @@
   <%= link_to "Редактировать шаг", edit_course_lesson_step_path(@course, @lesson, @step), class: "btn btn-primary" %>
   <% end %>
 </div>
-<%= render 'all_show' %>
+<div class="row">
+  <div class="col-lg-3">
+    <%= show_div_not_blank(Lesson.human_attribute_name(:name), @step.lesson.name) %>
+    <%= show_div_not_blank(Lesson.human_attribute_name(:comment_desc), @step.lesson.comment_desc) %>
+    <%= show_div_not_blank(Step.human_attribute_name(:name), @step.name) %>
+  </div>
+  <div class="col-lg-9">
+    <%= render 'all_show' %>
+  </div>
+</div>

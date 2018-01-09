@@ -3,11 +3,53 @@
 <% provide :breadcrumb, page_title  %>
 <h2>Просмотр урока студента</h2>
 <div class="form-group">
-  <%= link_to "Просмотр курса студента", my_course_path(@my_course), class: "btn btn-secondary" %>
+  <%= link_to "Просмотр курса", my_course_path(@my_course), class: "btn btn-secondary" %>
   <% if current_user&.is_mentor? %>
-  <%= link_to "Редактировать урок студента", edit_my_course_my_lesson_path(@my_course, @my_lesson), class: "btn btn-primary" %>
+  <%= link_to "Редактировать урок", edit_my_course_my_lesson_path(@my_course, @my_lesson), class: "btn btn-primary" %>
   <% end %>
 </div>
-<%= render 'st_my_lessons/st_show' %>
 <%= render 'mt_show' %>
 <%= render 'lessons/all_show' %>
+<br/>
+<div class="row">
+  <div class="col-lg-6">
+    <h3>Шаги урока</h3>
+    <div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th><%= Step.human_attribute_name(:name) %></th>
+          <th><%= Step.human_attribute_name(:step_type) %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @steps.each do |s| %>
+            <tr>
+              <td><%= s.name %></td>
+              <td><%= s.step_type %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <h3>Шаги урока студента</h3>
+    <div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th><%= Step.human_attribute_name(:name) %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @my_steps.each do |s| %>
+            <tr>
+              <td><%= s.step.name %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

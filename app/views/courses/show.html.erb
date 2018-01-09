@@ -7,35 +7,36 @@
   <%= link_to "Редактировать курс", edit_course_path(@course), class: "btn btn-primary" %>
   <% end %>
 </div>
-<div><b><%= Course.human_attribute_name(:name) %></b></div>
-<div><%= @course.name %></div>
-<div><b><%= Course.human_attribute_name(:description) %></b></div>
-<div><%= @course.description %></div>
-<br/>
-<% if current_user&.is_mentor? %>
-<div class="form-group">
-  <%= link_to "Создать урок", new_course_lesson_path(@course), class: "btn btn-primary" %>
-</div>
-<% end %>
-<div>
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th><%= Lesson.human_attribute_name(:id) %></th>
-      <th><%= Lesson.human_attribute_name(:name) %></th>
-      <th><%= Lesson.human_attribute_name(:comment_desc) %></th>
-      <th><%= Lesson.human_attribute_name(:created_at) %></th>
-    </tr>
-    </thead>
-    <tbody>
-    <% @lessons.each do |u| %>
-        <tr>
-          <td><%= u.id %></td>
-          <td><%= link_to u.name, course_lesson_path(@course, u) %></td>
-          <td><%= u.comment_desc %></td>
-          <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
-        </tr>
+<div class="row">
+  <div class="col-lg-3">
+    <%= show_div_not_blank(Course.human_attribute_name(:name), @course.name) %>
+    <%= show_div_not_blank(Course.human_attribute_name(:description), @course.description) %>
+  </div>
+  <div class="col-lg-9">
+    <% if current_user&.is_mentor? %>
+    <div class="form-group">
+      <%= link_to "Создать урок", new_course_lesson_path(@course), class: "btn btn-primary" %>
+    </div>
     <% end %>
-    </tbody>
-  </table>
+    <div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th><%= Lesson.human_attribute_name(:name) %></th>
+          <th><%= Lesson.human_attribute_name(:comment_desc) %></th>
+          <th><%= Lesson.human_attribute_name(:created_at) %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @lessons.each do |u| %>
+            <tr>
+              <td><%= link_to u.name, course_lesson_path(@course, u) %></td>
+              <td><%= u.comment_desc %></td>
+              <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

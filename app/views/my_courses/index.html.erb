@@ -11,7 +11,6 @@
   <table class="table table-striped">
     <thead>
     <tr>
-      <th><%= MyCourse.human_attribute_name(:id) %></th>
       <th><%= MyCourse.human_attribute_name(:user_id) %></th>
       <th><%= MyCourse.human_attribute_name(:course_id) %></th>
       <th><%= MyCourse.human_attribute_name(:status) %></th>
@@ -22,7 +21,6 @@
     <tbody>
     <% @courses.each do |u| %>
         <tr>
-          <td><%= link_to u.id, my_course_path(u) %></td>
           <td><%= pref_and_full_name_link(u.user, my_course_path(u)) %></td>
           <td><%= u.course.name %></td>
           <td><%= u.status %></td>

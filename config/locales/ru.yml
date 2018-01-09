@@ -281,7 +281,7 @@ ru:
         comment: 'Чего Вы хотите'
         remember_me: 'Запомнить меня'
       course:
-        name: 'Название'
+        name: 'Название курса'
         created_at: 'Создан'
         description: 'Описание'
       lesson:
@@ -293,7 +293,7 @@ ru:
         created_at: 'Создан'
         hint: 'Подсказка'
       step:
-        name: 'Название'
+        name: 'Название шага'
         video_link: 'Видео'
         desc: 'Описание'
         step_type: 'Тип шага'

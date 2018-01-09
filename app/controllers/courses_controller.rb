@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
   before_action :auth_mentor, except: [:index, :show]
 
   def index
-    @courses = Course.all
+    @courses = Course.all.order(:id)
   end
 
   def new

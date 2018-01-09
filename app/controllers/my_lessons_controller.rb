@@ -35,6 +35,8 @@ class MyLessonsController < ApplicationController
   def show
     @my_lesson = MyLesson.find(params[:id])
     @lesson = @my_lesson.lesson
+    @steps = @lesson.steps.order(:id)
+    @my_steps = @my_lesson.my_steps.order(:id)
   end
 
   def set_my_course
