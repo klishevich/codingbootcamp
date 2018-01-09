@@ -317,7 +317,7 @@ ru:
         comment: 'Комментарий для ментора'
       certificate:
         student: 'Ученик'
-        course_title: 'Успешно прошел курс'
+        course_title: 'Успешно пройден курс'
         course_desc: 'Описание курса'
         mentors: 'Преподаватели'
         issue_date: 'Дата выдачи'
