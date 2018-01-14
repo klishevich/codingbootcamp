@@ -5,7 +5,9 @@
     <meta name="author" content="Michael Klishevich">
     <title><%= content_for?(:title) ? yield(:title) : t(:default_title) %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t(:default_title) %>">
-    <meta name="keywords" content="<%= content_for?(:keywords) ? yield(:keywords) : t(:default_title) %>">
+    <% if content_for?(:keywords) %>
+      <meta name="keywords" content="<%= yield(:keywords) %>">
+    <% end %>
     <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
