@@ -3,113 +3,67 @@
 <% provide(:keywords, "курс, react, node.js, javascript") %>
 <div class="program-block">
   <h1>Программа курса <%= t(:program_modern_javascript) %></h1>
-  <h5><span class="badge badge-primary">Module 2</span> <%= t(:program_modern_javascript) %> <span class="badge badge-success">9 weeks</span></h5>
+  <h5><span class="badge badge-primary">Module 2</span> <%= t(:program_modern_javascript) %> <span class="badge badge-success">15 недель</span></h5>
   <ol>
-    <li>What is Node.js <span class="badge badge-success">2 hours</span>
+    <%= program_info_li 'Знакомство с Node.js',
+                        'Установка Node.js и NPM, Знакомство с операторами и синтаксисом ES6+ (let, const, import, export, package.json, template literals, map, iterrate object, arrow functions, destructuring assignment)',
+                        'Создать новый проект и выполнить задание с использованием вышеперечисленных операторов',
+                        'Читать про ES6+' %>
+    <%= program_info_li 'Webpack',
+                        'Установка и настройка Webpack (loaders json, jsx, css, jpg), транспайлер Babel.js и ES5, webpack-dev-server',
+                        'Создать проект, настроить Webpack, написать код простой странички на ES6 и чтобы она работала в браузере',
+                        'Читать про Webpack' %>
+    <%= program_info_li 'Express Server и Mongo DB',
+                        'Установка и настройка сервера Express. Подключение Mongo DB. Реализация обработки GET, POST, PUT, PATCH запросов с сохранение в Mongo DB',
+                        'Установить и настроить свой Express Server, Mongo и сделать REST API для одной модели',
+                        'Читать про Express' %>
+    <%= program_info_li 'React',
+                        'Подключение React. JSX. Передача данных через props. Интерактивные компоненты. Инструменты разработчика. Работа со state. Функциональные компоненты. React Lifecycle',
+                        'Сделать свой проект на React',
+                        'Читать про React' %>
+    <%= program_info_li 'React Router',
+                        'Подключение React Router. Навигация между страницами. Передача параметра :id',
+                        'Сделать несколько страниц: страница список, страница создания элемента, страница просмотра элемента',
+                        'Читать про React Router' %>
+    <%= program_info_li 'Material UI',
+                        'Подключение Material-UI к проекту. Использование библиотеки, обзор компонент',
+                        'Сделать свой проект красивым с Material-UI',
+                        'Читать про Material UI' %>
+    <%= program_info_li 'Redux',
+                        'Установка и подключение Redux. Концепция однонаправленного потока данных. Actions, Reducers, Store. Использование с React. Async Actions, Middleware, Usage with React Router',
+                        'Сделать CRUD функциональность с React и Redux',
+                        'Читать про Redux' %>
+    <%= program_info_li 'Components, Containers и структура State',
+                        'Понятие умных и глупых компонент. Структура state в Redux. О том когда сохранять в state данные',
+                        'Добавить еще одну модель. Разделить компоненты на умные и глупые. Сделать рефакторинг state',
+                        'Читать про умные и глупые компоненты' %>
+    <%= program_info_li 'Redux Form',
+                        'Настройка и работа с Redux Form. Sync and Async validations',
+                        'Переписать имеющиеся формы на Redux Form',
+                        'Читать Redux Form API' %>
+    <%= program_info_li 'Оптимизируем Webpack и сервер',
+                        'ESLint, Server Side Rendering, разбиваем на Chunk, Pre commit hooks',
+                        'Настраиваем у себя все это хозяйство',
+                        'Читать про Webpack' %>
+    <%= program_info_li 'Jest тестирование',
+                        'Настраиваем Jest, тестируем функции, компоненты, настраиваем хуки на запуск тестов перед коммитом',
+                        'Настроить у себя тесты и написать 3 теста',
+                        'Читать про Jest' %>
+    <%= program_info_li 'JWT Authentication',
+                        'Реализовываем на сервере возможность аутентификации с использованием JWT. Дорабатываем клиента, для использования JWT аутентификации.',
+                        'Включить аутентификацию у себя в проекте',
+                        'Читать про JWT' %>
+    <%= program_info_li 'Развертывание на сервере',
+                        'Скрипт для автоматического обновления приложения на сервере. Работа с PM2.',
+                        'Развернуть свой проект на сервере',
+                        'Читать про PM2' %>
+    <%= program_info_li 'Глубокий JS',
+                        'React и HOC, Promises, Async Await, Decorators',
+                        'Сделать задание на использование вышеперечисленного',
+                        'Читать по теме' %>
+    <li><b>Персональный проект</b>
       <ul>
-        <li>Install NPM, Node</li>
-        <li>EcmaScript 6+</li>
-        <li>Node REPL</li>
-        <li>Webpack</li>
-        <li>React alternatives: Angular 2, Vue, Meteor, Ember</li>
-        <li><span class="badge badge-warning">Homework</span>: Create a new node.js project. Play around with node</li>
-      </ul>
-    </li>
-    <li>Integrate React with backend API <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li>Setting up Webpack</li>
-        <li>ES6 modules, import, export</li>
-        <li>Dynamic page with React example</li>
-        <li><span class="badge badge-warning">Homework</span>: Create an editable grid page with React: Webpack, ES6+</li>
-      </ul>
-    </li>
-    <li>Redux <span class="badge badge-success">3 hours</span>
-      <ul>
-        <li>Why use Redux</li>
-        <li>Redux alternatives</li>
-        <li>Dynamic page with Redux example</li>
-        <li>Redux Thunk Middleware: Redux Thunk</li>
-        <li><span class="badge badge-warning">Homework</span>: Create an editable grid page with React and Redux</li>
-      </ul>
-    </li>
-    <li>Single Page Application SPA <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li>Create a new JavaScript project, add essential dependancies, Webpack, React, Redux, React Router</li>
-        <li><span class="badge badge-warning">Home task</span>: Create a personal project with Webpack, React, Redux, React Router and couple of pages</li>
-      </ul>
-    </li>
-    <li>Running the create-react-app for a new project <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li>Project structure</li>
-        <li>Start up scripts</li>
-        <li>Adding Redux and React Router</li>
-        <li>Grid Page</li>
-        <li><span class="badge badge-warning">Homework</span>: Continue where you started during the lecture - create a page and Edit the  page. Routing</li>
-      </ul>
-    </li>
-    <li>What it takes to be a Webpack Engineer! <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li>Assets, Loaders, npm scripts</li>
-        <li>Dev and productions configurations</li>
-        <li>Start with mocks</li>
-        <li><span class="badge badge-warning">Homework</span>: Set up webpack from scratch</li>
-      </ul>
-    </li>
-    <li>Productivity: ESLint, mocks with nock <span class="badge badge-success">1 hour</span>
-      <ul>
-        <li><span class="badge badge-warning">Homework</span>: Set up personal eslintrc.js, play around with different code styles</li>
-      </ul>
-    </li>
-    <li>Testing Application: Jest, Karma <span class="badge badge-success">3 hours</span>
-      <ul>
-        <li>Testing functions</li>
-        <li>Testing components</li>
-        <li>Integration tests</li>
-        <li><span class="badge badge-warning">Homework</span>: Full coverage for your project</li>
-      </ul>
-    </li>
-    <li>Authentication for SPA <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li>Understanding of authentication and authorisation</li>
-        <li>JWT authentication</li>
-        <li><span class="badge badge-warning">Homework</span>: Create a new project and add JWT authentication with existing Rails backend</li>
-      </ul>
-    </li>
-    <li>Node.js Express server <span class="badge badge-success">4 hours</span>
-      <ul>
-        <li>Purpose of node.js server</li>
-        <li>Add services and mocks to node.js server</li>
-        <li>Adding business logic to node.js server</li>
-        <li>Authentication on server usage</li>
-        <li><span class="badge badge-warning">Homework</span>: Create an application with Express server connected to Postgres database and CRUD UI</li>
-      </ul>
-    </li>
-    <li>Google Firebase <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li>What is Firebase and when you should use it</li>
-        <li>Firebase as backend for SPA usage</li>
-        <li><span class="badge badge-warning">Homework</span>: Replace Postgres with Firebase</li>
-      </ul>
-    </li>
-    <li>Setting Up Production server <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li>Nginx, Express</li>
-        <li><span class="badge badge-warning">Homework</span>: Set up production environment for your node.js project with assets</li>
-      </ul>
-    </li>
-    <li>Continuous deployment of node.js application with Jenkins / Travis CI <span class="badge badge-success">2 hours</span>
-      <ul>
-        <li><span class="badge badge-warning">Homework</span>: Deploy your node.js application with Jenkins</li>
-      </ul>
-    </li>
-    <li>Personal project <span class="badge badge-danger">Coursework</span> <span class="badge badge-success">4 hours</span>
-      <ul>
-        <li>Get professional advice while working on your personal project!</li>
-      </ul>
-    </li>
-    <li>Team project 3 members in each team <span class="badge badge-danger">Coursework</span> <span class="badge badge-success">4 hours</span>
-      <ul>
-        <li>Get professional advice while working on team projects!</li>
+        <li>Сделать личный проект</li>
       </ul>
     </li>
   </ol>
