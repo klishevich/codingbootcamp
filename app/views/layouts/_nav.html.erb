@@ -1,6 +1,6 @@
 <% navItemDropdownClassActive = current_action?(['corporate', 'instructor', 'partner']) ? "active" : "" %>
 
-<% navItemDropdownClassActive2 = current_action?(['program_intro_to_web', 'program_web_developer', 'program_modern_javascript']) ? "active" : "" %>
+<% navItemDropdownClassActive2 = current_action?(['program_intro_to_web', 'program_modern_javascript']) ? "active" : "" %>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="/"><%= image_tag 'logo3a.png', height: '40' %></a>
@@ -15,7 +15,6 @@
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <%= page_dropdown_item t(:program_intro_to_web), program_intro_to_web_path %>
           <%= page_dropdown_item t(:program_modern_javascript), program_modern_javascript_path %>
-          <%= page_dropdown_item t(:program_web_developer), program_web_developer_path %>
         </div>
       </li>
       <%= page_nav_item t(:nav_mentors), mentors_path %>

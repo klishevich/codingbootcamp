@@ -2,8 +2,19 @@
 <% provide :description, "Программа курса: React, Node.js, Webpack, React Router, Middlewares, Material UI, Redux, Components and Containers, CRUD, Form validation, Testing with Jest, Express Server, Mongo DB, JWT authentication, PM2" %>
 <% provide(:keywords, "курс, react, node.js, javascript") %>
 <div class="program-block">
-  <h1>Программа курса <%= t(:program_modern_javascript) %></h1>
-  <h5><span class="badge badge-primary">Module 2</span> <%= t(:program_modern_javascript) %> <span class="badge badge-success">15 недель</span></h5>
+  <h1>Курс <%= t(:program_modern_javascript) %></h1>
+  <div class="alert alert-success program-block__goals" role="alert">
+    <h4 class="alert-heading">Цели данного курса</h4>
+    <ol>
+      <li>Дать практические навыки для профессиональной frontend разработки на React, Redux</li>
+      <li>Дать навыки достаточные для создание REST API на Node.js, Express, MongoDB</li>
+      <li>Узнать современный JavaScript - ECMAScript 6+</li>
+    </ol>
+    <div><b>Стоимость обучения</b>: 30 000 руб</div>
+  </div>
+  <div>Учебный курс представляет собой <b>14 видео-уроков</b>. После каждого видео-урока дается <b>практическое задание</b>, которое проверяется наставником и <b>материалы для чтения</b>. Если у наставника есть замечания, то ученик должен их исправить, чтобы получить доступ к следующему уроку. В течение курса необходимо будет выполнить <b>Персональный проект</b>. Ученику дается <b>16 недель для прохождения</b> всего курса. По окончанию этого срока проверка заданий и консультации наставника прекращаются. Необходимо планировать примерно <b>8 часов в неделю</b> для прохождения курса.</div>
+
+  <h5><span class="badge badge-primary">Module 2</span> <%= t(:program_modern_javascript) %> <span class="badge badge-success">16 недель</span></h5>
   <ol>
     <%= program_info_li 'Знакомство с Node.js',
                         'Установка Node.js и NPM, Знакомство с операторами и синтаксисом ES6+ (let, const, import, export, package.json, template literals, map, iterrate object, arrow functions, destructuring assignment)',
