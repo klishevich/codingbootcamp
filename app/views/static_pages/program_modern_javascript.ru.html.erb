@@ -1,6 +1,15 @@
-<% provide :title, "Курс #{t(:program_modern_javascript)} от #{t(:default_title)}" %>
-<% provide :description, "Программа курса: React, Node.js, Webpack, React Router, Middlewares, Material UI, Redux, Components and Containers, CRUD, Form validation, Testing with Jest, Express Server, Mongo DB, JWT authentication, PM2" %>
-<% provide(:keywords, "курс, react, node.js, javascript") %>
+<% base_title = "Курс #{t(:program_modern_javascript)} от #{t(:default_title)}" %>
+<% base_description = "Курс Современный JavaScript содержит следующие уроки: React, Node.js, Webpack, React Router, Middlewares, Material UI, Redux, Components and Containers, CRUD, Form validation, Testing with Jest, Express Server, MongoDB, JWT authentication, PM2. Друзья записывайтесь на курс!" %>
+<% base_image_url = asset_url('_IMG_6425_rect.jpg') %>
+<% provide(:title, base_title) %>
+<% provide(:description, base_description) %>
+<% provide(:og_title, base_title) %>
+<% provide(:og_description, base_description) %>
+<% provide(:og_image, base_image_url) %>
+<% provide(:twitter_title, base_title) %>
+<% provide(:twitter_description, base_description) %>
+<% provide(:twitter_image, base_image_url) %>
+
 <div class="program-block">
   <h1>Курс <%= t(:program_modern_javascript) %></h1>
   <div class="alert alert-success program-block__goals" role="alert">
@@ -17,16 +26,16 @@
   <h5><span class="badge badge-primary">Module 2</span> <%= t(:program_modern_javascript) %> <span class="badge badge-success">16 недель</span></h5>
   <ol>
     <%= program_info_li 'Знакомство с Node.js',
-                        'Установка Node.js и NPM, Знакомство с операторами и синтаксисом ES6+ (let, const, import, export, package.json, template literals, map, iterrate object, arrow functions, destructuring assignment)',
+                        'Установка Node.js и NPM, Знакомство с операторами и синтаксисом ES6+ (let, const, import, export, package.json, template literals, map, iterate object, arrow functions, destructuring assignment)',
                         'Создать новый проект и выполнить задание с использованием вышеперечисленных операторов',
                         'Читать про ES6+' %>
     <%= program_info_li 'Webpack',
                         'Установка и настройка Webpack (loaders json, jsx, css, jpg), транспайлер Babel.js и ES5, webpack-dev-server',
                         'Создать проект, настроить Webpack, написать код простой странички на ES6 и чтобы она работала в браузере',
                         'Читать про Webpack' %>
-    <%= program_info_li 'Express Server и Mongo DB',
-                        'Установка и настройка сервера Express. Подключение Mongo DB. Реализация обработки GET, POST, PUT, PATCH запросов с сохранение в Mongo DB',
-                        'Установить и настроить свой Express Server, Mongo и сделать REST API для одной модели',
+    <%= program_info_li 'Express Server и MongoDB',
+                        'Установка и настройка сервера Express. Подключение MongoDB. Реализация обработки GET, POST, PUT, PATCH запросов с сохранение в MongoDB',
+                        'Установить и настроить свой Express Server, MongoDB и сделать REST API для одной модели',
                         'Читать про Express' %>
     <%= program_info_li 'React',
                         'Подключение React. JSX. Передача данных через props. Интерактивные компоненты. Инструменты разработчика. Работа со state. Функциональные компоненты. React Lifecycle',

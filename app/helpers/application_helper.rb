@@ -23,4 +23,8 @@ module ApplicationHelper
       return link_to(t(:my_data), users_profile_path, role: 'button', class: cls)
     end
   end
+
+  def asset_url(asset)
+    "#{request.protocol}#{request.host_with_port}#{asset_path(asset)}"
+  end
 end

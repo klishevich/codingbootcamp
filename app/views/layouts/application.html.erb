@@ -6,7 +6,21 @@
     <title><%= content_for?(:title) ? yield(:title) : t(:default_title) %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t(:default_title) %>">
     <% if content_for?(:keywords) %>
-      <meta name="keywords" content="<%= yield(:keywords) %>">
+    <meta name="keywords" content="<%= yield(:keywords) %>">
+    <% end %>
+    <% if content_for?(:og_title) %>
+    <meta property="og:title" content="<%= yield(:og_title) %>" />
+    <meta property="og:description" content="<%= yield(:og_description) %>" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= yield(:og_image) %>" />
+    <% end %>
+    <% if content_for?(:twitter_title) %>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@codingbootcamp1"/>
+    <meta name="twitter:creator" content="@busation"/>
+    <meta name="twitter:title" content="<%= yield(:twitter_title) %>"/>
+    <meta name="twitter:description" content="<%= yield(:twitter_description) %>"/>
+    <meta name="twitter:image" content="<%= yield(:twitter_image) %>"/>
     <% end %>
     <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>

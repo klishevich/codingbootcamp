@@ -1,6 +1,14 @@
-<% provide :title, "Курс #{t(:program_intro_to_web)} от #{t(:default_title)}" %>
-<% provide :description, "Программа курса: Ubuntu, Bash, SublimeText, HTML, CSS, JavaScript, NGINX, хостинг Linode, фреймворк Twitter Bootstrap, библиотека jQuery, система управления баз данных MySQL, CMS Wordpress" %>
-<% provide(:keywords, "курс, css, html, javascript") %>
+<% base_title = "Курс #{t(:program_intro_to_web)} от #{t(:default_title)}" %>
+<% base_description = "Курс #{t(:program_intro_to_web)} содержит следующие уроки: Ubuntu, Bash, SublimeText, HTML, CSS, JavaScript, NGINX, хостинг Linode, фреймворк Twitter Bootstrap, библиотека jQuery, система управления баз данных MySQL, CMS Wordpress. Друзья записывайтесь на курс!" %>
+<% base_image_url = asset_url('_IMG_6425_rect.jpg') %>
+<% provide(:title, base_title) %>
+<% provide(:description, base_description) %>
+<% provide(:og_title, base_title) %>
+<% provide(:og_description, base_description) %>
+<% provide(:og_image, base_image_url) %>
+<% provide(:twitter_title, base_title) %>
+<% provide(:twitter_description, base_description) %>
+<% provide(:twitter_image, base_image_url) %>
 
 <div class="program-block">
   <h1>Курс <%= t(:program_intro_to_web) %></h1>
