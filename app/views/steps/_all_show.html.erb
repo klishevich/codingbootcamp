@@ -1,12 +1,5 @@
 <div class="info-block3 lesson-show">
   <h1><%= @step.name %></h1>
-  <% if !@step.video_link.blank? %>
-    <div class="show-div">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe width="560" height="315" src='https://www.youtube.com/embed/<%=@step.video_link %>' frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-      </div>
-    </div>
-  <% end %>
-  <br/>
+  <%= show_youtube_embed(@step.video_link) %>
   <%= markdown(@step.desc) %>
 </div>

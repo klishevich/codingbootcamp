@@ -292,6 +292,7 @@ ru:
         comment_desc: 'Комментарий по уроку'
         created_at: 'Создан'
         hint: 'Подсказка'
+        video_link: 'Видео'
       step:
         name: 'Название шага'
         video_link: 'Видео'

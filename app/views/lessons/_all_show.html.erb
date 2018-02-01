@@ -1,5 +1,6 @@
 <div class="info-block3 lesson-show">
   <h1><%= @lesson.name %></h1>
+  <%= show_youtube_embed(@lesson.video_link) %>
   <% if !@lesson.video_desc.blank? %>
     <div class="show-div">
       <div><b><%= Lesson.human_attribute_name(:video_desc) %></b></div>

@@ -27,4 +27,24 @@ module ApplicationHelper
   def asset_url(asset)
     "#{request.protocol}#{request.host_with_port}#{asset_path(asset)}"
   end
+
+  def show_youtube_embed(youtube_code)
+    if youtube_code.blank?
+      return nil
+    else
+      content_tag(:div, class: 'show-div') do
+        content_tag(:div, class: 'embed-responsive embed-responsive-16by9') do
+          content_tag(:iframe,
+                      '',
+                      src: "https://www.youtube.com/embed/#{youtube_code}",
+                      width: 560,
+                      height: 315,
+                      frameborder: 0,
+                      gesture: 'media',
+                      allow: 'encrypted-media',
+                      allowfullscreen: '')
+        end
+      end
+    end
+  end
 end
