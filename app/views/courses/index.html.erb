@@ -12,6 +12,7 @@
     <tr>
       <th><%= Course.human_attribute_name(:id) %></th>
       <th><%= Course.human_attribute_name(:name) %></th>
+      <th><%= Course.human_attribute_name(:code) %></th>
       <th><%= Course.human_attribute_name(:created_at) %></th>
       <th><%= Course.human_attribute_name(:description) %></th>
     </tr>
@@ -21,6 +22,7 @@
         <tr>
           <td><%= u.id %></td>
           <td><%= link_to u.name, course_path(u) %></td>
+          <td><%= u.code %></td>
           <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
           <td><%= u.description %></td>
         </tr>

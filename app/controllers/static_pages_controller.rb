@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   def home; end
   def program_intro_to_web; end
   def program_modern_javascript; end
+  def program_es6; end
   def mentors; end
   def faq; end
   def contacts; end

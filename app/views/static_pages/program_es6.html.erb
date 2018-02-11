@@ -1,0 +1,44 @@
+<% base_title = "Курс #{t(:program_es6)} от #{t(:default_title)}" %>
+<% base_description = "Курс #{t(:program_es6)} содержит следующие уроки: arrow функции, классы, promises, async/await, модули CommonJS и ES6" %>
+<% base_image_url = asset_url('_IMG_6425_rect.jpg') %>
+<% provide(:title, base_title) %>
+<% provide(:description, base_description) %>
+<% provide(:og_title, base_title) %>
+<% provide(:og_description, base_description) %>
+<% provide(:og_image, base_image_url) %>
+<% provide(:twitter_title, base_title) %>
+<% provide(:twitter_description, base_description) %>
+<% provide(:twitter_image, base_image_url) %>
+
+<div class="program-block">
+  <h1>Курс <%= t(:program_es6) %></h1>
+  <div class="alert alert-success program-block__goals" role="alert">
+    <h4 class="alert-heading">Цели данного курса</h4>
+    <ol>
+      <li>Курс нацелен на получение практических навыков</li>
+      <li>Курс расчитан на тех, кто уже имел опыт программирования на JavaScript</li>
+      <li>Цель курса познакомить и дать более глубокое понимание основных особенностей спецификации ES6, языка программирования JavaScript</li>
+      <li>Курс будет полезен для бэкэнд разработчиков хоторые хотят познакомиться с современным JavaScript</li>
+    </ol>
+    <div><b>Стоимость обучения</b>: 1000 руб</div>
+  </div>
+  <div>Учебный курс представляет собой <b>5 видео-уроков</b> по следущим темам: Arrow Functions, Classes, Promises, Async/Await, модули ES6 и CommonJS, наиболее полезные функции ES5, ES7, ES8, ES Next. После каждого видео-урока дается <b>практическое задание</b> и <b>материалы для чтения</b>. Необходимо планировать примерно <b>8 часов</b> для прохождения курса.</div>
+
+  <h5><%= t(:program_es6) %> <span class="badge badge-success">8 часов</span></h5>
+  <ol>
+    <li>Что такое EcmaScript</li>
+    <li>Наиболее полезные функции в ES5</li>
+    <li>Arrow-функции</li>
+    <li>Классы в ES6 и что такое prototype</li>
+    <li>Promises</li>
+    <li>Async/Await</li>
+    <li>CommonJS модули</li>
+    <li>Модули ES6</li>
+    <li>ES7, ES8, ES Next</li>
+  </ol>
+  <div class="center-text">
+    <div class="apply-now-button-large">
+      <%= apply_to_course_button 'es6' %>
+    </div>
+  </div>
+</div>

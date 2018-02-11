@@ -11,6 +11,8 @@ module UsersHelper
   def concat_name(user)
     if (user.preferred_name.blank?)
       user.full_name
+    elsif (user.full_name.blank?)
+      user.preferred_name
     else
       "#{user.preferred_name} (#{user.full_name})"
     end

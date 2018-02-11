@@ -6,5 +6,5 @@ class MyCourse < ApplicationRecord
 
   validates_uniqueness_of :course_id, scope: :user_id
 
-  enum status: { active: 0, closed: 1, hold: 2 }
+  enum status: { active: 0, closed: 1, hold: 2, graduate: 3, free: 4 }
 end

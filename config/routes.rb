@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#home'
   get '/program_intro_to_web', to: 'static_pages#program_intro_to_web'
   get '/program_modern_javascript', to: 'static_pages#program_modern_javascript'
+  get '/es6', to: 'static_pages#program_es6'
   get '/mentors', to: 'static_pages#mentors'
   get '/faq', to: 'static_pages#faq'
   get '/contacts', to: 'static_pages#contacts'
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   get '/instructor', to: 'static_pages#instructor'
   get '/partner', to: 'static_pages#partner'
 
-  resources :users, only: [:index]
+  get '/users/list', to: 'users#list'
   get '/users/profile', to: 'users#profile'
 
   resources :courses do

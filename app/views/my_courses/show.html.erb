@@ -18,8 +18,8 @@
     <%= show_div_not_blank(User.human_attribute_name(:phone), @course.user.phone) %>
     <%= show_div_not_blank(MyCourse.human_attribute_name(:status), @course.status) %>
     <%= show_div_not_blank(MyCourse.human_attribute_name(:ref), @course.ref) %>
-    <%= show_div_not_blank(MyCourse.human_attribute_name(:date_start), @course.date_start.strftime('%d.%m.%Y')) %>
-    <%= show_div_not_blank(MyCourse.human_attribute_name(:date_end), @course.date_end.strftime('%d.%m.%Y')) %>
+    <%= show_div_not_blank(MyCourse.human_attribute_name(:date_start), @course.date_start&.strftime('%d.%m.%Y')) %>
+    <%= show_div_not_blank(MyCourse.human_attribute_name(:date_end), @course.date_end&.strftime('%d.%m.%Y')) %>
     <%= show_div_not_blank(MyCourse.human_attribute_name(:grade), @course.grade ) %>
     <%= show_div_not_blank(MyCourse.human_attribute_name(:comment_for_student), raw(@course.comment_for_student)) %>
     <%= show_div_not_blank(MyCourse.human_attribute_name(:comment), @course.comment) %>

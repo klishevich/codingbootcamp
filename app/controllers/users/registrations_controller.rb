@@ -3,9 +3,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    build_resource
+    yield resource if block_given?
+    # Pass course_code from url
+    resource[:code] = params[:code]
+    respond_with resource
+  end
 
   # POST /resource
   def create
@@ -14,22 +18,47 @@ class Users::RegistrationsController < Devise::RegistrationsController
     resource.save
     yield resource if block_given?
     if resource.persisted?
+      # Added admin notification for new registartion
+      MyMailer.new_registration(resource).deliver_now
+      # Open Course if course_code provided
+      my_course_path = open_course_by_code(resource.id, resource.code)
       if resource.active_for_authentication?
         set_flash_message! :notice, :signed_up
         sign_up(resource_name, resource)
-        respond_with resource, location: after_sign_up_path_for(resource)
+        if (my_course_path)
+          redirect_to my_course_path
+        else
+          respond_with resource, location: after_sign_up_path_for(resource)
+        end
       else
         set_flash_message! :notice, :"signed_up_but_#{resource.inactive_message}"
         expire_data_after_sign_in!
         respond_with resource, location: after_inactive_sign_up_path_for(resource)
       end
-      # Added admin notification for new registartion
-      MyMailer.new_registration(resource).deliver_now
     else
       clean_up_passwords resource
       set_minimum_password_length
       respond_with resource
     end
+  end
+
+  private
+
+  # Opens Course and First lesson by code
+  def open_course_by_code(user_id, course_code)
+    course = Course.find_by(code: course_code)
+    if course
+      start_course_date = Date.today
+      my_course = MyCourse.create(user_id: user_id, course_id: course.id, date_start: start_course_date)
+      my_course.free!
+      if course.lessons.first
+        first_lesson_id = course.lessons.first.id
+        my_lesson = my_course.my_lessons.create(my_course_id: my_course.id, lesson_id: first_lesson_id)
+        my_lesson.active!
+      end
+      return st_my_course_path(my_course)
+    end
+    return nil
   end
 
   # GET /resource/edit

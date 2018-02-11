@@ -17,8 +17,8 @@
         <tr>
           <td><%= link_to u.course.name, st_my_course_path(u) %></td>
           <td><%= u.status %></td>
-          <td><%= u.date_start.strftime('%d.%m.%Y') %></td>
-          <td><%= u.date_end.strftime('%d.%m.%Y') %></td>
+          <td><%= u.date_start&.strftime('%d.%m.%Y') %></td>
+          <td><%= u.date_end&.strftime('%d.%m.%Y') %></td>
         </tr>
     <% end %>
     </tbody>
