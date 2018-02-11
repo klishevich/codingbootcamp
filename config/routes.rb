@@ -30,7 +30,7 @@ Rails.application.routes.draw do
     resources :my_lessons
   end
 
-  resources :st_my_courses, only: [:index, :show] do
+  resources :st_my_courses, only: [:index, :show, :create] do
     resources :st_my_lessons, only: [:show] do
       resources :st_my_steps, only: [:show]
     end

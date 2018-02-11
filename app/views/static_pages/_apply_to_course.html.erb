@@ -1,0 +1,16 @@
+<div class="center-text">
+  <div class="apply-now-button-large">
+    <% if !user_signed_in? %>
+      <%= link_to('Записаться на курс', new_user_registration_path(code: course_code), role: 'button', class: 'btn btn-success btn-lg') %>
+    <% else %>
+      <%= simple_form_for(@my_course, url: st_my_courses_path, :method => :post) do |f| %>
+        <div class="form-inputs">
+          <%= f.hidden_field :comment, value: course_code %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Записаться на курс", class: 'btn btn-primary btn-lg' %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

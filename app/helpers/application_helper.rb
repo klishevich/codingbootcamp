@@ -19,17 +19,6 @@ module ApplicationHelper
     cls = large ? 'btn btn-success btn-lg' : 'btn btn-success'
     if !user_signed_in?
       return link_to('Подать заявку', new_user_registration_path, role: 'button', class: cls)
-    else
-      return link_to(t(:my_data), users_profile_path, role: 'button', class: cls)
-    end
-  end
-
-  def apply_to_course_button(course_code)
-    cls = 'btn btn-success btn-lg'
-    if !user_signed_in?
-      return link_to('Записаться на курс', new_user_registration_path(code: course_code), role: 'button', class: cls)
-    else
-      return link_to(t(:my_data), users_profile_path, role: 'button', class: cls)
     end
   end
 

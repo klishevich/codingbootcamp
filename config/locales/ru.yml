@@ -278,7 +278,7 @@ ru:
         preferred_name: 'Как к Вам обращаться'
         city: 'Город проживания'
         phone: 'Телефон'
-        comment: 'Что Вы хотите'
+        comment: 'Что хотите изучить'
         remember_me: 'Запомнить меня'
       course:
         name: 'Название курса'
@@ -354,3 +354,6 @@ ru:
   created_successfuly: 'Успешно создано'
   saved_successfuly: 'Успешно сохранено'
   deleted_successfuly: 'Успешно удалено'
+  course_opened: 'Вам открыт первый урок. Чтобы открыть весь курс, оплатите его, либо сообщите промокод'
+  sorry: 'Что-то пошло не так :('
+  already_have_course: 'Вы уже записаны на этот курс'
