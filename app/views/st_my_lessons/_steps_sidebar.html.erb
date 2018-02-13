@@ -9,7 +9,6 @@
     <%= show_div_not_blank(Lesson.human_attribute_name(:name), @my_lesson.lesson.name) %>
     <%= show_div_not_blank(MyLesson.human_attribute_name(:status), @my_lesson.status) %>
     <%= show_div_not_blank(MyLesson.human_attribute_name(:date_start), @my_lesson.date_start&.strftime('%d.%m.%Y')) %>
-    <%= show_div_not_blank(MyLesson.human_attribute_name(:comment_for_student), @my_lesson.comment_for_student) %>
     <%= show_div_not_blank(Lesson.human_attribute_name(:comment_desc), @my_lesson.lesson.comment_desc) %>
   </div>
   <div class="form-group info-block3">

@@ -285,6 +285,8 @@ ru:
         code: 'Уникальный код'
         created_at: 'Создан'
         description: 'Описание'
+        video_link: 'Видео'
+        comment_for_student: 'Комментарий по курсу'
       lesson:
         name: 'Название урока'
         video_desc: 'Видео'
@@ -315,7 +317,7 @@ ru:
         date_start: 'Дата начала'
         date_end: 'Дата окончания'
         grade: 'Оценка'
-        comment_for_student: 'Комментарий для студента'
+        comment_for_student: 'Комментарий'
         comment: 'Комментарий для ментора'
       certificate:
         student: 'Ученик'
@@ -354,6 +356,6 @@ ru:
   created_successfuly: 'Успешно создано'
   saved_successfuly: 'Успешно сохранено'
   deleted_successfuly: 'Успешно удалено'
-  course_opened: 'Вам открыт первый урок. Чтобы открыть весь курс, оплатите его, либо сообщите промокод'
+  course_opened: 'Вам открыт курс'
   sorry: 'Что-то пошло не так :('
   already_have_course: 'Вы уже записаны на этот курс'

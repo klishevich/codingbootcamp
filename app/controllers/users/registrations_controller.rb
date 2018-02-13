@@ -44,18 +44,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   private
 
-  # Opens Course and First lesson by code
+  # Open Course
   def open_course_by_code(user_id, course_code)
     course = Course.find_by(code: course_code)
     if course
       start_course_date = Date.today
       my_course = MyCourse.create(user_id: user_id, course_id: course.id, date_start: start_course_date)
       my_course.free!
-      if course.lessons.first
-        first_lesson_id = course.lessons.first.id
-        my_lesson = my_course.my_lessons.create(my_course_id: my_course.id, lesson_id: first_lesson_id)
-        my_lesson.active!
-      end
       return st_my_course_path(my_course)
     end
     return nil

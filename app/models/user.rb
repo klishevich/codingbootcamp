@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  validates :preferred_name, :city, presence: true
+  validates :full_name, :city, presence: true
 
   def mentor?
     self.is_mentor? || self.is_mentor_view?

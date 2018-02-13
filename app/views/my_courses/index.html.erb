@@ -16,6 +16,7 @@
       <th><%= MyCourse.human_attribute_name(:status) %></th>
       <th>Текущий урок</th>
       <th><%= MyCourse.human_attribute_name(:ref) %></th>
+      <th><%= MyCourse.human_attribute_name(:created_at) %></th>
     </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
           <td><%= u.status %></td>
           <td><%= link_to_last_my_lesson(u) %></td>
           <td><%= u.ref %></td>
+          <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
         </tr>
     <% end %>
     </tbody>

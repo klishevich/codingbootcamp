@@ -23,11 +23,6 @@ class StMyCoursesController < ApplicationController
       @my_course.date_start = Date.today
       @my_course.free!
       if @my_course.save
-        if course.lessons.first
-          first_lesson_id = course.lessons.first.id
-          my_lesson = @my_course.my_lessons.create(my_course_id: @my_course.id, lesson_id: first_lesson_id)
-          my_lesson.active!
-        end
         flash[:notice] = t(:course_opened)
         redirect_to st_my_course_path @my_course
       else

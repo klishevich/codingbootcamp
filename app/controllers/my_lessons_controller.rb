@@ -12,7 +12,7 @@ class MyLessonsController < ApplicationController
     if @my_lesson.save
       create_my_steps
       flash[:notice] = t(:created_successfuly)
-      redirect_to my_course_my_lesson_path(@my_course, @my_lesson)
+      redirect_to my_course_path(@my_course)
     else
       render 'new'
     end
