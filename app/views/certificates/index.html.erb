@@ -1,6 +1,11 @@
 <% page_title = 'Админка ментора / Список сертификатов' %>
 <% provide :title, page_title %>
 <% provide :breadcrumb, page_title %>
+<% if current_user&.is_mentor? %>
+<div class="form-group">
+  <%= link_to "Выпустить сертификат", new_certificate_path, class: "btn btn-primary" %>
+</div>
+<% end %>
 <h2>Список сертификатов</h2>
 <div>
   <table class="table table-striped">
@@ -15,7 +20,11 @@
     <tbody>
     <% @certificates.each do |c| %>
         <tr>
-          <td><%= link_to c.id, certificate_path(c) %></td>
+          <td>
+            <%= link_to c.id, certificate_path(c), target: 'blank' %>&nbsp;
+            <%= link_to 'Edit', edit_certificate_path(c) %>&nbsp;
+            <%= link_to 'Copy', new_certificate_url(id: c.id) %>
+          </td>
           <td><%= c.student %></td>
           <td><%= c.course_title %></td>
           <td><%= c.issue_date.strftime('%d.%m.%Y') %></td>

@@ -42,8 +42,11 @@
         <div class="dropdown-menu" aria-labelledby="dropdown03">
           <%= link_to 'Курсы', courses_path, class: 'dropdown-item' %>
           <%= link_to 'Последний курс', last_course_helper_path, class: 'dropdown-item' %>
-          <%= link_to 'Курсы студентов', my_courses_path, class: 'dropdown-item' %>
-          <%= link_to 'Активные студенты', "#{my_courses_path}?s=active", class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to 'Студенты', my_courses_path, class: 'dropdown-item' %>
+          <%= link_to 'Активные студенты', my_courses_url(s: 'active'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to 'Сертификаты', certificates_path, class: 'dropdown-item' %>
         </div>
       </li>
     </ul>
