@@ -22,8 +22,10 @@
         <tr>
           <td>
             <%= link_to c.id, certificate_path(c), target: 'blank' %>&nbsp;
-            <%= link_to 'Edit', edit_certificate_path(c) %>&nbsp;
-            <%= link_to 'Copy', new_certificate_url(id: c.id) %>
+            <% if current_user&.is_mentor? %>
+              <%= link_to 'Edit', edit_certificate_path(c) %>&nbsp;
+              <%= link_to 'Copy', new_certificate_url(id: c.id) %>
+            <% end %>
           </td>
           <td><%= c.student %></td>
           <td><%= c.course_title %></td>
