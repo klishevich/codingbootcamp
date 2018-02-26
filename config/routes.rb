@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   get '/instructor', to: 'static_pages#instructor'
   get '/partner', to: 'static_pages#partner'
 
-  get '/users/list', to: 'users#list'
-  get '/users/profile', to: 'users#profile'
+  get '/profile', to: 'user_infos#profile'
+  resources :user_infos, only: [:index, :edit, :update]
 
   resources :courses do
     resources :lessons do

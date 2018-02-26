@@ -5,37 +5,31 @@
     <tr>
       <th><%= User.human_attribute_name(:id) %></th>
       <th><%= User.human_attribute_name(:email) %></th>
+      <th><%= User.human_attribute_name(:full_name) %></th>
       <th><%= User.human_attribute_name(:last_sign_in_at) %></th>
       <th><%= User.human_attribute_name(:confirmed_at) %></th>
       <th><%= User.human_attribute_name(:created_at) %></th>
-      <th><%= User.human_attribute_name(:full_name) %></th>
-      <th><%= User.human_attribute_name(:preferred_name) %></th>
-      <th><%= User.human_attribute_name(:phone) %></th>
       <th><%= User.human_attribute_name(:city) %></th>
       <th><%= User.human_attribute_name(:is_student) %></th>
       <th><%= User.human_attribute_name(:is_mentor) %></th>
       <th><%= User.human_attribute_name(:is_mentor_view) %></th>
       <th><%= User.human_attribute_name(:is_admin) %></th>
-      <th><%= User.human_attribute_name(:comment) %></th>
     </tr>
     </thead>
     <tbody>
     <% @users.each do |u| %>
         <tr>
           <td><%= u.id %></td>
-          <td><%= u.email %></td>
+          <td><%= link_to u.email, edit_user_info_path(u) %></td>
+          <td><%= u.full_name %></td>
           <td><%= u.last_sign_in_at&.strftime('%d.%m.%Y %T') %></td>
           <td><%= u.confirmed_at&.strftime('%d.%m.%Y %T') %></td>
           <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
-          <td><%= u.full_name %></td>
-          <td><%= u.preferred_name %></td>
-          <td><%= u.phone %></td>
           <td><%= u.city %></td>
           <td><%= u.is_student %></td>
           <td><%= u.is_mentor %></td>
           <td><%= u.is_mentor_view %></td>
           <td><%= u.is_admin %></td>
-          <td><%= u.comment %></td>
         </tr>
     <% end %>
     </tbody>

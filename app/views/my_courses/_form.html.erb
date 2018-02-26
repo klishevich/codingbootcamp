@@ -13,7 +13,7 @@
           <%= f.input :date_start %>
           <%= f.input :date_end %>
           <%= f.input :grade %>
-          <%= f.input :comment %>
+          <%= f.input :comment, input_html: { rows: 6 } %>
           <%= f.input :comment_for_student, hint: 'HTML, не используется' %>
         </div>
         <div class="form-actions">

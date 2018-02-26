@@ -43,7 +43,7 @@ class CoursesController < ApplicationController
     @course=Course.find(params[:id])
     @course.destroy
     flash[:notice] = t(:deleted_successfuly)
-    redirect_to courses_index_path
+    redirect_to courses_path
   end
 
   private
