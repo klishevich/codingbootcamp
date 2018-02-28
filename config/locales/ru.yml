@@ -296,6 +296,7 @@ ru:
         created_at: 'Создан'
         hint: 'Подсказка'
         video_link: 'Видео'
+        notify_open: 'Отправить email уведомление при открытии урока'
       step:
         name: 'Название шага'
         video_link: 'Видео'
@@ -359,3 +360,4 @@ ru:
   course_opened: 'Вам открыт курс'
   sorry: 'Что-то пошло не так :('
   already_have_course: 'Вы уже записаны на этот курс'
+  new_lesson_is_opened: 'Тебе открыт новый урок'

@@ -47,7 +47,8 @@ class LessonsController < ApplicationController
                                   :reading_desc,
                                   :comment_desc,
                                   :hint,
-                                  :video_link)
+                                  :video_link,
+                                  :notify_open)
   end
 
 end

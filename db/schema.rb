@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180213191502) do
+ActiveRecord::Schema.define(version: 20180228204047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20180213191502) do
     t.datetime "updated_at", null: false
     t.text "hint"
     t.string "video_link"
+    t.boolean "notify_open", default: false
     t.index ["course_id"], name: "index_lessons_on_course_id"
   end
 

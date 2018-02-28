@@ -13,6 +13,11 @@ class MyLessonsController < ApplicationController
       create_my_steps
       flash[:notice] = t(:created_successfuly)
       redirect_to my_course_path(@my_course)
+      if (@my_lesson.lesson.notify_open)
+        MyMailer.lesson_opened(@my_lesson.my_course.user.email,
+                             @my_lesson.lesson.name,
+                             st_my_course_url(@my_course.id)).deliver_now
+      end
     else
       render 'new'
     end
