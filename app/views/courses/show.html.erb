@@ -26,6 +26,7 @@
           <th><%= Lesson.human_attribute_name(:name) %></th>
           <th><%= Lesson.human_attribute_name(:comment_desc) %></th>
           <th><%= Lesson.human_attribute_name(:created_at) %></th>
+          <th>notify_open</th>
         </tr>
         </thead>
         <tbody>
@@ -34,6 +35,7 @@
               <td><%= link_to u.name, course_lesson_path(@course, u) %></td>
               <td><%= u.comment_desc %></td>
               <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
+              <td><%= u.notify_open if u.notify_open %></td>
             </tr>
         <% end %>
         </tbody>

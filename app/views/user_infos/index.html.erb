@@ -26,10 +26,10 @@
           <td><%= u.confirmed_at&.strftime('%d.%m.%Y %T') %></td>
           <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
           <td><%= u.city %></td>
-          <td><%= u.is_student %></td>
-          <td><%= u.is_mentor %></td>
-          <td><%= u.is_mentor_view %></td>
-          <td><%= u.is_admin %></td>
+          <td><%= u.is_student if u.is_student %></td>
+          <td><%= u.is_mentor if u.is_mentor %></td>
+          <td><%= u.is_mentor_view if u.is_mentor_view %></td>
+          <td><%= u.is_admin if u.is_admin %></td>
         </tr>
     <% end %>
     </tbody>
