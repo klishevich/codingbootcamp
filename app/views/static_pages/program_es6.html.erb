@@ -13,28 +13,24 @@
 <div class="program-block">
   <h1>Курс <%= t(:program_es6) %></h1>
   <div class="alert alert-success program-block__goals" role="alert">
-    <h4 class="alert-heading">Цели данного курса</h4>
-    <ol>
-      <li>Курс нацелен на получение практических навыков</li>
-      <li>Курс расчитан на тех, кто уже имел опыт программирования на JavaScript</li>
-      <li>Цель курса познакомить и дать более глубокое понимание основных особенностей спецификации ES6, языка программирования JavaScript</li>
-      <li>Курс будет полезен для бэкэнд разработчиков хоторые хотят познакомиться с современным JavaScript</li>
-    </ol>
-    <div><b>Стоимость обучения</b>: 1000 руб</div>
+    <h4 class="alert-heading">О курсе</h4>
+    <div><b>Цель</b>: Дать практические навыки работы с ECMAScript 6</div>
+    <div><b>Курс расчитан</b> на разработчиков хоторые хотят познакомиться с современным JavaScript</div>
+    <div><b>Требования к студенту</b>: Работа с Ubuntu/Debian, Bash (apt-get, работа с файлами, выдача прав), Git + GitHub (умение делать Pull Request), HTML, CSS (подключение CSS, селекторы, flex), JavaScript (условные операторы, циклы, массивы, объекты, функции, подключение JS, события, изменение элементов и атрибутов страницы), jQuery, Twitter Bootstrap. Умение гуглить и читать stackoverflow на английском :)</div>
+    <div><b>Стоимость обучения</b>: 2000 руб</div>
   </div>
-  <div>Учебный курс представляет собой <b>5 видео-уроков</b> по следущим темам: Arrow Functions, Classes, Promises, Async/Await, модули ES6 и CommonJS, наиболее полезные функции ES5, ES7, ES8, ES Next. После каждого видео-урока дается <b>практическое задание</b> и <b>материалы для чтения</b>. Необходимо планировать примерно <b>8 часов</b> для прохождения курса.</div>
+  <div>Учебный курс представляет собой <b>8 видео-уроков</b>. После видео-урока дается <b>домашнее задание</b>, обязательное для выполнения, которое проверяется ментором. Необходимо планировать примерно <b>3 часа</b> для прохождения каждого урока.</div>
 
-  <h5><%= t(:program_es6) %> <span class="badge badge-success">8 часов</span></h5>
+  <h5>Список уроков <span class="badge badge-success">8 часов</span></h5>
   <ol>
-    <li>Что такое EcmaScript</li>
-    <li>Наиболее полезные функции в ES5</li>
-    <li>Arrow-функции</li>
-    <li>Классы в ES6 и что такое prototype</li>
-    <li>Promises</li>
-    <li>Async/Await</li>
-    <li>CommonJS модули</li>
-    <li>Модули ES6</li>
-    <li>ES7, ES8, ES Next</li>
+    <li>Что такое ECMAScript - 10 мин видео + домашнее задание</li>
+    <li>ES5 - ES6 полезные фичи (setTimeout, forEach, map, let, const, use strict, rest parameters, spread, destructuring, template literals, iterate objects/arrays) - 50 мин видео + ДЗ</li>
+    <li>Arrow Functions - 15 мин + ДЗ</li>
+    <li>Classes (prototypical inheritance, ES6 classes, usage) - 40 мин видео + ДЗ</li>
+    <li>Promises and Async/Await (Promisifying, create promise, chaining promises, promise implementation) - 40 мин видео + ДЗ</li>
+    <li>ES7, ES8, ES Next - 20 мин</li>
+    <li>Modules (CommonJS, ES6 modules, NPM registry) - 30 мин + ДЗ</li>
+    <li>Babel (понижение версии ECMAScript, полифилы, поддержка в браузерах) - 40 мин + ДЗ</li>
   </ol>
   <%= render 'apply_to_course', course_code: 'es6' %>
 </div>
