@@ -6,14 +6,14 @@
       <th><%= User.human_attribute_name(:id) %></th>
       <th><%= User.human_attribute_name(:email) %></th>
       <th><%= User.human_attribute_name(:full_name) %></th>
-      <th><%= User.human_attribute_name(:last_sign_in_at) %></th>
-      <th><%= User.human_attribute_name(:confirmed_at) %></th>
-      <th><%= User.human_attribute_name(:created_at) %></th>
       <th><%= User.human_attribute_name(:city) %></th>
+      <th><%= User.human_attribute_name(:source) %></th>
       <th><%= User.human_attribute_name(:is_student) %></th>
       <th><%= User.human_attribute_name(:is_mentor) %></th>
       <th><%= User.human_attribute_name(:is_mentor_view) %></th>
       <th><%= User.human_attribute_name(:is_admin) %></th>
+      <th><%= User.human_attribute_name(:last_sign_in_at) %></th>
+      <th><%= User.human_attribute_name(:confirmed_at) %></th>
     </tr>
     </thead>
     <tbody>
@@ -22,14 +22,14 @@
           <td><%= u.id %></td>
           <td><%= link_to u.email, edit_user_info_path(u) %></td>
           <td><%= u.full_name %></td>
-          <td><%= u.last_sign_in_at&.strftime('%d.%m.%Y %T') %></td>
-          <td><%= u.confirmed_at&.strftime('%d.%m.%Y %T') %></td>
-          <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
           <td><%= u.city %></td>
+          <td><%= u.source %></td>
           <td><%= u.is_student if u.is_student %></td>
           <td><%= u.is_mentor if u.is_mentor %></td>
           <td><%= u.is_mentor_view if u.is_mentor_view %></td>
           <td><%= u.is_admin if u.is_admin %></td>
+          <td><%= u.last_sign_in_at&.strftime('%d.%m.%Y %T') %></td>
+          <td><%= u.confirmed_at&.strftime('%d.%m.%Y %T') %></td>
         </tr>
     <% end %>
     </tbody>

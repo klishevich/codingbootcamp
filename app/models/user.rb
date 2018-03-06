@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  validates :full_name, :city, presence: true
+  validates :full_name, :city, :source, presence: true
   validates_length_of :comment, maximum: 280
 
   def mentor?
