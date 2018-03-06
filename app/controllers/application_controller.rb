@@ -25,8 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   def auth_mentor_view
-    if !current_user&.mentor?
-      Rails.logger.info("current_user&.mentor? #{current_user&.mentor?}")
+    if !current_user&.is_mentor_or_mentor_view?
       flash[:notice] = t(:you_are_not_mentor_view)
       redirect_to '/'
     end

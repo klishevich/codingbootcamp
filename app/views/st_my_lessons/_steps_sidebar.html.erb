@@ -5,6 +5,19 @@
       <%= steps_sidebar_menu(@my_course, @my_lesson, @my_steps, @my_step_id) %>
     </div>
   </nav>
+  <% if @my_lesson.st_lesson_feedback&.persisted? %>
+    <div class="form-group info-block3">
+      <%= link_to "Мой фидбэк",
+      st_my_course_st_my_lesson_st_lesson_feedback_path(@my_course, @my_lesson, @my_lesson.st_lesson_feedback),
+      class: "btn btn-primary" %>
+    </div>
+  <% else %>
+    <div class="form-group info-block3">
+      <%= link_to "Завершить урок",
+      new_st_my_course_st_my_lesson_st_lesson_feedback_path(@my_course, @my_lesson),
+      class: "btn btn-warning" %>
+    </div>
+  <% end %>
   <div class="info-block3 my-lesson-st-show">
     <%= show_div_not_blank(Lesson.human_attribute_name(:name), @my_lesson.lesson.name) %>
     <%= show_div_not_blank(MyLesson.human_attribute_name(:status), @my_lesson.status) %>

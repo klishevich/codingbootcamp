@@ -36,7 +36,7 @@
         </li>
       <% end %>
     </ul>
-    <% if current_user&.mentor? %>
+    <% if current_user&.is_mentor_or_mentor_view? %>
     <ul class="navbar-nav justify-content-end">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ментор</a>
@@ -46,6 +46,7 @@
           <div class="dropdown-divider"></div>
           <%= link_to 'Студенты', my_courses_path, class: 'dropdown-item' %>
           <%= link_to 'Активные студенты', my_courses_url(s: 'active'), class: 'dropdown-item' %>
+          <%= link_to 'ДЗ', st_lesson_feedbacks_path, class: 'dropdown-item' %>
           <div class="dropdown-divider"></div>
           <%= link_to 'Сертификаты', certificates_path, class: 'dropdown-item' %>
         </div>

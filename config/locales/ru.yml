@@ -327,6 +327,15 @@ ru:
         course_desc: 'Описание курса'
         mentors: 'Преподаватели'
         issue_date: 'Дата выдачи'
+      st_lesson_feedback:
+        grades:
+          super: 'Отлично'
+          normal: 'Нормально'
+          improve: 'Можно улучшить'
+        grade: 'Вам понравился урок?'
+        grade_comment: 'Комментарий'
+        hw_done: 'Я сделал домашную работу'
+        hw_link: 'Ссылка на GitHub с домашней работой'
   default_title: 'Coding Bootcamp Ru'
   nav_brand: 'Coding Bootcamp Ru'
   nav_brand_short: 'Coding Bootcamp Ru'
@@ -362,3 +371,5 @@ ru:
   sorry: 'Что-то пошло не так :('
   already_have_course: 'Вы уже записаны на этот курс'
   new_lesson_is_opened: 'Тебе открыт новый урок'
+  other_user: 'Недостаточно прав для добавления комментария по данному уроку'
+  lesson_completed: 'Поздравляю, вы завершили урок'

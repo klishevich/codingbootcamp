@@ -33,8 +33,12 @@ Rails.application.routes.draw do
   resources :st_my_courses, only: [:index, :show, :create] do
     resources :st_my_lessons, only: [:show] do
       resources :st_my_steps, only: [:show]
+      resources :st_lesson_feedbacks, only: [:new, :create, :show]
     end
   end
+
+  resources :st_lesson_feedbacks, only: [:index]
+
   # get '/st_my_courses/:id', to: 'st_my_courses#show', as: 'st_my_courses'
 
   resources :certificates

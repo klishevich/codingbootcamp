@@ -1,0 +1,20 @@
+<% page_title = 'ЛК Студента / Просмотр курса / Просмотр урока' %>
+<% provide :title, page_title %>
+<% provide :breadcrumb, page_title  %>
+<div class="row">
+  <div class="col-lg-3">
+    <%= render 'st_my_lessons/steps_sidebar' %>
+  </div>
+  <div class="col-lg-9">
+    <div class="info-block3 lesson-show">
+      <h1>Мой фидбэк</h1>
+      <%= show_div_not_blank(StLessonFeedback.human_attribute_name(:grade), StLessonFeedback.human_enum_name(:grade, @feedback.grade)) %>
+      <%= show_div_not_blank(StLessonFeedback.human_attribute_name(:grade_comment), @feedback.grade_comment) %>
+      <% done = @feedback.hw_done ? 'Да' : 'Нет' %>
+      <%= show_div_not_blank(StLessonFeedback.human_attribute_name(:hw_done), done) %>
+      <% if @feedback.hw_link.present? %>
+        <%= link_to @feedback.hw_link, @feedback.hw_link, target: '_blank' %>
+      <% end %>
+    </div>
+  </div>
+</div>

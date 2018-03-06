@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180306191253) do
+ActiveRecord::Schema.define(version: 20180306194928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,17 @@ ActiveRecord::Schema.define(version: 20180306191253) do
     t.index ["step_id"], name: "index_my_steps_on_step_id"
   end
 
+  create_table "st_lesson_feedbacks", force: :cascade do |t|
+    t.bigint "my_lesson_id"
+    t.integer "grade"
+    t.string "grade_comment"
+    t.boolean "hw_done", default: false
+    t.string "hw_link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["my_lesson_id"], name: "index_st_lesson_feedbacks_on_my_lesson_id"
+  end
+
   create_table "steps", force: :cascade do |t|
     t.bigint "lesson_id"
     t.string "name"
@@ -147,5 +158,6 @@ ActiveRecord::Schema.define(version: 20180306191253) do
   add_foreign_key "my_lessons", "my_courses"
   add_foreign_key "my_steps", "my_lessons"
   add_foreign_key "my_steps", "steps"
+  add_foreign_key "st_lesson_feedbacks", "my_lessons"
   add_foreign_key "steps", "lessons"
 end

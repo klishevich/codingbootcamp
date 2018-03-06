@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grade: 1
+  grade_comment: MyString
+  hw_done: false
+  hw_link: MyString
+
+two:
+  grade: 1
+  grade_comment: MyString
+  hw_done: false
+  hw_link: MyString

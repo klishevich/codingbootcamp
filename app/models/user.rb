@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :full_name, :city, :source, presence: true
   validates_length_of :comment, maximum: 280
 
-  def mentor?
+  def is_mentor_or_mentor_view?
     self.is_mentor? || self.is_mentor_view?
   end
 

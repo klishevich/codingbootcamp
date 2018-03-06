@@ -1,0 +1,14 @@
+<% page_title = 'ЛК Студента / Просмотр курса / Просмотр урока' %>
+<% provide :title, page_title %>
+<% provide :breadcrumb, page_title  %>
+<div class="row">
+  <div class="col-lg-3">
+    <%= render 'st_my_lessons/steps_sidebar' %>
+  </div>
+  <div class="col-lg-9">
+    <div class="info-block3 lesson-show">
+      <h1>Завершение урока</h1>
+      <%= render 'form' %>
+    </div>
+  </div>
+</div>

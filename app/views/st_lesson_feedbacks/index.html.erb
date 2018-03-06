@@ -1,0 +1,39 @@
+<% page_title = 'Админка ментора / Список ДЗ по урокам' %>
+<% provide :title, page_title %>
+<% provide :breadcrumb, page_title %>
+<h2>Список ДЗ по урокам</h2>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>my_lesson_id</th>
+      <th><%= User.human_attribute_name(:full_name) %></th>
+      <th><%= StLessonFeedback.human_attribute_name(:grade) %></th>
+      <th><%= MyLesson.human_attribute_name(:status) %></th>
+      <th><%= StLessonFeedback.human_attribute_name(:grade_comment) %></th>
+      <th><%= StLessonFeedback.human_attribute_name(:hw_done) %></th>
+      <th><%= StLessonFeedback.human_attribute_name(:hw_link) %></th>
+      <th><%= MyCourse.human_attribute_name(:created_at) %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @feedbacks.each do |f| %>
+        <tr>
+          <td><%= link_to f.my_lesson.id,
+          my_course_my_lesson_path(f.my_lesson.my_course.id,f.my_lesson.id) %></td>
+          <td><%= f.my_lesson.my_course.user.full_name %></td>
+          <td><%= f.grade %></td>
+          <td><%= f.my_lesson.status %></td>
+          <td><%= f.grade_comment %></td>
+          <td><%= f.hw_done ? 'Да' : '' %></td>
+          <td>
+            <% if f.hw_link.present? %>
+              <%= link_to 'ДЗ', f.hw_link, target: '_blank' %>
+            <% end %>
+          </td>
+          <td><%= f.created_at.strftime('%d.%m.%Y %T') %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
