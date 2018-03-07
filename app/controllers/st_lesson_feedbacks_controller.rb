@@ -5,7 +5,7 @@ class StLessonFeedbacksController < ApplicationController
   before_action :other_user, only: [:create]
 
   def index
-    @feedbacks = StLessonFeedback.order(id: :desc)
+    @feedbacks = StLessonFeedback.order(id: :desc).joins(:my_lesson).where("my_lessons.status = 0")
   end
 
   def new
