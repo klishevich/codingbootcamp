@@ -9,7 +9,7 @@ class StMyStepsController < ApplicationController
     @step = @my_step.step
 
     # for steps_sidebar_menu
-    @my_steps = @my_lesson.my_steps.order(:id)
+    @my_steps = @my_lesson.my_steps.order(:step_id)
     @my_step_id = params[:id].to_i
   end
 end
