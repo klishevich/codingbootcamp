@@ -11,8 +11,8 @@
           <%= f.input :date_start %>
           <%= f.input :date_end %>
           <%= f.input :grade %>
+          <%= f.input :comment_for_student, input_html: { rows: 2 }, hint: 'для студента' %>
           <%= f.input :comment, input_html: { rows: 2 } %>
-          <%= f.input :comment_for_student, input_html: { rows: 2 }, hint: 'не ипользуется' %>
         </div>
         <div class="form-actions">
           <%= f.button :submit, "Сохранить", class: 'btn btn-primary btn-lg' %>

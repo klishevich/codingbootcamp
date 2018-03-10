@@ -319,7 +319,7 @@ ru:
         date_start: 'Дата начала'
         date_end: 'Дата окончания'
         grade: 'Оценка'
-        comment_for_student: 'Комментарий'
+        comment_for_student: 'Коммент по ДЗ'
         comment: 'Комментарий для ментора'
       certificate:
         student: 'Ученик'

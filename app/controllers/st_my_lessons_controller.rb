@@ -7,7 +7,7 @@ class StMyLessonsController < ApplicationController
     @lesson = @my_lesson.lesson
 
     # for steps_sidebar_menu
-    @my_steps = @my_lesson.my_steps.order(:id)
+    @my_steps = @my_lesson.my_steps.order(:step_id)
     # hardcode for lesson first menu element
     @my_step_id = -1
   end

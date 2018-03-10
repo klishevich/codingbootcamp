@@ -28,6 +28,7 @@
           <th><%= MyLesson.human_attribute_name(:lesson_id) %></th>
           <th><%= MyLesson.human_attribute_name(:status) %></th>
           <th><%= Lesson.human_attribute_name(:comment_desc) %></th>
+          <th><%= MyLesson.human_attribute_name(:comment_for_student) %></th>
         </tr>
         </thead>
         <tbody>
@@ -36,6 +37,7 @@
               <td><%= link_to u.lesson.name, st_my_course_st_my_lesson_path(@course, u) %></td>
               <td><%= u.status %></td>
               <td><%= short_info(u.lesson.comment_desc) %></td>
+              <td><%= short_info(u.comment_for_student) %></td>
             </tr>
         <% end %>
         </tbody>
