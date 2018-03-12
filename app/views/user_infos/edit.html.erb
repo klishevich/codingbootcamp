@@ -15,6 +15,7 @@
           <%= f.input :phone %>
           <%= f.input :city %>
           <%= f.input :comment, input_html: { rows: 6 } %>
+          <%= f.input :source, collection: [['Альфа-Опыт', 'alfa'], ['Реклама Coding Bootcamp Ru', 'codingbootcamp'], ['Google / Yandex', 'orginic_search'], ['Другое', 'other']], required: false %>
           <%= f.input :is_student %>
           <%= f.input :is_mentor %>
           <%= f.input :is_mentor_view %>

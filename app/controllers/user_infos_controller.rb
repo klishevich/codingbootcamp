@@ -33,6 +33,7 @@ class UserInfosController < ApplicationController
                                  :phone,
                                  :city,
                                  :comment,
+                                 :source,
                                  :is_student,
                                  :is_mentor,
                                  :is_mentor_view,
