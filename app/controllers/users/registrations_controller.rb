@@ -19,7 +19,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     yield resource if block_given?
     if resource.persisted?
       # Added admin notification for new registartion
-      MyMailer.new_registration(resource).deliver_now
+      # MyMailer.new_registration(resource).deliver_now
       # Open Course if course_code provided
       my_course_path = open_course_by_code(resource.id, resource.code)
       if resource.active_for_authentication?
