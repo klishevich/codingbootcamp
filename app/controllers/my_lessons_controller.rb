@@ -16,7 +16,7 @@ class MyLessonsController < ApplicationController
       if (@my_lesson.lesson.notify_open)
         MyMailer.lesson_opened(@my_lesson.my_course.user.email,
                              @my_lesson.lesson.name,
-                             st_my_course_url(@my_course.id)).deliver_now
+                             st_my_course_st_my_lesson_url(@my_course.id, @my_lesson.id)).deliver_now
       end
     else
       render 'new'

@@ -7,7 +7,7 @@
   <%= link_to "Открыть курс студенту", new_my_course_path, class: "btn btn-primary" %>
 </div>
 <% end %>
-<div>
+<div class="scroll-div">
   <table class="table table-striped">
     <thead>
     <tr>
@@ -17,6 +17,7 @@
       <th>Текущий урок</th>
       <th><%= MyCourse.human_attribute_name(:ref) %></th>
       <th><%= MyCourse.human_attribute_name(:created_at) %></th>
+      <th></th>
     </tr>
     </thead>
     <tbody>
@@ -28,6 +29,11 @@
           <td><%= link_to_last_my_lesson(u) %></td>
           <td><%= u.ref %></td>
           <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
+          <td>
+            <% unless u.my_lessons&.length > 0 %>
+              <%= link_to("X", my_course_path(u), method: :delete, class: "btn btn-warning") %>
+            <% end %>
+          </td>
         </tr>
     <% end %>
     </tbody>

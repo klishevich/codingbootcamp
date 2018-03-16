@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get '/partner', to: 'static_pages#partner'
 
   get '/profile', to: 'user_infos#profile'
-  resources :user_infos, only: [:index, :edit, :update]
+  resources :user_infos, only: [:index, :edit, :update, :destroy]
 
   resources :courses do
     resources :lessons do

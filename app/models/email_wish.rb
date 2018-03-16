@@ -1,0 +1,2 @@
+class EmailWish < ApplicationRecord
+end

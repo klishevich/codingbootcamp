@@ -117,3 +117,9 @@ body {
 .course-date {
   font-size: 1rem;
 }
+
+.scroll-div {
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}

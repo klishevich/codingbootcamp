@@ -25,6 +25,13 @@ class UserInfosController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:notice] = t(:deleted_successfuly)
+    redirect_to user_infos_path
+  end
+
   private
 
   def user_info_params

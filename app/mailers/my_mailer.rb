@@ -9,6 +9,13 @@ class MyMailer < ApplicationMailer
   def lesson_opened(user_email, lesson_name, lesson_url)
     mail(to: user_email,
          subject: "#{t(:default_title)} - #{t(:new_lesson_is_opened)}",
-         body: "#{t(:new_lesson_is_opened)}: #{lesson_name} - #{lesson_url}\n\n C любовью #{t(:default_title)}")
+         body: "#{t(:new_lesson_is_opened)}: #{lesson_name} - #{lesson_url}\n\n С любовью, #{get_wish} Майкл")
   end
+
+  private
+
+  def get_wish
+    EmailWish.order("RANDOM()").first.text
+  end
+
 end

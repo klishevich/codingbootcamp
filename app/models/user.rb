@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
+  has_many :my_courses
   validates :full_name, :city, :source, presence: true
   validates_length_of :comment, maximum: 280
 
