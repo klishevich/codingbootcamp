@@ -1,6 +1,6 @@
 <% base_title = "Курс #{t(:program_es6)} от #{t(:default_title)}" %>
-<% base_description = "Курс #{t(:program_es6)} содержит следующие уроки: arrow функции, классы, promises, async/await, модули CommonJS и ES6" %>
-<% base_image_url = asset_url('_IMG_6425_rect.jpg') %>
+<% base_description = "Курс #{t(:program_es6)} содержит следующие уроки по JavaScript: arrow функции, классы, promises, async/await, модули CommonJS и ES6" %>
+<% base_image_url = asset_url('es6_program_page_photo_square.jpg') %>
 <% provide(:title, base_title) %>
 <% provide(:description, base_description) %>
 <% provide(:og_title, base_title) %>
@@ -12,13 +12,20 @@
 
 <div class="program-block">
   <h1>Курс <%= t(:program_es6) %></h1>
+  <div class="program-block__img">
+    <div class="row">
+      <div class="col-lg-6">
+        <%= image_tag 'es6_program_page_photo_square.jpg', class: "img-fluid", alt: 'Курс JavaScript на кухне у Майкла (ES6)' %>
+      </div>
+    </div>
+  </div>
   <div class="alert alert-success program-block__goals" role="alert">
     <h4 class="alert-heading">О курсе</h4>
     <div><b>Цель</b>: Дать практические навыки работы с ECMAScript 6</div>
     <div><b>Курс расчитан</b> на разработчиков хоторые хотят познакомиться с современным JavaScript</div>
     <div><b>Требования к студенту</b>: Работа с Ubuntu/Debian, Bash (apt-get, работа с файлами, выдача прав), Git + GitHub (умение делать Pull Request), HTML, CSS (подключение CSS, селекторы, flex), JavaScript (условные операторы, циклы, массивы, объекты, функции, подключение JS, события, изменение элементов и атрибутов страницы), jQuery, Twitter Bootstrap. Умение гуглить и читать stackoverflow на английском :)</div>
     <div><b>Стоимость обучения</b>: бесплатно</div>
-    <div><b>Стоимость проверки заданий</b>: 2000 руб. (за весь курс)</div>
+    <div><b>Стоимость проверки заданий</b>: 1 000 руб. (за весь курс)</div>
   </div>
   <div>Учебный курс представляет собой <b>8 видео-уроков</b>. После видео-урока дается <b>домашнее задание</b>. Необходимо планировать примерно <b>3 часа</b> для прохождения каждого урока.</div>
 
@@ -28,10 +35,10 @@
     <li>ES5 - ES6 полезные фичи (setTimeout, forEach, map, let, const, use strict, rest parameters, spread, destructuring, template literals, iterate objects/arrays) - 50 мин видео + ДЗ</li>
     <li>Arrow Functions - 15 мин + ДЗ</li>
     <li>Classes (prototypical inheritance, ES6 classes, usage) - 40 мин видео + ДЗ</li>
-    <li>Promises and Async/Await (Promisifying, create promise, chaining promises, promise implementation) - 40 мин видео + ДЗ</li>
-    <li>ES7, ES8, ES Next - 20 мин</li>
-    <li>Modules (CommonJS, ES6 modules, NPM registry) - 30 мин + ДЗ</li>
-    <li>Babel (понижение версии ECMAScript, полифилы, поддержка в браузерах) - 40 мин + ДЗ</li>
+    <li>Promises (Promisifying, create promise, chaining promises, promise implementation) - 40 мин видео + ДЗ</li>
+    <li>ES7, ES8, Async/Await - 30 мин + ДЗ</li>
+    <li>Modules (CommonJS, AMD, ES6, browser, Node.js) - 40 мин + ДЗ</li>
+    <li>Babel (понижение версии ECMAScript, полифилы, поддержка в браузерах) - 30 мин + ДЗ</li>
   </ol>
   <%= render 'apply_to_course', course_code: 'es6' %>
 </div>

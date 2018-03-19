@@ -52,6 +52,11 @@ body {
   }
 }
 
+.program-block__img {
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
 .program-block__goals {
   ol {
     margin-bottom: 0;
@@ -122,4 +127,13 @@ body {
   overflow: auto;
   overflow-y: hidden;
   white-space: nowrap;
+}
+
+.review-block {
+  margin-top: 2.4rem;
+  h3 {
+    text-align: center;
+    margin-top: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
 }

@@ -56,7 +56,7 @@
         <span class="badge badge-success course-date">Бесплатно (без проверки ментором)</span>
       </div>
     </div>
-    <%= course_info "Проверка заданий", "Если вы хотите чтобы ментор проверял ваши домашние задания, то нужно оплатить 2 000 руб." %>
+    <%= course_info "Проверка заданий", "Если вы хотите чтобы ментор проверял ваши домашние задания, то нужно оплатить 1 000 руб." %>
     <p class="lead">
       <%= link_to 'Смотреть программу', es6_path, class: 'btn btn-primary btn-lg', role: 'button' %>
     </p>
@@ -82,6 +82,41 @@
     <p class="lead">
       <%= link_to 'Смотреть программу', program_intro_to_web_path, class: 'btn btn-primary btn-lg', role: 'button' %>
     </p>
+  </div>
+  <div class="review-block">
+    <h3>Отзывы</h3>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card">
+          <%= image_tag 'review_students/galina.jpg', class: 'card-img-top', alt: 'Галина (ВШЭ)' %>
+          <div class="card-body">
+            <h5 class="card-title">Галина, Москва</h5>
+            <p><i>Студент ВШЭ</i></p>
+            <p class="card-text">Уникальное чувство, каждую неделю думать, что прыгаешь выше своей головы. Пока не наступит новая неделя и все опять повторится сначала. Основы веб-разработки интересовали давно, но на это всегда не хватало времени. Теперь вижу, что занятость - не помеха, если есть четкая система и внимательный ментор.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <%= image_tag 'review_students/serdar.jpg', class: 'card-img-top', alt: 'Сердар (Альфа-Банк)' %>
+          <div class="card-body">
+            <h5 class="card-title">Сердар, Барнаул</h5>
+            <p><i>Специалист по обучению, Альфа-Банк</i></p>
+            <p class="card-text">Здорово, когда ты будучи гуманитарием, начинаешь понимать как все утроено и даже можешь создавать простый проекты сам!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <%= image_tag 'review_students/anna.jpg', class: 'card-img-top', alt: 'Анна' %>
+          <div class="card-body">
+            <h5 class="card-title">Анна, Москва</h5>
+            <p><i>Менеджер по продажам</i></p>
+            <p class="card-text">Очень много информации и внимательное отношение к каждому студенту!  Полученные знания сразу получилось использовать на практике в своём интернет-проекте, я довольна результатом!</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="course-block">
     <h2>Курс <%= t(:program_modern_javascript) %></h2>
