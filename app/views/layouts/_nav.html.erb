@@ -32,7 +32,7 @@
       <%= page_nav_item t(:nav_contacts), contacts_path %>
       <% if !user_signed_in? %>
         <li>
-          <%= apply_now_button %>
+          <%= apply_now_button(false, course_code) %>
         </li>
       <% end %>
     </ul>

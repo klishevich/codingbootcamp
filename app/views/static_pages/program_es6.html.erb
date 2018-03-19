@@ -9,6 +9,8 @@
 <% provide(:twitter_title, base_title) %>
 <% provide(:twitter_description, base_description) %>
 <% provide(:twitter_image, base_image_url) %>
+<% course_code = 'es6' %>
+<% provide(:course_code, course_code) %>
 
 <div class="program-block">
   <h1>Курс <%= t(:program_es6) %></h1>
@@ -24,8 +26,8 @@
     <div><b>Цель</b>: Дать практические навыки работы с ECMAScript 6</div>
     <div><b>Курс расчитан</b> на разработчиков хоторые хотят познакомиться с современным JavaScript</div>
     <div><b>Требования к студенту</b>: Работа с Ubuntu/Debian, Bash (apt-get, работа с файлами, выдача прав), Git + GitHub (умение делать Pull Request), HTML, CSS (подключение CSS, селекторы, flex), JavaScript (условные операторы, циклы, массивы, объекты, функции, подключение JS, события, изменение элементов и атрибутов страницы), jQuery, Twitter Bootstrap. Умение гуглить и читать stackoverflow на английском :)</div>
-    <div><b>Стоимость обучения</b>: бесплатно</div>
-    <div><b>Стоимость проверки заданий</b>: 1 000 руб. (за весь курс)</div>
+    <div><b>Стоимость обучения</b>: БЕСПЛАТНО</div>
+    <div><b>Стоимость проверки заданий</b>: 1 000 руб. (за весь курс). Если требуется проверка заданий, то оплату необходимо перечислить по реквизитам указанным в п. 11 на странице <%= link_to 'Оферта', offer_path + '#rekv' %>. Копию платежного поручения, отправьте на емайл <%= codingbootcamp_email %></div>
   </div>
   <div>Учебный курс представляет собой <b>8 видео-уроков</b>. После видео-урока дается <b>домашнее задание</b>. Необходимо планировать примерно <b>3 часа</b> для прохождения каждого урока.</div>
 
@@ -40,5 +42,5 @@
     <li>Modules (CommonJS, AMD, ES6, browser, Node.js) - 40 мин + ДЗ</li>
     <li>Babel (понижение версии ECMAScript, полифилы, поддержка в браузерах) - 30 мин + ДЗ</li>
   </ol>
-  <%= render 'apply_to_course', course_code: 'es6' %>
+  <%= render 'apply_to_course', course_code: course_code || '' %>
 </div>

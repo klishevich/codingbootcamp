@@ -15,10 +15,11 @@ module ApplicationHelper
     link_to(text, path, class: elClass)
   end
 
-  def apply_now_button(large=false)
+  def apply_now_button(large=false, code)
     cls = large ? 'btn btn-success btn-lg' : 'btn btn-success'
     if !user_signed_in?
-      return link_to('Подать заявку', new_user_registration_path, role: 'button', class: cls)
+      reg_path = code.present? ? new_user_registration_path(code: code) : new_user_registration_path
+      return link_to('Подать заявку', reg_path, role: 'button', class: cls)
     end
   end
 
