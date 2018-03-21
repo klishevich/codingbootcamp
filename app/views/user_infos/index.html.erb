@@ -6,8 +6,10 @@
       <th><%= User.human_attribute_name(:id) %></th>
       <th><%= User.human_attribute_name(:email) %></th>
       <th><%= User.human_attribute_name(:full_name) %></th>
+      <th><%= User.human_attribute_name(:preferred_name) %></th>
       <th><%= User.human_attribute_name(:city) %></th>
       <th><%= User.human_attribute_name(:source) %></th>
+      <th><%= User.human_attribute_name(:comment) %></th>
       <th><%= User.human_attribute_name(:is_student) %></th>
       <th><%= User.human_attribute_name(:is_mentor) %></th>
       <th><%= User.human_attribute_name(:is_mentor_view) %></th>
@@ -23,8 +25,10 @@
           <td><%= u.id %></td>
           <td><%= link_to u.email, edit_user_info_path(u) %></td>
           <td><%= u.full_name %></td>
+          <td><%= u.preferred_name %></td>
           <td><%= u.city %></td>
           <td><%= u.source %></td>
+          <td><%= short_info(u.comment) %></td>
           <td><%= u.is_student if u.is_student %></td>
           <td><%= u.is_mentor if u.is_mentor %></td>
           <td><%= u.is_mentor_view if u.is_mentor_view %></td>

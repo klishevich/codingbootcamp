@@ -26,4 +26,14 @@ module StaticPagesHelper
       content_tag(:b, lesson) + list
     end
   end
+
+  def short_info(text)
+    if text.blank?
+      return ''
+    elsif text.length <= 20
+      return text
+    else
+      return "#{text[0..20]} ..."
+    end
+  end
 end

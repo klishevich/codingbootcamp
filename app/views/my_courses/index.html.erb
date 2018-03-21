@@ -13,10 +13,15 @@
     <tr>
       <th><%= MyCourse.human_attribute_name(:user_id) %></th>
       <th><%= MyCourse.human_attribute_name(:course_id) %></th>
+      <th><%= MyCourse.human_attribute_name(:ref) %></th>
       <th><%= MyCourse.human_attribute_name(:status) %></th>
       <th>Текущий урок</th>
-      <th><%= MyCourse.human_attribute_name(:ref) %></th>
       <th><%= MyCourse.human_attribute_name(:created_at) %></th>
+      <th><%= User.human_attribute_name(:email) %></th>
+      <th><%= User.human_attribute_name(:city) %></th>
+      <th><%= User.human_attribute_name(:source) %></th>
+      <th><%= User.human_attribute_name(:last_sign_in_at) %></th>
+      <th><%= User.human_attribute_name(:confirmed_at) %></th>
       <th></th>
     </tr>
     </thead>
@@ -24,11 +29,16 @@
     <% @courses.each do |u| %>
         <tr>
           <td><%= pref_and_full_name_link(u.user, my_course_path(u)) %></td>
-          <td><%= u.course.name %></td>
+          <td><%= u.course.code %></td>
+          <td><%= u.ref %></td>
           <td><%= u.status %></td>
           <td><%= link_to_last_my_lesson(u) %></td>
-          <td><%= u.ref %></td>
-          <td><%= u.created_at.strftime('%d.%m.%Y %T') %></td>
+          <td><%= u.created_at.strftime('%d.%m.%Y') %></td>
+          <td><%= u.user.email %></td>
+          <td><%= u.user.city %></td>
+          <td><%= u.user.source %></td>
+          <td><%= u.user.last_sign_in_at&.strftime('%d.%m.%Y') %></td>
+          <td><%= u.user.confirmed_at&.strftime('%d.%m.%Y') %></td>
           <td>
             <% unless u.my_lessons&.length > 0 %>
               <%= link_to("X", my_course_path(u), method: :delete, class: "btn btn-warning") %>

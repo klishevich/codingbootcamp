@@ -278,7 +278,7 @@ ru:
         preferred_name: 'Как к Вам обращаться'
         city: 'Город проживания'
         phone: 'Телефон'
-        comment: 'Что хотите изучить'
+        comment: 'О чем вы думаете'
         remember_me: 'Запомнить меня'
         source: 'Откуда о нас узнали'
       course:
@@ -307,12 +307,13 @@ ru:
         user_id: 'Студент'
         course_id: 'Курс'
         status: "Статус"
-        ref: "Источник привлечения"
+        ref: "Источник"
         date_start: "Дата начала"
         date_end: "Дата окончания"
         grade: "Оценка"
         comment_for_student: "Комментарий"
         comment: "Комментарий для ментора"
+        created_at: 'Курс открыт'
       my_lesson:
         lesson_id: 'Название урока'
         status: 'Статус'
