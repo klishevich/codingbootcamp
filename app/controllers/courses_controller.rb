@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  before_action :authenticate_user!
   before_action :auth_mentor_view, only: [:index, :show]
   before_action :auth_mentor, except: [:index, :show]
 

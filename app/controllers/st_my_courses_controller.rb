@@ -1,4 +1,5 @@
 class StMyCoursesController < ApplicationController
+  before_action :authenticate_user!
   before_action :auth_student
 
   def index

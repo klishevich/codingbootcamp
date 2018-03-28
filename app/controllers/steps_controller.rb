@@ -1,4 +1,5 @@
 class StepsController < ApplicationController
+  before_action :authenticate_user!
   before_action :auth_mentor_view, only: [:show]
   before_action :auth_mentor, except: [:show]
   before_action :set_course, :set_lesson, only: [:create, :new, :edit, :update, :show]

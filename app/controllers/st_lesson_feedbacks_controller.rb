@@ -1,4 +1,5 @@
 class StLessonFeedbacksController < ApplicationController
+  before_action :authenticate_user!
   before_action :auth_student, except: [:index]
   before_action :auth_mentor_view, only: [:index]
   before_action :set_my_course_lesson_step, only: [:new, :create, :show]
