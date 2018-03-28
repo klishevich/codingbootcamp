@@ -278,7 +278,7 @@ ru:
         preferred_name: 'Как к Вам обращаться'
         city: 'Город проживания'
         phone: 'Телефон'
-        comment: 'О чем вы думаете'
+        comment: 'Что хотите изучить'
         remember_me: 'Запомнить меня'
         source: 'Откуда о нас узнали'
       course:
@@ -371,6 +371,7 @@ ru:
   course_opened: 'Вам открыт курс'
   sorry: 'Что-то пошло не так :('
   already_have_course: 'Вы уже записаны на этот курс'
-  new_lesson_is_opened: 'Тебе открыт новый урок'
+  new_lesson_is_opened: 'Открыт новый урок'
   other_user: 'Недостаточно прав для добавления комментария по данному уроку'
   lesson_completed: 'Поздравляю, вы завершили урок'
+  dear_student: 'Уважаемый студент'

@@ -51,9 +51,23 @@ class Users::RegistrationsController < Devise::RegistrationsController
       start_course_date = Date.today
       my_course = MyCourse.create(user_id: user_id, course_id: course.id, date_start: start_course_date)
       my_course.free!
+      if course.lessons.first
+        create_my_lesson_with_steps(course.lessons.first, my_course)
+      end
+      if course.lessons.second
+        create_my_lesson_with_steps(course.lessons.second, my_course)
+      end
       return st_my_course_path(my_course)
     end
     return nil
+  end
+
+  def create_my_lesson_with_steps(lesson, my_course)
+    my_lesson = my_course.my_lessons.create(my_course_id: my_course.id, lesson_id: lesson.id)
+    my_lesson.active!
+    lesson.steps.each do |s|
+      MyStep.create(my_lesson: my_lesson, step: s)
+    end
   end
 
   # GET /resource/edit
