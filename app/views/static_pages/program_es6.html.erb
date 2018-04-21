@@ -1,5 +1,6 @@
-<% base_title = "Курс #{t(:program_es6)} от #{t(:default_title)}" %>
-<% base_description = "Курс #{t(:program_es6)} содержит следующие уроки по JavaScript: arrow функции, классы, promises, async/await, модули CommonJS и ES6" %>
+<% base_subtitle = "JavaScript для профессионалов" %>
+<% base_title = "Курс #{t(:program_es6)} - #{base_subtitle}" %>
+<% base_description = "Курс #{t(:program_es6)} - #{base_subtitle} содержит следующие уроки: arrow функции, классы, promises, async/await, модули CommonJS и ES6" %>
 <% base_image_url = asset_url('es6_program_page_photo_square.jpg') %>
 <% provide(:title, base_title) %>
 <% provide(:description, base_description) %>
@@ -22,7 +23,7 @@
     </div>
   </div>
   <div class="alert alert-success program-block__goals" role="alert">
-    <h4 class="alert-heading">О курсе</h4>
+    <h4 class="alert-heading">О курсе <%= base_subtitle %> ES6</h4>
     <div><b>Цель</b>: Дать практические навыки работы с ECMAScript 6</div>
     <div><b>Курс расчитан</b> на разработчиков, которые хотят глубоко изучить современный JavaScript</div>
     <div><b>Требования к студенту</b>: Работа с Ubuntu/Debian, Bash (apt-get, работа с файлами, выдача прав), Git + GitHub (умение делать Pull Request), HTML, CSS (подключение CSS, селекторы, flex), JavaScript (условные операторы, циклы, массивы, объекты, функции, подключение JS, события, изменение элементов и атрибутов страницы), jQuery, Twitter Bootstrap. Умение гуглить и читать stackoverflow на английском :)</div>
