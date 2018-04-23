@@ -1,13 +1,13 @@
-<% base_subtitle = "JavaScript для профессионалов" %>
-<% base_title = "Курс #{t(:program_es6)} - #{base_subtitle}" %>
-<% base_description = "Курс #{t(:program_es6)} - #{base_subtitle} содержит следующие уроки: arrow функции, классы, promises, async/await, модули CommonJS и ES6" %>
+<% base_subtitle = "JavaScript курс от Coding Bootcamp Ru" %>
+<% base_title = "#{t(:program_es6)} - #{base_subtitle}" %>
+<% base_description = "#{t(:program_es6)} - #{base_subtitle} содержит следующие уроки: arrow функции, классы, promises, async/await, generators, модули CommonJS и ES6, babel" %>
 <% base_image_url = asset_url('es6_program_page_photo_square.jpg') %>
 <% provide(:title, base_title) %>
 <% provide(:description, base_description) %>
-<% provide(:og_title, base_title) %>
+<% provide(:og_title, t(:program_es6)) %>
 <% provide(:og_description, base_description) %>
 <% provide(:og_image, base_image_url) %>
-<% provide(:twitter_title, base_title) %>
+<% provide(:twitter_title, t(:program_es6)) %>
 <% provide(:twitter_description, base_description) %>
 <% provide(:twitter_image, base_image_url) %>
 <% course_code = 'es6' %>
@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="alert alert-success program-block__goals" role="alert">
-    <h4 class="alert-heading">О курсе <%= base_subtitle %> ES6</h4>
+    <h4 class="alert-heading">О курсе</h4>
     <div><b>Цель</b>: Дать практические навыки работы с ECMAScript 6</div>
     <div><b>Курс расчитан</b> на разработчиков, которые хотят глубоко изучить современный JavaScript</div>
     <div><b>Требования к студенту</b>: Работа с Ubuntu/Debian, Bash (apt-get, работа с файлами, выдача прав), Git + GitHub (умение делать Pull Request), HTML, CSS (подключение CSS, селекторы, flex), JavaScript (условные операторы, циклы, массивы, объекты, функции, подключение JS, события, изменение элементов и атрибутов страницы), jQuery, Twitter Bootstrap. Умение гуглить и читать stackoverflow на английском :)</div>
@@ -39,9 +39,9 @@
     <li>Arrow Functions - 15 мин + ДЗ</li>
     <li>Classes (prototypical inheritance, ES6 classes, usage) - 40 мин видео + ДЗ</li>
     <li>Promises (Promisifying, create promise, chaining promises, promise implementation) - 40 мин видео + ДЗ</li>
-    <li>ES7, ES8, Async/Await - 30 мин + ДЗ</li>
-    <li>Modules (CommonJS, AMD, ES6, browser, Node.js) - 40 мин + ДЗ</li>
-    <li>Babel (понижение версии ECMAScript, полифилы, поддержка в браузерах) - 30 мин + ДЗ</li>
+    <li>ES7, ES8, Async/Await, Generators - 50 мин + ДЗ</li>
+    <li>Modules (CommonJS, AMD, ES6, in browser, in Node.js, with Webpack) - 60 мин + ДЗ</li>
+    <li>Babel (понижение версии ECMAScript, полифилы, поддержка в браузерах) - 40 мин + ДЗ</li>
   </ol>
   <%= render 'apply_to_course', course_code: course_code || '' %>
 </div>

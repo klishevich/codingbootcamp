@@ -27,3 +27,4 @@
 .idea/
 lib/capistrano/
 .DS_Store
+.vscode/
