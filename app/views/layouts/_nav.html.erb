@@ -1,6 +1,6 @@
 <% navItemDropdownClassActive = current_action?(['corporate', 'instructor', 'partner']) ? "active" : "" %>
 
-<% navItemDropdownClassActive2 = current_action?(['program_es6', 'program_intro_to_web', 'program_modern_javascript']) ? "active" : "" %>
+<% navItemDropdownClassActive2 = current_action?(['program_js_camp', 'program_es6', 'program_intro_to_web', 'program_modern_javascript']) ? "active" : "" %>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="/"><%= image_tag 'logo3a.png', height: '40' %></a>
@@ -13,6 +13,7 @@
       <li class="nav-item dropdown <%= navItemDropdownClassActive2 %>">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Курсы</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <%= page_dropdown_item t(:program_js_camp), js_camp_path %>
           <%= page_dropdown_item t(:program_es6), es6_path %>
           <%= page_dropdown_item t(:program_intro_to_web), program_intro_to_web_path %>
           <%= page_dropdown_item t(:program_modern_javascript), program_modern_javascript_path %>

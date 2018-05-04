@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/program_intro_to_web', to: 'static_pages#program_intro_to_web'
   get '/program_modern_javascript', to: 'static_pages#program_modern_javascript'
   get '/es6', to: 'static_pages#program_es6'
+  get '/js_camp', to: 'static_pages#program_js_camp'
   get '/mentors', to: 'static_pages#mentors'
   get '/faq', to: 'static_pages#faq'
   get '/contacts', to: 'static_pages#contacts'

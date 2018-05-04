@@ -1,0 +1,170 @@
+<% base_title = "#{t(:program_js_camp)}" %>
+<% base_description = "#{t(:program_js_camp)} содержит темы: HTML, CSS, Git, GitHub, jQuery, Bootstrap, npm, MongoDB, Express, NGINX, Linode, хостинг"%>
+<% base_image_url = asset_url('_IMG_6425_square.jpg') %>
+<% provide(:title, base_title) %>
+<% provide(:description, base_description) %>
+<% provide(:og_title, t(:program_js_camp)) %>
+<% provide(:og_description, base_description) %>
+<% provide(:og_image, base_image_url) %>
+<% provide(:twitter_title, t(:program_js_camp)) %>
+<% provide(:twitter_description, base_description) %>
+<% provide(:twitter_image, base_image_url) %>
+<% course_code = 'camp' %>
+<% provide(:course_code, course_code) %>
+
+<div class="program-block">
+  <h1><%= t(:program_js_camp) %></h1>
+  <br/>
+  <h2>Организаторы</h2>
+  <div class="program-block__img">
+    <div class="row">
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'logo3a.png', alt: 'Coding Bootcamp Ru', class: 'card-img-top' %>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="my-card-organizers">
+                <div class="title">Coding Bootcamp Ru</div>
+                <div class="subtitile">Курсы по JavaScript</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'alfa_learn.png', alt: 'Альфа-Опыт', class: 'card-img-top' %>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="my-card-organizers">
+                <div class="title">Альфа-Опыт</div>
+                <div class="subtitile">Банк знаний и опыта. Без купюр</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'elbrus.png', alt: 'Elbrus', class: 'card-img-top' %>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="my-card-organizers">
+                <div class="title">Elbrus</div>
+                <div class="subtitile">Coding School</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'alfabank.png', alt: 'Альфа-Банк', class: 'card-img-top' %>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="my-card-organizers">
+                <div class="subtitile">При поддержке</div>
+                <div class="title">Альфа-Банк</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <h2>Инструкторы и Спикеры</h2>
+  <div class="program-block__img">
+    <div class="row">
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag '_IMG_6425_square.jpg', alt: 'Майкл Клишевич', class: 'card-img-top' %>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="my-card-organizers">
+                <div class="title">Майкл Клишевич</div>
+                <div class="subtitile">Ведущий JavaScript разработчик, Альфа-Банк. Более 5 лет промышленной web-разработки</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'george.jpg', alt: 'Георгий Бабаян', class: 'card-img-top' %>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="my-card-organizers">
+                <div class="title">Георгий Бабаян</div>
+                <div class="subtitile">Выпускник DevBootcamp лагерь по программированию в Сан-Францизко</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'azat.jpg', alt: 'Azat Mardan', class: 'card-img-top' %>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="my-card-organizers">
+                <div class="title">Azat Mardan</div>
+                <div class="subtitile">Author of 14 books on JavaScript and Node.js, founder of Node University, San Francisco</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'annie.jpg', alt: 'Annie Clarke', class: 'card-img-top' %>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="my-card-organizers">
+                <div class="title">Анна Кларк</div>
+                <div class="subtitile">Инструктор по Йоге</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-success program-block__goals" role="alert">
+    <h4 class="alert-heading">Лагерь пройдет с 9 по 13 июля</h4>
+    <div><b>Цель</b>: Интенсивное и полное погружение в JavaScript</div>
+    <div><b>Форма обучения</b>: Онлайн-Прекурс (25 июня - 8 июля). Лагерь дневного пребывания с 9:00 до 18:00 (9 - 13 июля)</div>
+    <div><b>Требования к студенту</b>: Возраст от 18 лет. Курс не требует предварительных знаний, но знакомство и понимание алгоритмов, циклов, функций и знание английского будет крайне полезно. Студенты не прошедшие Прекурс к лагерю не допускаются.</div>
+    <div><b>Стоимость обучения</b>: 34 000 руб. (при оплате до 25 мая 29 000 руб.)</div>
+    <div>Оплату необходимо перечислить по реквизитам, указанным в п. 11 на странице <%= link_to 'Оферта', offer_path + '#rekv' %>. Копию платежного поручения отправьте на емайл <%= codingbootcamp_email %></div>
+  </div>
+  <h5>Наши подходы к обучению</h5>
+  <ul>
+    <li>Максимальное погружение в JavaScript: 4-5 заданий каждый день</li>
+    <li>Парное программирование</li>
+    <li>Придется много работать</li>
+    <li>Максимальный уровень открытости и взаимодействия</li>
+    <li>Работа в команде</li>
+    <li>Ежедневная Йога</li>
+  </ul>
+  <h5>Программа Онлайн-Прекурса (25 июня - 8 июля) <span class="badge badge-success">2 недели</span></h5>
+  <ol>
+    <li>Ubuntu, Bash</li>
+    <li>SublimeText</li>
+    <li>Git и Github (create pull-request)</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Основы JavaScript</li>
+    <li>парное программирование</li>
+  </ol>
+  <h5>Программа Летнего лагеря (9 июля - 13 июля) с 9:00 до 18:00 <span class="badge badge-success">5 дней</span></h5>
+  <div>Занятия будут проводиться в учебном центре Альфа-Банка - Москва, ул. Фридриха Энгельса, 75</div>
+  <br/>
+  <ol>
+    <li><b>ПН</b> Перезагрузка: знакомство, задание на материал из Прекурса, парное программирование</li>
+    <li><b>ВТ</b> JavaScript (frontend): jQuery, Bootstrap, селекторы (по ID, по классу), события (click, focus, scroll), эффекты (fade, animate), цепочки событий, манипуляции с HTML (получить, изменить значение, изменить класс)</li>
+    <li><b>СР</b> JavaScript (backend): node.js, npm, http сервер, Express, MongoDB, HTTP методы, работа с Callbacks, тесты JEST</li>
+    <li><b>ЧТ</b> Hosting: найстройка сервера на Ubuntu, NGINX, Linode, доп. задания по node.js (аутентификация, Event/Emitter pattern, ES6 и CommonJS Modules, Babel)</li>
+    <li><b>ПТ</b> Коммандный проект: сделать аналог Twitter. Презентация команд</li>
+  </ol>
+</div>
