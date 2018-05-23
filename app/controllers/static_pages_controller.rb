@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
   def program_es6
     @my_course = MyCourse.new(status: 0)
   end
-  def program_js_camp
+  def program_jscamp
     @my_course = MyCourse.new(status: 0)
   end
   def mentors; end

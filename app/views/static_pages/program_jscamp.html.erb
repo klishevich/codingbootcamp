@@ -1,31 +1,31 @@
-<% base_title = "#{t(:program_js_camp)}" %>
-<% base_description = "#{t(:program_js_camp)} содержит темы: HTML, CSS, Git, GitHub, jQuery, Bootstrap, npm, MongoDB, Express, NGINX, Linode, хостинг"%>
+<% base_title = "#{t(:program_jscamp)}" %>
+<% base_description = "#{t(:program_jscamp)} содержит темы: HTML, CSS, Git, GitHub, jQuery, Bootstrap, npm, NGINX, Linode, хостинг, Wordpress"%>
 <% base_image_url = asset_url('_IMG_6425_square.jpg') %>
 <% provide(:title, base_title) %>
 <% provide(:description, base_description) %>
-<% provide(:og_title, t(:program_js_camp)) %>
+<% provide(:og_title, t(:program_jscamp)) %>
 <% provide(:og_description, base_description) %>
 <% provide(:og_image, base_image_url) %>
-<% provide(:twitter_title, t(:program_js_camp)) %>
+<% provide(:twitter_title, t(:program_jscamp)) %>
 <% provide(:twitter_description, base_description) %>
 <% provide(:twitter_image, base_image_url) %>
 <% course_code = 'camp' %>
 <% provide(:course_code, course_code) %>
 
 <div class="program-block">
-  <h1><%= t(:program_js_camp) %></h1>
+  <h1><%= t(:program_jscamp) %></h1>
   <br/>
   <h2>Организаторы</h2>
   <div class="program-block__img">
     <div class="row">
       <div class="col-lg-3 my-card">
         <div class="card">
-          <%= image_tag 'logo3a.png', alt: 'Coding Bootcamp Ru', class: 'card-img-top' %>
+          <%= image_tag 'jscamp/codingbootcamp_a.jpg', alt: 'Coding Bootcamp Ru', class: 'card-img-top' %>
           <div class="card-body">
             <div class="card-text">
               <div class="my-card-organizers">
                 <div class="title">Coding Bootcamp Ru</div>
-                <div class="subtitile">Курсы по JavaScript</div>
+                <div class="subtitile">Курсы по JavaScript для профессионалов</div>
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@
       </div>
       <div class="col-lg-3 my-card">
         <div class="card">
-          <%= image_tag 'alfa_learn.png', alt: 'Альфа-Опыт', class: 'card-img-top' %>
+          <%= image_tag 'jscamp/alfa_learn_a.jpg', alt: 'Альфа-Опыт', class: 'card-img-top' %>
           <div class="card-body">
             <div class="card-text">
               <div class="my-card-organizers">
@@ -46,12 +46,12 @@
       </div>
       <div class="col-lg-3 my-card">
         <div class="card">
-          <%= image_tag 'elbrus.png', alt: 'Elbrus', class: 'card-img-top' %>
+          <%= image_tag 'jscamp/elbrus_a.jpg', alt: 'Elbrus', class: 'card-img-top' %>
           <div class="card-body">
             <div class="card-text">
               <div class="my-card-organizers">
                 <div class="title">Elbrus</div>
-                <div class="subtitile">Coding School</div>
+                <div class="subtitile">Coding School - FullStack Bootcamp</div>
               </div>
             </div>
           </div>
@@ -59,12 +59,12 @@
       </div>
       <div class="col-lg-3 my-card">
         <div class="card">
-          <%= image_tag 'alfabank.png', alt: 'Альфа-Банк', class: 'card-img-top' %>
+          <%= image_tag 'jscamp/alfabank.png', alt: 'Альфа-Банк', class: 'card-img-top' %>
           <div class="card-body">
             <div class="card-text">
               <div class="my-card-organizers">
-                <div class="subtitile">При поддержке</div>
-                <div class="title">Альфа-Банк</div>
+                <div class="subtitile">При организационной поддержке</div>
+                <div class="title">АО "Альфа-Банк"</div>
               </div>
             </div>
           </div>
