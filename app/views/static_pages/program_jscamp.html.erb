@@ -102,19 +102,6 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 my-card">
-        <div class="card">
-          <%= image_tag 'azat.jpg', alt: 'Azat Mardan', class: 'card-img-top' %>
-          <div class="card-body">
-            <div class="card-text">
-              <div class="my-card-organizers">
-                <div class="title">Azat Mardan</div>
-                <div class="subtitile">Author of 14 books on JavaScript and Node.js, founder of Node University, San Francisco (онлайн)</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
   <div class="alert alert-success program-block__goals" role="alert">
@@ -144,6 +131,11 @@
     <li>Широкий спектр тематик, не только HTML, CSS, JavaScript, но ещё и Ubuntu, Git, GitHub, веб-сервер NGINX, хостинг, Twitter Bootstrap, jQuery, MySQL, CMS Wordpress.</li>
     <li>Лучшие образовательные практики в миксе (blended learning): видеоуроки, домашки, парное программирование, работа в команде, максимальный уровень открытости и взаимодействия.</li>
   </ol>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="embed-responsive embed-responsive-16by9 gallery-item__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/4eI-Bk0HqTY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+    </div>
+  </div>
   <br/>
   <h4>График обучения</h4>
   <h5>Часть 1. Онлайн-Прекурс, 25 июня - 8 июля. <span class="badge badge-success">2 недели</span></h5>
@@ -178,4 +170,47 @@
   <div>- Презентация</div>
   <br/>
   <div>Занятия проходят с 10-00 до 18-00 с обедами и кофе-брейками. Локация - учебный Центр Альфа-Банка: Москва, ул. Фридриха Энгельса, 75/11.</div>
+  <br/>
+  <div>
+    <h3>Отзывы</h3>
+    <div class="row">
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'review_students/galina.jpg', class: 'card-img-top', alt: 'Галина (ВШЭ)' %>
+          <div class="card-body">
+            <h5 class="card-title">Галина, Москва</h5>
+            <p><i>Студент ВШЭ</i></p>
+            <p class="card-text">Уникальное чувство, каждую неделю думать, что прыгаешь выше своей головы. Пока не наступит новая неделя и все опять повторится сначала. Основы веб-разработки интересовали давно, но на это всегда не хватало времени. Теперь вижу, что занятость - не помеха, если есть четкая система и внимательный ментор.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'review_students/serdar.jpg', class: 'card-img-top', alt: 'Сердар (Альфа-Банк)' %>
+          <div class="card-body">
+            <h5 class="card-title">Сердар, Барнаул</h5>
+            <p><i>Специалист по обучению, Альфа-Банк</i></p>
+            <p class="card-text">Здорово, когда ты будучи гуманитарием, начинаешь понимать как все утроено и даже можешь создавать простый проекты сам!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 my-card">
+        <div class="card">
+          <%= image_tag 'review_students/anna.jpg', class: 'card-img-top', alt: 'Анна' %>
+          <div class="card-body">
+            <h5 class="card-title">Анна, Москва</h5>
+            <p><i>Менеджер по продажам</i></p>
+            <p class="card-text">Очень много информации и внимательное отношение к каждому студенту!  Полученные знания сразу получилось использовать на практике в своём интернет-проекте, я довольна результатом!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <h3>Стоимость</h3>
+  <br/>
+  <div>Стоимость обучения 19 900 руб. и 24 900 (юрлица).</div>
+  <div>Студентам - скидка 50% (нужно прислать студенческий и сообщить телефон деканата.</div>
+  <div>Оплату необходимо перечислить по реквизитам, указанным в п. 11 на странице <%= link_to 'Оферта', offer_path + '#rekv' %>. Копию платежного поручения отправьте на емайл <%= codingbootcamp_email %></div>
+  <br/>
 </div>
