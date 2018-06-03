@@ -16,7 +16,7 @@
     <div class="col-md-6">
       <div class="certificate-info">
         <h1>Сертификат</h1>
-        <div>№ <%= @certificate.id %> C_IW</div>
+        <div>№ <%= @certificate.id %></div>
       </div>
       <div>
         <%= show_div_not_blank(Certificate.human_attribute_name(:student), @certificate.student) %>
