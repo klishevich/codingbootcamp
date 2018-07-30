@@ -13,10 +13,10 @@
       <li class="nav-item dropdown <%= navItemDropdownClassActive2 %>">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Курсы</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <%= page_dropdown_item t(:program_jscamp), jscamp_path %>
-          <%= page_dropdown_item t(:program_es6), es6_path %>
           <%= page_dropdown_item t(:program_intro_to_web), program_intro_to_web_path %>
+          <%= page_dropdown_item t(:program_es6), es6_path %>
           <%= page_dropdown_item t(:program_modern_javascript), program_modern_javascript_path %>
+          <%= page_dropdown_item t(:program_jscamp), jscamp_path %>
         </div>
       </li>
       <%= page_nav_item t(:nav_mentors), mentors_path %>
