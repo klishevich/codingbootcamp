@@ -7,7 +7,7 @@ class UserInfosController < ApplicationController
   end
 
   def index
-    @users = User.all.order(:id)
+    @users = User.all.order(id: :desc)
   end
 
   def edit

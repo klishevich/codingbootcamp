@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock "3.9.0"
 
-server 'jupiter.j123.ru', port: 22, roles: [:web, :app, :db], primary: true
+server 'jupiter.busation.ru', port: 22, roles: [:web, :app, :db], primary: true
 
 set :application, "codingbootcamp"
 set :repo_url, "git@github.com:klishevich/codingbootcamp.git"

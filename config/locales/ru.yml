@@ -265,6 +265,11 @@ ru:
         restrict_dependent_destroy:
           has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
           has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+      models:
+        user:
+          attributes:
+            reg_code:
+              reg_code_is_not_correct: 'Некорректный код регистрации'
     models:
       user: 'Пользователь'
       course: 'Курс'
@@ -281,6 +286,7 @@ ru:
         comment: 'Что хотите изучить'
         remember_me: 'Запомнить меня'
         source: 'Откуда о нас узнали'
+        reg_code: 'Код для регистрации'
       course:
         name: 'Название курса'
         code: 'Уникальный код'

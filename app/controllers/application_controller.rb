@@ -54,7 +54,8 @@ class ApplicationController < ActionController::Base
                                                        :city,
                                                        :comment,
                                                        :code,
-                                                       :source])
+                                                       :source,
+                                                       :reg_code])
   end
   
 end
