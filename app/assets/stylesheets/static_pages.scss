@@ -5,6 +5,10 @@ body {
   padding-top: 5rem;
 }
 
+.content-block {
+  min-height: calc(100vh - 150px);
+}
+
 .starter-template {
   h1 {
     margin-top: 1.2rem;
